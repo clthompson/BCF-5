@@ -443,7 +443,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 65em;
   *zoom: 1; }
   .row:before, .row:after {
     content: " ";
@@ -461,8 +461,8 @@ select {
     margin-right: 0; }
   .row .row {
     width: auto;
-    margin-left: -0.9375em;
-    margin-right: -0.9375em;
+    margin-left: -0.625em;
+    margin-right: -0.625em;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none;
@@ -486,8 +486,8 @@ select {
 .column,
 .columns {
   position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
+  padding-left: 0.625em;
+  padding-right: 0.625em;
   width: 100%;
   float: left; }
 
@@ -495,55 +495,59 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
     float: left; }
 
   .small-1 {
     position: relative;
-    width: 8.33333%; }
+    width: 7.69231%; }
 
   .small-2 {
     position: relative;
-    width: 16.66667%; }
+    width: 15.38462%; }
 
   .small-3 {
     position: relative;
-    width: 25%; }
+    width: 23.07692%; }
 
   .small-4 {
     position: relative;
-    width: 33.33333%; }
+    width: 30.76923%; }
 
   .small-5 {
     position: relative;
-    width: 41.66667%; }
+    width: 38.46154%; }
 
   .small-6 {
     position: relative;
-    width: 50%; }
+    width: 46.15385%; }
 
   .small-7 {
     position: relative;
-    width: 58.33333%; }
+    width: 53.84615%; }
 
   .small-8 {
     position: relative;
-    width: 66.66667%; }
+    width: 61.53846%; }
 
   .small-9 {
     position: relative;
-    width: 75%; }
+    width: 69.23077%; }
 
   .small-10 {
     position: relative;
-    width: 83.33333%; }
+    width: 76.92308%; }
 
   .small-11 {
     position: relative;
-    width: 91.66667%; }
+    width: 84.61538%; }
 
   .small-12 {
+    position: relative;
+    width: 92.30769%; }
+
+  .small-13 {
     position: relative;
     width: 100%; }
 
@@ -553,43 +557,47 @@ select {
 
   .small-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 7.69231%; }
 
   .small-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 15.38462%; }
 
   .small-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 23.07692%; }
 
   .small-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 30.76923%; }
 
   .small-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 38.46154%; }
 
   .small-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 46.15385%; }
 
   .small-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 53.84615%; }
 
   .small-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 61.53846%; }
 
   .small-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 69.23077%; }
 
   .small-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
+    margin-left: 76.92308%; }
+
+  .small-offset-11 {
+    position: relative;
+    margin-left: 84.61538%; }
 
   [class*="column"] + [class*="column"]:last-child {
     float: right; }
@@ -607,49 +615,53 @@ select {
 @media only screen and (min-width: 768px) {
   .large-1 {
     position: relative;
-    width: 8.33333%; }
+    width: 7.69231%; }
 
   .large-2 {
     position: relative;
-    width: 16.66667%; }
+    width: 15.38462%; }
 
   .large-3 {
     position: relative;
-    width: 25%; }
+    width: 23.07692%; }
 
   .large-4 {
     position: relative;
-    width: 33.33333%; }
+    width: 30.76923%; }
 
   .large-5 {
     position: relative;
-    width: 41.66667%; }
+    width: 38.46154%; }
 
   .large-6 {
     position: relative;
-    width: 50%; }
+    width: 46.15385%; }
 
   .large-7 {
     position: relative;
-    width: 58.33333%; }
+    width: 53.84615%; }
 
   .large-8 {
     position: relative;
-    width: 66.66667%; }
+    width: 61.53846%; }
 
   .large-9 {
     position: relative;
-    width: 75%; }
+    width: 69.23077%; }
 
   .large-10 {
     position: relative;
-    width: 83.33333%; }
+    width: 76.92308%; }
 
   .large-11 {
     position: relative;
-    width: 91.66667%; }
+    width: 84.61538%; }
 
   .large-12 {
+    position: relative;
+    width: 92.30769%; }
+
+  .large-13 {
     position: relative;
     width: 100%; }
 
@@ -659,156 +671,170 @@ select {
 
   .row .large-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 7.69231%; }
 
   .row .large-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 15.38462%; }
 
   .row .large-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 23.07692%; }
 
   .row .large-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 30.76923%; }
 
   .row .large-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 38.46154%; }
 
   .row .large-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 46.15385%; }
 
   .row .large-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 53.84615%; }
 
   .row .large-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 61.53846%; }
 
   .row .large-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 69.23077%; }
 
   .row .large-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
+    margin-left: 76.92308%; }
 
   .row .large-offset-11 {
     position: relative;
-    margin-left: 91.66667%; }
+    margin-left: 84.61538%; }
+
+  .row .large-offset-12 {
+    position: relative;
+    margin-left: 92.30769%; }
 
   .push-1 {
     position: relative;
-    left: 8.33333%;
+    left: 7.69231%;
     right: auto; }
 
   .pull-1 {
     position: relative;
-    right: 8.33333%;
+    right: 7.69231%;
     left: auto; }
 
   .push-2 {
     position: relative;
-    left: 16.66667%;
+    left: 15.38462%;
     right: auto; }
 
   .pull-2 {
     position: relative;
-    right: 16.66667%;
+    right: 15.38462%;
     left: auto; }
 
   .push-3 {
     position: relative;
-    left: 25%;
+    left: 23.07692%;
     right: auto; }
 
   .pull-3 {
     position: relative;
-    right: 25%;
+    right: 23.07692%;
     left: auto; }
 
   .push-4 {
     position: relative;
-    left: 33.33333%;
+    left: 30.76923%;
     right: auto; }
 
   .pull-4 {
     position: relative;
-    right: 33.33333%;
+    right: 30.76923%;
     left: auto; }
 
   .push-5 {
     position: relative;
-    left: 41.66667%;
+    left: 38.46154%;
     right: auto; }
 
   .pull-5 {
     position: relative;
-    right: 41.66667%;
+    right: 38.46154%;
     left: auto; }
 
   .push-6 {
     position: relative;
-    left: 50%;
+    left: 46.15385%;
     right: auto; }
 
   .pull-6 {
     position: relative;
-    right: 50%;
+    right: 46.15385%;
     left: auto; }
 
   .push-7 {
     position: relative;
-    left: 58.33333%;
+    left: 53.84615%;
     right: auto; }
 
   .pull-7 {
     position: relative;
-    right: 58.33333%;
+    right: 53.84615%;
     left: auto; }
 
   .push-8 {
     position: relative;
-    left: 66.66667%;
+    left: 61.53846%;
     right: auto; }
 
   .pull-8 {
     position: relative;
-    right: 66.66667%;
+    right: 61.53846%;
     left: auto; }
 
   .push-9 {
     position: relative;
-    left: 75%;
+    left: 69.23077%;
     right: auto; }
 
   .pull-9 {
     position: relative;
-    right: 75%;
+    right: 69.23077%;
     left: auto; }
 
   .push-10 {
     position: relative;
-    left: 83.33333%;
+    left: 76.92308%;
     right: auto; }
 
   .pull-10 {
     position: relative;
-    right: 83.33333%;
+    right: 76.92308%;
     left: auto; }
 
   .push-11 {
     position: relative;
-    left: 91.66667%;
+    left: 84.61538%;
     right: auto; }
 
   .pull-11 {
     position: relative;
-    right: 91.66667%;
+    right: 84.61538%;
+    left: auto; }
+
+  .push-12 {
+    position: relative;
+    left: 92.30769%;
+    right: auto; }
+
+  .pull-12 {
+    position: relative;
+    right: 92.30769%;
     left: auto; }
 
   .column.large-centered,
@@ -3408,7 +3434,7 @@ label.error {
       background: #111111; }
 
   .contain-to-grid .top-bar {
-    max-width: 62.5em;
+    max-width: 65em;
     margin: 0 auto;
     margin-bottom: 0; }
 
@@ -5083,3 +5109,8 @@ a.th {
   src: local("☺"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.woff") format("woff"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.ttf") format("truetype"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+.columns {
+  border: 1px solid #666;
+  background-color: #999;
+  padding: 0px; }
