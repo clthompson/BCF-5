@@ -2,6 +2,8 @@
 // Custom Styles
 //
 
+//Fonts
+
   @font-face { 
     font-family: 'ComeniaSansCondRegular';
     src: url('http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot');
@@ -18,8 +20,52 @@
     font-style: normal;
   }
 
+  // Colors
+
+  $color-maroon: #762141;
+  $color-darkGray: #222;
+  $color-lightGray: #e2e2e2;
+  $color-maroon: #762141;
+  $color-maroon: #762141;
+
+  // Overall Paddings
+  $major-padding: emCalc(32);
+  $minor-padding: emCalc(16);
+
   .columns {
     border: 1px solid #666;
-    background-color: #999;
-    padding: 0px;
+    //background-color: lighten($primary-color, 30%);
   } 
+
+  a {
+    color: $color-maroon;
+  }
+
+  .full-width { 
+    width: 100%; 
+    max-width: 100%;
+    background-color: #eee;
+  }
+
+  .logo {
+    padding: $major-padding 0 $major-padding $major-padding;
+  }
+
+.mission-text {
+  position: relative;
+  height: emCalc(140);
+}
+
+.absolute-center {
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100%; 
+  height: 60%;
+  min-width: emCalc(200);
+  padding: 10%;
+  //border: 1px solid #666;
+}
+
+.italics {
+  font-style: italic;
+}
