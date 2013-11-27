@@ -27,16 +27,16 @@
   $color-maroon: #762141;
 
 // Overall Paddings
-  $major-padding: emCalc(32);
-  $minor-padding: emCalc(16);
-  $mini-padding: emCalc(8);
+  $padding-major: emCalc(32);
+  $padding-minor: emCalc(16);
+  $padding-mini: emCalc(8);
 
 // Backgrounds
   $background-d: url('../img/diagonals.png');
 
 // Borders
-  $maroon-thick: 5px solid $color-maroon;
-  $gray-thin: 1px solid $color-lightGray;
+  $thick-maroon: 5px solid $color-maroon;
+  $thin-grey: 1px solid $color-lightGray;
 
 // Text
   $bolder: bolder;
@@ -78,7 +78,7 @@
 
 //Header Styles
   .logo {
-    padding: $major-padding 0 $major-padding $major-padding;
+    padding: $padding-major 0 $padding-major $padding-major;
   }
 
   .mission-text {
@@ -100,23 +100,23 @@
   .footer-wrapper {
     background-image: $background-d;
     background-repeat:repeat;
-    border-top: $maroon-thick;
-    padding: $major-padding 0 $major-padding 0;
+    border-top: $thick-maroon;
+    padding: $padding-major 0 $padding-major 0;
   }
 
 // Nav One Styles
   .nav-one {
     background-color: $color-maroon;
-    padding: $mini-padding 0 $mini-padding 0;
+    padding: $padding-mini 0 $padding-mini 0;
     }
 
 //Nav Two Styles
   .nav-two {
     background-image: $background-d;
+    //height: emCalc(35); need this for real build
     background-repeat:repeat;
-    padding: $mini-padding 0 $mini-padding 0;
-    border-top: $gray-thin;
-    border-bottom: $gray-thin;
+    border-top: $thin-grey;
+    border-bottom: $thin-grey;
     text-align:center;
   }
 
@@ -127,45 +127,125 @@
 
   .nav-two ul li {
     display: inline-block;
-    padding-left: $mini-padding;
-    padding-right: $mini-padding;
+    padding: emCalc(5) $padding-mini emCalc(5) $padding-mini;
   }
 
 // Aside Styles
 
-  aside .wrapper {
-    padding: emCalc(30) emCalc(15) emCalc(90) emCalc(55);
+  aside {
+    .aside-wrapper {
+      padding: emCalc(30) emCalc(15) emCalc(90) emCalc(55);
+      .advert {
+        padding: emCalc(15) 0 emCalc(40) 0;
+        border-bottom: $thin-grey;
+      }
+      .spotlight {
+        padding: emCalc(15) 0 emCalc(15) 0;
+        border-bottom: $thin-grey;
+      }
+      .partners {
+        padding: emCalc(15) 0 emCalc(15) 0;
+        .title-bar{
+          background-color: $color-lightGray;
+          height: emcalc(40);
+        }
+        .partners-list{
+          .sponsor{
+            background-image: $background-d;
+            border-left: $thin-grey;
+            border-right: $thin-grey;
+            border-bottom: $thin-grey;
+            height: emCalc(60);
+            img {
+             padding: emCalc(10) 0 emCalc(10) $padding-major;
+           }
+          }
+        }
+      }
+    }
   }
 
-  .advert {
-    padding: emCalc(15) 0 emCalc(40) 0;
-    border-bottom: $gray-thin;
+
+// Article Section Styles
+
+  section .articles-wrapper{
+    padding: emCalc(45) 0 emCalc(90) emCalc(15);
+    .title-bar {
+      border-bottom: $thin-grey;
+    }
+    ul {
+      li {
+        padding:0;
+        .listed-article {
+          border-bottom: $thin-grey;
+          padding: emCalc(25) 0 emCalc(25) 0;
+          .article-image {
+            img {
+            margin: 0 emCalc(25) emCalc(15) 0;
+            height: emCalc(135);
+            width: emCalc(250);
+            }
+          }
+        }
+        .article-readmore p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      li:first-child {
+        .listed-article .article-image img {
+          height: emCalc(200);
+          width: emCalc(250);
+        }
+      }
+    }
   }
 
-  .spotlight {
-    padding: emCalc(15) 0 emCalc(15) 0;
-    border-bottom: $gray-thin;
-  }
+// Stats and Highlights Styles
 
-  .partners {
-    padding: emCalc(15) 0 emCalc(15) 0;
-
-  }
-
-  .partners .title-bar{
-    background-color: $color-lightGray;
-    height: emcalc(40);
-
-  }
-
-  .sponsor {
+  .stats-highlights{
     background-image: $background-d;
-    border-left: $gray-thin;
-    border-right: $gray-thin;
-    border-bottom: $gray-thin;
-    height: emCalc(60);
+    background-repeat: repeat-x;
   }
 
-  .sponsor img {
-    padding-left: $major-padding;
+  section .stats-wrapper {
+    padding: emCalc(22) 0 emCalc(22) 0;
+    ul {
+      width: 90%;
+      border-top: $thin-grey;
+      border-bottom: $thin-grey;
+      height: emCalc(75);
+      margin: auto;
+      text-align:center;
+      li {
+        display: inline-block;
+        width: 30%;
+        margin: emCalc(8) 0 emCalc(7) 0;
+        text-align:center;
+        height: emCalc(60);
+        border-left: $thin-grey;
+        .title {
+          display: block;
+          font-size: emCalc(10);
+          padding-top: emCalc(0);
+          margin: 0;
+        }
+        .detail {
+          position: relative;
+          top: 0px;
+          display: block;
+          font-size: emCalc(30); 
+          padding: 0;
+          margin: 0;
+        }
+      }
+      li:first-child{
+        border-left: none;
+      }
+    }
+
+  }
+
+  .highlights {
+    height: emCalc(400);
   }
