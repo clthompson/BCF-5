@@ -1,0 +1,68 @@
+stats stuff
+            <li>
+              <p class="title bolder all-caps">Scholarships & Awards</p>
+              <p class="detail">$7.3M</p>
+            </li>
+            <li>
+              <p class="title bolder all-caps">Students Benefitted</p>
+              <p class="detail">5,950</p>
+            </li>
+            <li>
+              <p class="title bolder all-caps">Gifts Received</p>
+              <p class="detail">35,913</p>
+            </li>
+
+
+Orbit stuff
+
+            <!IoRangeList><div class="fermata_item"  style="clear:both;">
+                <div class="date_image">
+                    <span class="date"><%text_display_date%></span>
+                    <img src="<%img_teaser%>" alt="<%text_title%>" title="<%text_title%>" /a>
+                </div>                        
+                <div class="info">
+                    <h2><%list_news_items%><a href="<%IoPageInfo_Link%>"><%stf_source%><%stf_date%></a></h2>
+                    <p><%stf_teaser_blurb%></p>
+                        
+                </div>
+            
+        </div><!-- .news_item -->
+            <!/IoRangeList>
+
+HomePage
+
+    statsHighlightsRow
+        con for stats
+             list for connecting stats objects
+        con for orbit
+            list for connecting stories
+
+    navTwoRow
+        list for pages (only stuff within GO)
+
+    articlesContentAsideRow
+        list for articles
+        con for aside elements
+
+ContentPage
+
+    articlesContentAsideRow
+	breadcrumbs
+        page content area
+        con for aside elements (includes navigation)
+
+Articles Landing page
+
+    articlesContentAsideRow
+	breadcrumbs
+        list for articles (includes pagination)
+        con for aside elements
+
+
+content pages
+image
+title
+date
+category
+text content
+teaser blurb

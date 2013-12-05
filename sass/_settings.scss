@@ -125,9 +125,9 @@ $body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-// $large-screen: 1440px;
+$small-screen: 768px; // phones basically (smaller than iPad landscape) (was 768)
+$medium-screen: 900px; // iPad portrait (only) (was 1280)
+$large-screen: 950px; // iPad landscape and desktop (was 1440)
 
 // $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";

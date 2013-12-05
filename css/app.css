@@ -347,12 +347,12 @@ meta.foundation-mq-small {
   width: 768px; }
 
 meta.foundation-mq-medium {
-  font-family: "only screen and (min-width:1280px)";
-  width: 1280px; }
+  font-family: "only screen and (min-width:900px)";
+  width: 900px; }
 
 meta.foundation-mq-large {
-  font-family: "only screen and (min-width:1440px)";
-  width: 1440px; }
+  font-family: "only screen and (min-width:950px)";
+  width: 950px; }
 
 *,
 *:before,
@@ -937,7 +937,7 @@ th.hide-for-xlarge {
   th.hide-for-small {
     display: table-cell !important; } }
 /* Large Displays: 1280px - 1440px */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 900px) {
   .show-for-large,
   .show-for-large-up {
     display: inherit !important; }
@@ -974,7 +974,7 @@ th.hide-for-xlarge {
   th.hide-for-medium-down {
     display: table-cell !important; } }
 /* X-Large Displays: 1400px and up */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 950px) {
   .show-for-xlarge {
     display: inherit !important; }
 
@@ -5096,6 +5096,515 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
+/* Grid HTML Classes */
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 65em;
+  width: 100%;
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row.collapse .column,
+  .row.collapse .columns {
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+  .row .row {
+    margin-left: -0.625em;
+    margin-right: -0.625em;
+    max-width: none;
+    width: auto;
+    *zoom: 1; }
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    .row .row:after {
+      clear: both; }
+    .row .row.collapse {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      width: auto;
+      *zoom: 1; }
+      .row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table; }
+      .row .row.collapse:after {
+        clear: both; }
+
+.column,
+.columns {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  width: 100%;
+  float: left;
+  position: relative; }
+
+@media only screen {
+  .small-1 {
+    width: 7.69231%; }
+
+  .small-2 {
+    width: 15.38462%; }
+
+  .small-3 {
+    width: 23.07692%; }
+
+  .small-4 {
+    width: 30.76923%; }
+
+  .small-5 {
+    width: 38.46154%; }
+
+  .small-6 {
+    width: 46.15385%; }
+
+  .small-7 {
+    width: 53.84615%; }
+
+  .small-8 {
+    width: 61.53846%; }
+
+  .small-9 {
+    width: 69.23077%; }
+
+  .small-10 {
+    width: 76.92308%; }
+
+  .small-11 {
+    width: 84.61538%; }
+
+  .small-12 {
+    width: 92.30769%; }
+
+  .small-13 {
+    width: 100%; }
+
+  .small-offset-0 {
+    margin-left: 0%; }
+
+  .small-offset-1 {
+    margin-left: 7.69231%; }
+
+  .small-offset-2 {
+    margin-left: 15.38462%; }
+
+  .small-offset-3 {
+    margin-left: 23.07692%; }
+
+  .small-offset-4 {
+    margin-left: 30.76923%; }
+
+  .small-offset-5 {
+    margin-left: 38.46154%; }
+
+  .small-offset-6 {
+    margin-left: 46.15385%; }
+
+  .small-offset-7 {
+    margin-left: 53.84615%; }
+
+  .small-offset-8 {
+    margin-left: 61.53846%; }
+
+  .small-offset-9 {
+    margin-left: 69.23077%; }
+
+  .small-offset-10 {
+    margin-left: 76.92308%; }
+
+  .small-offset-11 {
+    margin-left: 84.61538%; }
+
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+
+  [class*="column"] + [class*="column"].end {
+    float: left; }
+
+  .column.small-centered,
+  .columns.small-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; } }
+@media only screen and (min-width: 768px) {
+  .medium-1 {
+    width: 7.69231%; }
+
+  .medium-2 {
+    width: 15.38462%; }
+
+  .medium-3 {
+    width: 23.07692%; }
+
+  .medium-4 {
+    width: 30.76923%; }
+
+  .medium-5 {
+    width: 38.46154%; }
+
+  .medium-6 {
+    width: 46.15385%; }
+
+  .medium-7 {
+    width: 53.84615%; }
+
+  .medium-8 {
+    width: 61.53846%; }
+
+  .medium-9 {
+    width: 69.23077%; }
+
+  .medium-10 {
+    width: 76.92308%; }
+
+  .medium-11 {
+    width: 84.61538%; }
+
+  .medium-12 {
+    width: 92.30769%; }
+
+  .medium-13 {
+    width: 100%; }
+
+  .medium-offset-0 {
+    margin-left: 0%; }
+
+  .medium-offset-1 {
+    margin-left: 7.69231%; }
+
+  .medium-offset-2 {
+    margin-left: 15.38462%; }
+
+  .medium-offset-3 {
+    margin-left: 23.07692%; }
+
+  .medium-offset-4 {
+    margin-left: 30.76923%; }
+
+  .medium-offset-5 {
+    margin-left: 38.46154%; }
+
+  .medium-offset-6 {
+    margin-left: 46.15385%; }
+
+  .medium-offset-7 {
+    margin-left: 53.84615%; }
+
+  .medium-offset-8 {
+    margin-left: 61.53846%; }
+
+  .medium-offset-9 {
+    margin-left: 69.23077%; }
+
+  .medium-offset-10 {
+    margin-left: 76.92308%; }
+
+  .medium-offset-11 {
+    margin-left: 84.61538%; }
+
+  .medium-offset-12 {
+    margin-left: 92.30769%; }
+
+  .medium-push-1 {
+    left: 7.69231%;
+    right: auto; }
+
+  .medium-pull-1 {
+    right: 7.69231%;
+    left: auto; }
+
+  .medium-push-2 {
+    left: 15.38462%;
+    right: auto; }
+
+  .medium-pull-2 {
+    right: 15.38462%;
+    left: auto; }
+
+  .medium-push-3 {
+    left: 23.07692%;
+    right: auto; }
+
+  .medium-pull-3 {
+    right: 23.07692%;
+    left: auto; }
+
+  .medium-push-4 {
+    left: 30.76923%;
+    right: auto; }
+
+  .medium-pull-4 {
+    right: 30.76923%;
+    left: auto; }
+
+  .medium-push-5 {
+    left: 38.46154%;
+    right: auto; }
+
+  .medium-pull-5 {
+    right: 38.46154%;
+    left: auto; }
+
+  .medium-push-6 {
+    left: 46.15385%;
+    right: auto; }
+
+  .medium-pull-6 {
+    right: 46.15385%;
+    left: auto; }
+
+  .medium-push-7 {
+    left: 53.84615%;
+    right: auto; }
+
+  .medium-pull-7 {
+    right: 53.84615%;
+    left: auto; }
+
+  .medium-push-8 {
+    left: 61.53846%;
+    right: auto; }
+
+  .medium-pull-8 {
+    right: 61.53846%;
+    left: auto; }
+
+  .medium-push-9 {
+    left: 69.23077%;
+    right: auto; }
+
+  .medium-pull-9 {
+    right: 69.23077%;
+    left: auto; }
+
+  .medium-push-10 {
+    left: 76.92308%;
+    right: auto; }
+
+  .medium-pull-10 {
+    right: 76.92308%;
+    left: auto; }
+
+  .medium-push-11 {
+    left: 84.61538%;
+    right: auto; }
+
+  .medium-pull-11 {
+    right: 84.61538%;
+    left: auto; }
+
+  .medium-push-12 {
+    left: 92.30769%;
+    right: auto; }
+
+  .medium-pull-12 {
+    right: 92.30769%;
+    left: auto; }
+
+  .column.medium-centered,
+  .columns.medium-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; }
+
+  .column.medium-uncentered,
+  .columns.medium-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
+@media only screen and (min-width: 900px) {
+  .large-1 {
+    width: 7.69231%; }
+
+  .large-2 {
+    width: 15.38462%; }
+
+  .large-3 {
+    width: 23.07692%; }
+
+  .large-4 {
+    width: 30.76923%; }
+
+  .large-5 {
+    width: 38.46154%; }
+
+  .large-6 {
+    width: 46.15385%; }
+
+  .large-7 {
+    width: 53.84615%; }
+
+  .large-8 {
+    width: 61.53846%; }
+
+  .large-9 {
+    width: 69.23077%; }
+
+  .large-10 {
+    width: 76.92308%; }
+
+  .large-11 {
+    width: 84.61538%; }
+
+  .large-12 {
+    width: 92.30769%; }
+
+  .large-13 {
+    width: 100%; }
+
+  .large-offset-0 {
+    margin-left: 0%; }
+
+  .large-offset-1 {
+    margin-left: 7.69231%; }
+
+  .large-offset-2 {
+    margin-left: 15.38462%; }
+
+  .large-offset-3 {
+    margin-left: 23.07692%; }
+
+  .large-offset-4 {
+    margin-left: 30.76923%; }
+
+  .large-offset-5 {
+    margin-left: 38.46154%; }
+
+  .large-offset-6 {
+    margin-left: 46.15385%; }
+
+  .large-offset-7 {
+    margin-left: 53.84615%; }
+
+  .large-offset-8 {
+    margin-left: 61.53846%; }
+
+  .large-offset-9 {
+    margin-left: 69.23077%; }
+
+  .large-offset-10 {
+    margin-left: 76.92308%; }
+
+  .large-offset-11 {
+    margin-left: 84.61538%; }
+
+  .large-offset-12 {
+    margin-left: 92.30769%; }
+
+  .large-push-1 {
+    left: 7.69231%;
+    right: auto; }
+
+  .large-pull-1 {
+    right: 7.69231%;
+    left: auto; }
+
+  .large-push-2 {
+    left: 15.38462%;
+    right: auto; }
+
+  .large-pull-2 {
+    right: 15.38462%;
+    left: auto; }
+
+  .large-push-3 {
+    left: 23.07692%;
+    right: auto; }
+
+  .large-pull-3 {
+    right: 23.07692%;
+    left: auto; }
+
+  .large-push-4 {
+    left: 30.76923%;
+    right: auto; }
+
+  .large-pull-4 {
+    right: 30.76923%;
+    left: auto; }
+
+  .large-push-5 {
+    left: 38.46154%;
+    right: auto; }
+
+  .large-pull-5 {
+    right: 38.46154%;
+    left: auto; }
+
+  .large-push-6 {
+    left: 46.15385%;
+    right: auto; }
+
+  .large-pull-6 {
+    right: 46.15385%;
+    left: auto; }
+
+  .large-push-7 {
+    left: 53.84615%;
+    right: auto; }
+
+  .large-pull-7 {
+    right: 53.84615%;
+    left: auto; }
+
+  .large-push-8 {
+    left: 61.53846%;
+    right: auto; }
+
+  .large-pull-8 {
+    right: 61.53846%;
+    left: auto; }
+
+  .large-push-9 {
+    left: 69.23077%;
+    right: auto; }
+
+  .large-pull-9 {
+    right: 69.23077%;
+    left: auto; }
+
+  .large-push-10 {
+    left: 76.92308%;
+    right: auto; }
+
+  .large-pull-10 {
+    right: 76.92308%;
+    left: auto; }
+
+  .large-push-11 {
+    left: 84.61538%;
+    right: auto; }
+
+  .large-pull-11 {
+    right: 84.61538%;
+    left: auto; }
+
+  .large-push-12 {
+    left: 92.30769%;
+    right: auto; }
+
+  .large-pull-12 {
+    right: 92.30769%;
+    left: auto; }
+
+  .column.large-centered,
+  .columns.large-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; }
+
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @font-face {
   font-family: 'ComeniaSansCondRegular';
   src: url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co-webfont.eot");
@@ -5109,9 +5618,6 @@ a.th {
   src: local("☺"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.woff") format("woff"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.ttf") format("truetype"), url("http://www.brooklyn.cuny.edu/web/fonts/comenia_sans_co_bold-webfont.svg#webfont7RYPTQcC") format("svg");
   font-weight: normal;
   font-style: normal; }
-
-.columns {
-  border: 1px solid #666; }
 
 .clearfix {
   *zoom: 1; }
@@ -5141,66 +5647,84 @@ ul {
   font-weight: bolder; }
 
 .logo {
-  padding: 2em 0 2em 2em; }
+  padding: 2em 0 2em 1.6875em; }
 
-.mission-text {
+.mission-text p {
+  color: black;
   position: relative;
-  height: 8.75em; }
+  padding: 3.5em 1.25em 0 2.375em;
+  height: 8.4375em;
+  letter-spacing: -0.025em;
+  font-size: 1.125em;
+  line-height: 130%; }
 
-.absolute-center {
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 60%;
-  min-width: 12.5em;
-  padding: 10%; }
-
+/* .absolute-center {
+   margin: auto;
+   top: 0; left: 0; bottom: 0; right: 0;
+   width: 100%; 
+   height: 60%;
+   min-width: emCalc(200);
+   padding: 10%;
+   //border: 1px solid #666;
+ }*/
 .footer-wrapper {
-  background-image: url("../img/diagonals.png");
+  background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat;
   border-top: 5px solid #762141;
   padding: 2em 0 2em 0; }
 
+.footer-address {
+  padding: 0 0 0 2em; }
+
+.footer-title {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
 .nav-one {
   background-color: #762141;
-  padding: 0.5em 0 0.5em 0; }
+  padding-top: 0.3125em;
+  height: 2.1875em; }
+  .nav-one ul {
+    display: inline-block; }
+  .nav-one li {
+    display: inline-block;
+    padding-left: 1.8125em; }
+    .nav-one li a {
+      color: white; }
+      .nav-one li a:hover {
+        color: #762141; }
 
 .nav-two {
-  background-image: url("../img/diagonals.png");
+  background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat;
-  border-top: 1px solid #e2e2e2;
-  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   text-align: center; }
-
-.nav-two ul {
-  display: inline-block;
-  margin: auto; }
-
-.nav-two ul li {
-  display: inline-block;
-  padding: 0.3125em 0.5em 0.3125em 0.5em; }
+  .nav-two ul {
+    display: inline-block;
+    margin: auto; }
+    .nav-two ul li {
+      display: inline-block;
+      padding: 0.3125em 0.5em 0.3125em 0.5em; }
 
 aside .aside-wrapper {
   padding: 1.875em 0.9375em 5.625em 3.4375em; }
   aside .aside-wrapper .advert {
     padding: 0.9375em 0 2.5em 0;
-    border-bottom: 1px solid #e2e2e2; }
+    border-bottom: 1px solid #cccccc; }
   aside .aside-wrapper .spotlight {
     padding: 0.9375em 0 0.9375em 0;
-    border-bottom: 1px solid #e2e2e2; }
+    border-bottom: 1px solid #cccccc; }
   aside .aside-wrapper .partners {
     padding: 0.9375em 0 0.9375em 0; }
     aside .aside-wrapper .partners .title-bar {
-      background-color: #e2e2e2;
+      background-color: #cccccc;
       height: emcalc(40); }
     aside .aside-wrapper .partners .partners-list .sponsor {
-      background-image: url("../img/diagonals.png");
-      border-left: 1px solid #e2e2e2;
-      border-right: 1px solid #e2e2e2;
-      border-bottom: 1px solid #e2e2e2;
+      background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
       height: 3.75em; }
       aside .aside-wrapper .partners .partners-list .sponsor img {
         padding: 0.625em 0 0.625em 2em; }
@@ -5208,11 +5732,11 @@ aside .aside-wrapper {
 section .articles-wrapper {
   padding: 2.8125em 0 5.625em 0.9375em; }
   section .articles-wrapper .title-bar {
-    border-bottom: 1px solid #e2e2e2; }
+    border-bottom: 1px solid #cccccc; }
   section .articles-wrapper ul li {
     padding: 0; }
     section .articles-wrapper ul li .listed-article {
-      border-bottom: 1px solid #e2e2e2;
+      border-bottom: 1px solid #cccccc;
       padding: 1.5625em 0 1.5625em 0; }
       section .articles-wrapper ul li .listed-article .article-image img {
         margin: 0 1.5625em 0.9375em 0;
@@ -5226,15 +5750,15 @@ section .articles-wrapper {
     width: 15.625em; }
 
 .stats-highlights {
-  background-image: url("../img/diagonals.png");
+  background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat-x; }
 
 section .stats-wrapper {
   padding: 1.375em 0 1.375em 0; }
   section .stats-wrapper ul {
-    width: 90%;
-    border-top: 1px solid #e2e2e2;
-    border-bottom: 1px solid #e2e2e2;
+    width: 100%;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
     height: 4.6875em;
     margin: auto;
     text-align: center; }
@@ -5244,21 +5768,22 @@ section .stats-wrapper {
       margin: 0.5em 0 0.4375em 0;
       text-align: center;
       height: 3.75em;
-      border-left: 1px solid #e2e2e2; }
+      border-left: 1px solid #cccccc; }
       section .stats-wrapper ul li .title {
         display: block;
-        font-size: 0.625em;
+        color: #555555;
+        font-weight: 300;
+        font-size: 0.875em;
         padding-top: 0;
-        margin: 0; }
+        margin: -6px; }
       section .stats-wrapper ul li .detail {
         position: relative;
-        top: 0px;
+        top: -17px;
         display: block;
-        font-size: 1.875em;
+        color: #666666;
+        font-weight: 600;
+        font-size: 3.125em;
         padding: 0;
-        margin: 0; }
+        margin: 5px; }
     section .stats-wrapper ul li:first-child {
       border-left: none; }
-
-.highlights {
-  height: 25em; }

@@ -22,9 +22,13 @@
 // Colors
   $color-maroon: #762141;
   $color-darkGray: #222;
-  $color-lightGray: #e2e2e2;
+  $color-lightGray: #cccccc;
   $color-maroon: #762141;
   $color-maroon: #762141;
+  $color-black: #000000;
+  $color-midgray1: #555555;
+  $color-midgray2: #666666;
+  $color-white: #FFFFFF;
 
 // Overall Paddings
   $padding-major: emCalc(32);
@@ -32,7 +36,7 @@
   $padding-mini: emCalc(8);
 
 // Backgrounds
-  $background-d: url('../img/diagonals.png');
+  $background-d: url('http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png');
 
 // Borders
   $thick-maroon: 5px solid $color-maroon;
@@ -43,7 +47,7 @@
 
 // General Stuff
   .columns {
-    border: 1px solid #666;
+    //border: 1px solid #666;
     //background-color: lighten($primary-color, 30%);
   } 
 
@@ -78,15 +82,21 @@
 
 //Header Styles
   .logo {
-    padding: $padding-major 0 $padding-major $padding-major;
+    padding: $padding-major 0 $padding-major ($padding-major - emCalc(5));
   }
 
-  .mission-text {
+  .mission-text p{
+    //border: 1px solid #000000;
+    color: $color-black;
     position: relative;
-    height: emCalc(140);
+    padding: emCalc(56) emCalc(20) emCalc(0) emCalc(38);
+    height: emCalc(135);
+    letter-spacing: emCalc(-.4);
+    font-size: emCalc(18);
+    line-height: 130%;
   }
 
-  .absolute-center {
+ /* .absolute-center {
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
     width: 100%; 
@@ -94,7 +104,7 @@
     min-width: emCalc(200);
     padding: 10%;
     //border: 1px solid #666;
-  }
+  }*/
 
 //Footer Styles
   .footer-wrapper {
@@ -104,10 +114,33 @@
     padding: $padding-major 0 $padding-major 0;
   }
 
+  .footer-address{
+    padding: 0 0 0 $padding-major;
+  }
+
+  .footer-title {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
 // Nav One Styles
   .nav-one {
     background-color: $color-maroon;
-    padding: $padding-mini 0 $padding-mini 0;
+    padding-top: emCalc(5);
+    height: emCalc(35);
+      ul {
+        display: inline-block;
+      }
+      li {
+        display: inline-block;
+        padding-left: $padding-major - emCalc(3);
+        a {
+          color: $color-white;
+          &:hover {
+            color: $color-maroon;
+          }
+        }
+      }
     }
 
 //Nav Two Styles
@@ -118,16 +151,14 @@
     border-top: $thin-grey;
     border-bottom: $thin-grey;
     text-align:center;
-  }
-
-  .nav-two ul {
-    display: inline-block;
-    margin: auto;
-  }
-
-  .nav-two ul li {
-    display: inline-block;
-    padding: emCalc(5) $padding-mini emCalc(5) $padding-mini;
+    ul {
+      display: inline-block;
+      margin: auto;
+      li {
+      display: inline-block;
+      padding: emCalc(5) $padding-mini emCalc(5) $padding-mini;
+      }
+    }
   }
 
 // Aside Styles
@@ -211,7 +242,7 @@
   section .stats-wrapper {
     padding: emCalc(22) 0 emCalc(22) 0;
     ul {
-      width: 90%;
+      width: 100%;
       border-top: $thin-grey;
       border-bottom: $thin-grey;
       height: emCalc(75);
@@ -226,17 +257,21 @@
         border-left: $thin-grey;
         .title {
           display: block;
-          font-size: emCalc(10);
+          color: $color-midgray1;
+          font-weight: 300;
+          font-size: emCalc(14);
           padding-top: emCalc(0);
-          margin: 0;
+          margin: -6px;
         }
         .detail {
           position: relative;
-          top: 0px;
+          top: -17px;
           display: block;
-          font-size: emCalc(30); 
+          color: $color-midgray2;
+          font-weight: 600;
+          font-size: emCalc(50); 
           padding: 0;
-          margin: 0;
+          margin: 5px;
         }
       }
       li:first-child{
@@ -247,5 +282,4 @@
   }
 
   .highlights {
-    height: emCalc(400);
   }
