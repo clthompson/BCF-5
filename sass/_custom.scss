@@ -21,7 +21,7 @@
 
 // Colors
   $color-maroon: #762141;
-  $color-darkGray: #222;
+  $color-darkGray: #222222;
   $color-lightGray: #cccccc;
   $color-maroon: #762141;
   $color-maroon: #762141;
@@ -40,6 +40,7 @@
 
 // Borders
   $thick-maroon: 5px solid $color-maroon;
+  $medium-grey: 3px solid $color-lightGray;
   $thin-grey: 1px solid $color-lightGray;
 
 // Text
@@ -112,35 +113,38 @@
     background-repeat:repeat;
     border-top: $thick-maroon;
     padding: $padding-major 0 $padding-major 0;
-  }
-
-  .footer-address{
-    padding: 0 0 0 $padding-major;
-  }
-
-  .footer-title {
-    padding-bottom: 0;
-    margin-bottom: 0;
+    .footer-address{
+      padding: 0 0 0 $padding-major;
+      .footer-title {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+    .footer-nav {
+      ul li ul {
+        display: none;
+      }
+    }
   }
 
 // Nav One Styles
   .nav-one {
     background-color: $color-maroon;
-    padding-top: emCalc(5);
+//    padding-top: emCalc(5);
     height: emCalc(35);
-      ul {
-        display: inline-block;
-      }
-      li {
-        display: inline-block;
-        padding-left: $padding-major - emCalc(3);
-        a {
-          color: $color-white;
-          &:hover {
-            color: $color-maroon;
-          }
-        }
-      }
+//      ul {
+//        display: inline-block;
+//     }
+//      li {
+//        display: inline-block;
+//        padding-left: $padding-major - emCalc(3);
+//        a {
+//          color: $color-white;
+//          &:hover {
+//            color: $color-maroon;
+//          }
+//        }
+//      }
     }
 
 //Nav Two Styles
@@ -166,6 +170,14 @@
   aside {
     .aside-wrapper {
       padding: emCalc(30) emCalc(15) emCalc(90) emCalc(55);
+      .side-nav{
+        li {
+          //border-bottom;
+          &:first-child {
+            //background hatch, no bottom border
+          }
+        }
+      }
       .advert {
         padding: emCalc(15) 0 emCalc(40) 0;
         border-bottom: $thin-grey;
@@ -278,8 +290,77 @@
         border-left: none;
       }
     }
-
   }
+
+// Orbit Styles
 
   .highlights {
   }
+
+// Content Pages
+
+.breadcrumbs-bcf {
+  display: inline-block;
+  margin: 0 0 20px 0; 
+  overflow: hidden;
+  border-bottom: $medium-grey;
+  width: 100%;
+  font-size: emCalc(16);
+  li {
+    display: inline-block;
+    padding-right: emCalc(15);
+    img {
+      vertical-align: text-top;
+      padding-top:emCalc(3);
+    }
+  }
+  .selected h1 {
+      font-family: $body-font-family;
+      font-size: emCalc(16);
+      margin:0;
+      padding:0;
+    }
+  }
+
+.article-category {
+  color: $color-lightGray;
+}
+
+article {
+  width: 100%;
+  h1 {
+    font-size: $h1-font-size;
+  }
+  .article-date{
+    color: $color-lightGray;
+  }
+  .article-text-additional{
+    width: 100%;
+    .caption {
+      background-color: #eee; 
+      margin-bottom: $padding-minor; 
+      padding: emCalc(10);
+    }
+    .image-content{
+      width: 100%; 
+    }
+    .video-content{
+      position: relative;
+      padding-bottom: 57.25%;
+      padding-top: emCalc(30); 
+      height: 0; 
+      overflow: hidden;
+      margin-bottom: 0;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .article-text{
+
+  }
+}
