@@ -1,0 +1,18 @@
+img_spotlightImage - image
+stf_title - spotlight title and image alt-tag
+txt_text - spotlight text paragraphs
+
+          <div class="spotlight">
+            <div class="">
+              <p class="all-caps bolder">Spotlight</p>
+            </div>
+            <div class="image">
+              <img src="<%img_spotlightImage%>" alt="<%stf_title%>" title="<%stf_title%>">
+            </div> 
+            <div class="title">
+              <p class="all-caps bolder"><%stf_title%></p>
+            </div>
+            <div class="text">
+                <%txt_text%>
+            </div>
+          </div>

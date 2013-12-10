@@ -1,0 +1,8 @@
+No placeholders
+
+<link rel="stylesheet" href="http://www.brooklyn.cuny.edu/web/css/app.css" /> <!-- Compiled Sass CSS -->
+    <script src="http://www.brooklyn.cuny.edu/web/js/modernizr.js"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->

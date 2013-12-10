@@ -1,0 +1,9 @@
+stf_youtubeID - youtube video ID (hexidecimal code)
+stf_vimeoID - vimeo video id (numbers)
+txt_caption - video caption text
+
+    <div class="video-content">
+        <!IoRangeConditional><iframe src="//www.youtube.com/embed/<%stf_youtubeID%>" frameborder="0" allowfullscreen></iframe><!/IoRangeConditional>
+        <!IoRangeConditional><iframe src="//player.vimeo.com/video/<%stf_vimeoID%>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><!/IoRangeConditional>
+    </div>
+    <div class="caption"><%txt_caption%></div>

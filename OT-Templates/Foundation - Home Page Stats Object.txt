@@ -1,0 +1,7 @@
+stf_title - stat title
+stf_detail - stat detail (numbers)
+
+            <li>
+              <p class="title bolder all-caps"><%stf_title%></p>
+              <p class="detail"><%stf_detail%></p>
+            </li>

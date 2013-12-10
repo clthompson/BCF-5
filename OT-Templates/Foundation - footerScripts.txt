@@ -1,0 +1,17 @@
+No placeholders
+
+<!-- Google Analytics -->
+
+
+    <!-- js loads -->
+        <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
+        <!--<script src="http://www.brooklyn.cuny.edu/web/js/jquery.js"></script>--> <!-- jQuery -->
+        <script src="http://www.brooklyn.cuny.edu/web/js/foundation.min.js"></script> <!-- Foundation-->
+        <script src="http://www.brooklyn.cuny.edu/web/js/foundation/foundation.topbar.js"></script> <!-- top-bar menu -->
+        <script src="http://www.brooklyn.cuny.edu/web/js/response.js"></script> <!--// responsive content images//-->
+        <script src="http://www.brooklyn.cuny.edu/web/js/ga-eventtracker.js"></script> <!-- eventTracker (eventually will not use)-->
+    
+    <script>
+      $(document).foundation();
+    </script>

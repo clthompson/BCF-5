@@ -1,0 +1,16 @@
+stf_URLRedirect - external URL
+media_PDF - asset object for files
+anc_pageRedirect - anchor for internal page connections
+stf_analytics - GA tracking code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google Analytics -->
+
+<meta http-equiv="Refresh" content="0;url=<%stf_URLRedirect%><%media_PDF%><%anc_PageRedirect%><%stf_Analytics%>"/>
+</head>
+<body>
+</body>
+</html>

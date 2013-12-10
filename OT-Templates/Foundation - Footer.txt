@@ -1,0 +1,28 @@
+stf_title - BCF title
+txt_address - address text content
+con_links - container referencing top level of navOne
+stf_copyright - copyright text
+
+    <div class="full-width footer-wrapper">
+      <footer class="row">
+        <div class="small-8 medium-8 large-5 columns">
+          <div class="footer-address">
+            <p class="footer-title bolder all-caps"><%stf_title%></p>
+            <%txt_address%>
+          </div>
+        </div>
+        <div class="small-5 medium-5 large-8 columns">
+          <div class="footer-nav">
+            <!-- list that references the main navOne list and hides all li-ul elements -->
+            <ul>
+              <%con_links%>
+              <!--<li><a href="#">Giving Opportunities</a></li>
+              <li><a href="#">Donate Now</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>-->
+            </ul>
+            <p><%stf_copyright%></p>
+          </div> 
+        </div>
+      </footer>
+    </div>

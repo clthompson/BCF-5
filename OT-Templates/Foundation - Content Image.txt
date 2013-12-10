@@ -1,0 +1,12 @@
+img_imageBigger - larger image
+img_imageSmaller - smaller image
+txt_imgCaption - image caption
+
+
+<!IoRangeRedDotMode><img src="<%img_imageBigger%>"> <!/IoRangeRedDotMode>
+    <div class="image-content">
+        <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="" title=""
+        data-src0="<%img_imageSmaller%>"
+        data-src768="<%img_imageBigger%>"/>
+    </div>
+    <div class="caption"><%txt_imgCaption%></div>

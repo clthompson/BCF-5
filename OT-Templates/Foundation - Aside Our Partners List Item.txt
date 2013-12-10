@@ -1,0 +1,4 @@
+img_partner - image
+stf_altText - image alt-text
+
+		<li class="sponsor"><img src="<%img_partner%>" alt="<%stf_altText%>" title="<%stf_altText%>"></li>

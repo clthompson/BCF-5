@@ -1,0 +1,120 @@
+text_keywords - page keywords
+text_description - page description
+headline_parent - page's headline
+con_headerScripts - container for connecting headerScripts page
+con_header - container for connecting Header page
+con_navOne - container for connecting navOne page
+con_stats - container for Home Page stats elements
+list_highlights - list items for Orbit highlights
+list_navTwo - list item for navTwo
+anc_newsPage - Anchor for main news page
+img_imageSmaller - pulled image for news article
+opt_newsCategory - pulled option list for news article
+list_articles - pulled url for news article
+stf_title - pulled title for for news article
+txt_teaser - pulled teaser for news article
+con_aside - container for all aside elements
+con_footer - container for connecting Footer page
+con_footerScripts - container for connecting footerScripts page
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0"/>
+    <meta name="keywords" content="<%text_keywords%>" />
+    <meta name="description" content="<%text_description%>" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    
+    <title>Brooklyn College | <%headline_parent%></title>
+    
+    <%con_headerScripts%>
+    
+  </head>
+  <body data-responsejs='{"create" : {"mode" : "src", "prefix" : "src"}}'>
+
+    <!-- Body Elements --> 
+
+    <%con_header%>
+
+    <%con_navOne%>
+
+    <!-- articlesContentAsideRow -->
+
+    <div class="row">
+        <section class="large-8 medium-7 columns">
+            <div class="articles-wrapper">
+              <div class="">
+                <ul class="all-caps breadcrumbs-bcf">
+                  <li class="bolder"><a href="<%anc_home%>">Home</a></li>
+                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
+                  <!IoRangeConditional>
+                  <li class="bolder"><%opt_siteCategory%></li>
+                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
+                  <!/IoRangeConditional>
+                  <!IoRangeConditional>
+                  <li class="bolder"><%opt_siteSubCategory%></li>
+                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
+                  <!/IoRangeConditional>
+                  <li class="bolder selected"><%stf_title%></li>
+                </ul>
+              </div>
+                <!IoRangeConditional><p class="article-category all-caps"><%opt_newsCategory%></p><!/IoRangeConditional>
+                <!IoRangeConditional><div class="hide"><%txt_teaser%></div><!/IoRangeConditional>
+                <article>
+                  <h1><%stf_title%></h1>
+                  <!IoRangeConditional><p class="article-date"><%stf_date%></p><!/IoRangeConditional>
+                  <div class="article-text-additional">
+                    <!IoRangeRedDotMode><img src="<%img_imageBigger%>"><!/IoRangeRedDotMode>
+                        <!IoRangeConditional><div class="image-content">
+                            <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="" title=""
+                            data-src0="<%img_imageSmaller%>"
+                            data-src768="<%img_imageBigger%>"/>
+                        </div>
+                        <div class="caption"><%txt_imgCaption%></div><!/IoRangeConditional>
+                        <!IoRangeConditional><%con_additional1%><!/IoRangeConditional>
+                    </div>
+                  <div class="article-text">
+                    <%txt_content%>
+                  </div>
+                  <!IoRangeConditional><div class="article-text-additional"><%con_additional2%></div><!/IoRangeConditional>
+                </article>
+              </div>
+        </section>
+
+    <!-- aside -->
+
+        <aside class="large-5 medium-6 columns">
+            <div class="aside-wrapper">
+
+                <!IoRangeConditional>                
+                <ul class="side-nav">
+                    <li class="all-caps"><%headline_parent%></li>
+                    <!IoRangeList>
+                    <li><%list_sideSubNav%></li>
+                    <!/IoRangeList>
+                </ul>
+                <!/IoRangeConditional>
+
+                <!IoRangeConditional>                
+                <ul class="side-nav">
+                    <li class="all-caps"><%opt_sideNavTitle%></li>
+                    <!IoRangeList>
+                    <li><%list_sideNav%></li>
+                    <!/IoRangeList>
+                </ul>
+                <!/IoRangeConditional>
+
+                <%con_aside%>
+            </div>
+        </aside>
+      </div>
+
+    <%con_footer%>
+    
+    <%con_footerScripts%>
+
+  </body>
+</html>
+ 

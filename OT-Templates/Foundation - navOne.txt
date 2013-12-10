@@ -1,0 +1,19 @@
+con_navOneElements - container for all navOne Elements
+
+    <div class="full-width nav-one">
+          <div class="row large-13 columns">
+            <nav class="top-bar" data-topbar>
+            <!-- inside the ul, need a container for li elements and referenced side navs -->
+              <ul class="title-area">
+                <!-- Title Area -->
+                <li class="name"></li>
+                <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+              </ul>
+            <section class="top-bar-section">
+            <ul class="left">        
+                <%con_navOneElements%>
+            </ul>
+            </section>
+            </navv>
+          </div>
+    </div>

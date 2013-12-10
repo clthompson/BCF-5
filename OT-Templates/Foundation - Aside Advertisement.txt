@@ -1,0 +1,7 @@
+anc-URL - link to page
+img_adImage - image asset
+stf_altText - image alt-text
+
+          <div class="advert">
+            <a href="<%anc_URL%>"><img src="<%img_adImage%>" alt="<%stf_altText%>" title="<%stf_altText%>"></a>
+          </div>

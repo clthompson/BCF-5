@@ -1,0 +1,14 @@
+opt_dropdown - option list to turn on dropdown functionality (CSS class)
+anc_element - anchor for connected page
+stf_title - page title
+list_sideNav - connected page's referenced side navigation list
+
+<li class="<%opt_dropdown%>"><a href="<%anc_element%>"><%stf_title%></a>
+        <!IoRangeConditional>
+        <ul class="dropdown">
+            <!IoRangeList>
+            <li><%list_sideNav%></li>
+            <!/IoRangeList>
+        </ul>
+        <!/IoRangeConditional>
+</li>
