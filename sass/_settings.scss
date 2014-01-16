@@ -97,7 +97,7 @@ $body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
 
 // Control whether or not CSS classes come through in the CSS files.
 
-// $include-html-classes: true;
+//$include-html-classes: true;
 // $include-print-styles: true;
 // $include-html-global-classes: $include-html-classes;
 // $include-html-inline-list-classes: $include-html-classes;
@@ -115,7 +115,7 @@ $body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
 // $include-html-clearing-classes: $include-html-classes;
 // $include-html-alert-classes: $include-html-classes;
 // $include-html-nav-classes: $include-html-classes;
-// $include-html-top-bar-classes: $include-html-classes;
+//$include-html-top-bar-classes: $include-html-classes;
 // $include-html-label-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 // $include-html-pricing-classes: $include-html-classes;
@@ -150,7 +150,7 @@ $large-screen: 950px; // iPad landscape and desktop (was 1440)
 //
 
  $row-width: em-calc(1040);
- $column-gutter: em-calc(20);
+ $column-gutter: em-calc(0);
  $total-columns: 13;
 
 //
@@ -183,12 +183,12 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // Control header font sizes
 
- $h1-font-size: em-calc(44);
- $h2-font-size: em-calc(37);
- $h3-font-size: em-calc(27);
- $h4-font-size: em-calc(23);
- $h5-font-size: em-calc(18);
- $h6-font-size: 1em;
+ $h1-font-size: em-calc(34);
+ $h2-font-size: em-calc(24);
+ $h3-font-size: em-calc(16);
+ $h4-font-size: em-calc(16);
+ $h5-font-size: em-calc(16);
+ $h6-font-size: em-calc(16);
 
 // Control how subheaders are styled.
 
@@ -207,7 +207,7 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1em;
+$paragraph-font-size: 0.9375em;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: em-calc(20);
 // $paragraph-aside-font-size: em-calc(14);
@@ -816,7 +816,7 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // We use these to control the caption styles
 
-// $orbit-container-bg: #f5f5f5;
+$orbit-container-bg: #fff;
 // $orbit-caption-bg: rgba(0,0,0,0.6);
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: emCalc(14);
@@ -1255,17 +1255,17 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // Background color for the top bar
 
-// $topbar-bg-color: #111;
-// $topbar-bg: $topbar-bg-color;
+//$topbar-bg-color: #762141;
+//$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+//$topbar-height: 35px;
+//$topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 
-// $topbar-input-height: 2.45em;
+//$topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
 
@@ -1274,34 +1274,34 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
-// $topbar-dropdown-link-color: #fff;
-// // $topbar-dropdown-link-bg: lighten($topbar-bg-color, 5%);
+//$topbar-dropdown-bg: #762141;
+$topbar-dropdown-link-color: #222222;
+$topbar-dropdown-link-bg: #ffffff;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+//$topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
 
 // Set the link colors and styles for top-level nav
 
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
-// $topbar-link-weight: bold;
-// $topbar-link-font-size: em-calc(13);
+//$topbar-link-color: #121212;
+//$topbar-link-color-hover: #ffffff;
+//$topbar-link-color-active: #ffffff;
+//$topbar-link-weight: normal;
+//$topbar-link-font-size: $paragraph-font-size;
 // $topbar-link-hover-lightness: -30%; // Darken by 30%
 // $topbar-link-bg-hover: darken($topbar-bg-color, 3%);
 // $topbar-link-bg-active: darken($topbar-bg-color, 3%);
 
-// $topbar-dropdown-label-color: #555;
-// $topbar-dropdown-label-text-transform: uppercase;
+// $topbar-dropdown-label-color: #121212;
+//$topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
-// $topbar-dropdown-label-font-size: em-calc(10);
-// $topbar-dropdown-label-bg: lighten($topbar-bg-color, 5%);
+//$topbar-dropdown-label-font-size: em-calc(10);
+//$topbar-dropdown-label-bg: #fff; //lighten($topbar-bg-color, 5%);
 
 // Top menu icon styles
 
 // $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: em-calc(13);
+// $topbar-menu-link-font-size: em-calc(20);
 // $topbar-menu-link-weight: bold;
 // $topbar-menu-link-color: #fff;
 // $topbar-menu-icon-color: #fff;
@@ -1310,8 +1310,8 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 
 // Transitions and breakpoint styles
 
-// $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: 940 !default; // Change to 9999px for always mobile layout
+$topbar-transition-speed: 300ms;
+//$topbar-breakpoint: 450px; // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
 
 // Divider Styles
@@ -1322,4 +1322,4 @@ $header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Uni
 // Sticky Class
 
 // $topbar-sticky-class: ".sticky";
-// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+$topbar-arrows: false; //Set false to remove the triangle icon from the menu item

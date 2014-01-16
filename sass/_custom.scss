@@ -26,20 +26,20 @@
   $color-maroon: #762141;
   $color-maroon: #762141;
   $color-black: #000000;
-  $color-midgray1: #555555;
+  $color-midgray1: #333333;
   $color-midgray2: #666666;
   $color-white: #FFFFFF;
 
 // Overall Paddings
-  $padding-major: emCalc(32);
-  $padding-minor: emCalc(16);
-  $padding-mini: emCalc(8);
+  $padding-major: em-calc(32);
+  $padding-minor: em-calc(16);
+  $padding-mini: em-calc(8);
 
 // Backgrounds
   $background-d: url('http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png');
 
 // Borders
-  $thick-maroon: 5px solid $color-maroon;
+  $thick-maroon: 7px solid $color-maroon;
   $medium-grey: 3px solid $color-lightGray;
   $thin-grey: 1px solid $color-lightGray;
 
@@ -58,6 +58,9 @@
 
   a {
     color: $color-maroon;
+    &:hover {
+      color: $color-darkGray;
+    }
   }
 
   ul {
@@ -81,19 +84,28 @@
     font-weight: $bolder;
   }
 
-//Header Styles
-  .logo {
-    padding: $padding-major 0 $padding-major ($padding-major - emCalc(5));
+  .see-all{
+  //border: $thin-grey;
+  padding-right: 12px;
+  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 50px 6px;
+  &:hover {
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 50px 6px;
+    }
   }
 
-  .mission-text p{
+//Header Styles
+  .logo {
+    padding: $padding-major 0 $padding-major em-calc(40);
+  }
+
+  .mission-text p {
     //border: 1px solid #000000;
     color: $color-black;
     position: relative;
-    padding: emCalc(56) emCalc(20) emCalc(0) emCalc(38);
-    height: emCalc(135);
-    letter-spacing: emCalc(-.4);
-    font-size: emCalc(18);
+    padding: em-calc(56) 0 0 em-calc(38);
+    height: em-calc(135);
+    letter-spacing: em-calc(-.4);
+    font-size: em-calc(18);
     line-height: 130%;
   }
 
@@ -102,7 +114,7 @@
     top: 0; left: 0; bottom: 0; right: 0;
     width: 100%; 
     height: 60%;
-    min-width: emCalc(200);
+    min-width: em-calc(200);
     padding: 10%;
     //border: 1px solid #666;
   }*/
@@ -112,17 +124,37 @@
     background-image: $background-d;
     background-repeat:repeat;
     border-top: $thick-maroon;
-    padding: $padding-major 0 $padding-major 0;
+    padding: em-calc(25) 0 em-calc(28) 0;
     .footer-address{
-      padding: 0 0 0 $padding-major;
+      padding: 0 0 0 em-calc(40);
+      h1 {
+        font-size: em-calc(14);
+      }
+      p {
+        font-size: em-calc(12);
+        padding: 0 0 em-calc(10) 0;
+        margin: 0;
+      }
       .footer-title {
         padding-bottom: 0;
         margin-bottom: 0;
       }
+      .footer-url {
+        padding-top: em-calc(20);
+      }
     }
     .footer-nav {
-      ul li ul {
-        display: none;
+      ul li {
+        font-size: em-calc(14);
+        padding-bottom: em-calc(2);
+        ul {
+          display: none;
+        }
+      }
+      .footer-copyright {
+        padding: 0;
+        font-size: em-calc(12);
+        margin: 0;
       }
     }
   }
@@ -130,27 +162,18 @@
 // Nav One Styles
   .nav-one {
     background-color: $color-maroon;
-//    padding-top: emCalc(5);
-    height: emCalc(35);
-//      ul {
-//        display: inline-block;
-//     }
-//      li {
-//        display: inline-block;
-//        padding-left: $padding-major - emCalc(3);
-//        a {
-//          color: $color-white;
-//          &:hover {
-//            color: $color-maroon;
-//          }
-//        }
-//      }
+//    padding-top: em-calc(5);
+    max-height: em-calc(35);
+    text-transform: uppercase;
+    nav {
+      padding-left: 0 em-calc(40) 0 em-calc(40);
     }
+  }
 
 //Nav Two Styles
   .nav-two {
     background-image: $background-d;
-    //height: emCalc(35); need this for real build
+    //height: em-calc(35); need this for real build
     background-repeat:repeat;
     border-top: $thin-grey;
     border-bottom: $thin-grey;
@@ -160,17 +183,16 @@
       margin: auto;
       li {
       display: inline-block;
-      padding: emCalc(5) $padding-mini emCalc(5) $padding-mini;
+      padding: em-calc(5) $padding-mini em-calc(5) $padding-mini;
       }
     }
   }
 
 // Aside Styles
-
   aside {
     .aside-wrapper {
-      padding: emCalc(30) emCalc(15) emCalc(90) emCalc(55);
-      .side-nav{
+      padding: em-calc(30) em-calc(40) em-calc(90) em-calc(65);
+      .side-nav{ //to come
         li {
           //border-bottom;
           &:first-child {
@@ -179,18 +201,55 @@
         }
       }
       .advert {
-        padding: emCalc(15) 0 emCalc(40) 0;
+        padding: em-calc(15) 0 em-calc(40) 0;
         border-bottom: $thin-grey;
       }
       .spotlight {
-        padding: emCalc(15) 0 emCalc(15) 0;
+        padding: em-calc(15) 0 em-calc(15) 0;
         border-bottom: $thin-grey;
+        .spotlight-header {
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-size: em-calc(15);
+            height: em-calc(21);
+          }
+        }
+        .spotlight-image {
+          img {
+            //asas
+          }
+        }
+        .spotlight-title {
+          h3 {
+            padding-top: em-calc(13);
+            margin: 0;
+            font-size: em-calc(18);
+            height: em-calc(33);
+          }
+        }
+        .spotlight-text {
+          p {
+            padding: 0px 0px 5px 0px;
+            margin: 3px 0px 0px 0px;
+            font-size: em-calc(14);
+            line-height: 19px;
+          }
+        }
       }
       .partners {
-        padding: emCalc(15) 0 emCalc(15) 0;
-        .title-bar{
+        padding: em-calc(15) 0 em-calc(15) 0;
+        .partners-title-bar{
           background-color: $color-lightGray;
-          height: emcalc(40);
+          height: em-calc(40);
+          h3 {
+            padding: 4px 0px 0px 10px;
+            font-size: em-calc(18);
+            color: $color-midgray2;
+          }
+          .see-all {
+            margin: 10px 10px 0px 0px;
+          }
         }
         .partners-list{
           .sponsor{
@@ -198,9 +257,10 @@
             border-left: $thin-grey;
             border-right: $thin-grey;
             border-bottom: $thin-grey;
-            height: emCalc(60);
+            height: 60px;
             img {
-             padding: emCalc(10) 0 emCalc(10) $padding-major;
+              //border: 1px solid #000;
+              margin: 6px 0px 0px 25px;
            }
           }
         }
@@ -208,82 +268,139 @@
     }
   }
 
-
-// Article Section Styles
-
-  section .articles-wrapper{
-    padding: emCalc(45) 0 emCalc(90) emCalc(15);
+// Article Section Styles for Home Page and News Landing Page
+  section .articles-wrapper {
+    //border:1px solid #000;
+    padding: em-calc(32) em-calc(8) em-calc(90) em-calc(32);
     .title-bar {
       border-bottom: $thin-grey;
+      height: 23px; 
+      .title {
+      }
     }
     ul {
       li {
         padding:0;
-        .listed-article {
+        .listed-article, .listed-article-landing {
           border-bottom: $thin-grey;
-          padding: emCalc(25) 0 emCalc(25) 0;
+          padding: em-calc(25) 0 em-calc(25) 0;
           .article-image {
+            margin-right: em-calc(30);
+            overflow:hidden; // this is important
+            position:relative; // this is important too
+            width: 250px;
+            height: 135px;
             img {
-            margin: 0 emCalc(25) emCalc(15) 0;
-            height: emCalc(135);
-            width: emCalc(250);
+              position:absolute;
             }
           }
-        }
-        .article-readmore p {
-          padding: 0;
-          margin: 0;
-        }
+          .article-tag {
+            padding: 0;
+            margin: 0;
+            font-size: em-calc(12);
+            height: em-calc(9);
+            a {
+              color: $color-midgray2;
+              &:hover {
+                color: $color-maroon;
+              }
+            }
+          }
+          .article-title {
+            //border: 1px solid #000;
+            padding: 0;
+            margin: 8px 0 -6px 0;
+            h2 {
+              font-size: em-calc(20);
+            }
+            //height: em-calc(37);
+            a {
+              color: $color-darkGray;
+              &:hover {
+                color: $color-maroon;
+              }
+            }
+          }
+          .article-teaser {
+            //border: 1px solid #000;
+            padding: 0;
+            margin-bottom: -11px;
+            p {
+              font-size: em-calc(16);
+              line-height: 19px;
+            }
+          }
+          .article-readmore {
+            //border: 1px solid #000;
+            padding: 0;
+            margin: 0;
+            a {
+              font-size: em-calc(16);
+              color: $color-maroon;
+              &:hover {
+                color: $color-midgray2;
+              }
+            }
+          }
+        }        
       }
       li:first-child {
-        .listed-article .article-image img {
-          height: emCalc(200);
-          width: emCalc(250);
+        .listed-article {
+          .article-image {
+            width: 250px;
+            height: 200px;
+            img {
+              min-width: 350px; 
+              height: 210px;
+              left:-60px;
+            }
+          }
         }
       }
     }
   }
 
 // Stats and Highlights Styles
-
   .stats-highlights{
     background-image: $background-d;
     background-repeat: repeat-x;
   }
 
   section .stats-wrapper {
-    padding: emCalc(22) 0 emCalc(22) 0;
+    padding: em-calc(22) 0 em-calc(22) 0;
+    height: 118px;
+    margin: 0;
     ul {
       width: 100%;
       border-top: $thin-grey;
       border-bottom: $thin-grey;
-      height: emCalc(75);
+      height: 75px;
       margin: auto;
       text-align:center;
       li {
         display: inline-block;
-        width: 30%;
-        margin: emCalc(8) 0 emCalc(7) 0;
+        width: 33%;
+        margin: em-calc(7) 0 em-calc(7) 0;
         text-align:center;
-        height: emCalc(60);
+        height: em-calc(60);
         border-left: $thin-grey;
         .title {
           display: block;
           color: $color-midgray1;
           font-weight: 300;
-          font-size: emCalc(14);
-          padding-top: emCalc(0);
-          margin: -6px;
+          font-size: em-calc(16);
+          padding-top: em-calc(0);
+          margin: -5px;
         }
         .detail {
           position: relative;
-          top: -17px;
+          top: -11px;
           display: block;
           color: $color-midgray2;
           font-weight: 600;
-          font-size: emCalc(50); 
+          font-size: em-calc(48); 
           padding: 0;
-          margin: 5px;
+          margin: 0;
         }
       }
       li:first-child{
@@ -293,61 +410,186 @@
   }
 
 // Orbit Styles
-
   .highlights {
+    ul {
+      li { //(each highlight)
+        padding: 0 em-calc(40) 0 em-calc(40);
+        .hightlighted-article { //(content) 
+          .article-image {
+            padding-right: em-calc(25);
+          }
+          .article-text-elements {
+            background-color: #fff;
+            padding: em-calc(36) em-calc(25) 0 0;
+            .article-title {
+              h2 {
+                text-transform: uppercase;
+                font-size: em-calc(30);
+                line-height: 30px;
+                a {
+                  color: $color-darkGray;
+                  &:hover {
+                    color: $color-maroon;
+                  }
+                }
+              }
+            }
+            .article-teaser {
+              p{
+                padding-top: 2px; 
+                font-size: em-calc(19);
+                //font-weight: $bolder;
+                line-height: 21px;
+              }
+            }
+            .article-readmore {
+              p {
+                a {
+                  color: $color-white;
+                  font-size: em-calc(19);
+                  //font-weight: $bolder;
+                  background-color: $color-maroon;
+                  padding: em-calc(12) em-calc(10) em-calc(7) em-calc(10);
+                  &:hover {
+                    //asas
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
 // Content Pages
 
-.breadcrumbs-bcf {
-  display: inline-block;
-  margin: 0 0 20px 0; 
-  overflow: hidden;
-  border-bottom: $medium-grey;
-  width: 100%;
-  font-size: emCalc(16);
-  li {
-    display: inline-block;
-    padding-right: emCalc(15);
-    img {
-      vertical-align: text-top;
-      padding-top:emCalc(3);
-    }
-  }
-  .selected h1 {
-      font-family: $body-font-family;
-      font-size: emCalc(16);
+// Breadcrumbs
+  .breadcrumbs-bcf {
+    padding: 0px;
+    margin: 0 0 20px 0; 
+    overflow: hidden;
+    border-bottom: $medium-grey;
+    width: 100%;
+    font-size: em-calc(12);
+    p {
+      padding: 0;
       margin:0;
-      padding:0;
+      span {
+        color: $color-midgray1;
+        padding: 0 em-calc(25) 0 em-calc(5);
+        margin: 0;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
+        a {
+          color: $color-midgray1;
+            &:hover{
+            color: $color-maroon;
+          }
+        }
+        &:first-child {
+          padding-left: 0;
+          a {
+            color: $color-maroon;
+            &:hover{
+              color: $color-midgray1;
+            }
+          }
+        }
+        &:last-of-type {
+          background: none;
+        }
+      }
     }
   }
 
+// Article Pages
 .article-category {
-  color: $color-lightGray;
+    padding: 0; 
+    margin: 0;
+    font-size: em-calc(10);
+    a {
+    color: $color-lightGray;
+      &:hover{
+      color: $color-maroon;
+    }
+  }
 }
 
 article {
   width: 100%;
-  h1 {
-    font-size: $h1-font-size;
-  }
   .article-date{
     color: $color-lightGray;
+    padding: 12px 0px 4px 0px;
   }
-  .article-text-additional{
-    width: 100%;
-    .caption {
-      background-color: #eee; 
-      margin-bottom: $padding-minor; 
-      padding: emCalc(10);
+  h1 {
+    font-size: $h1-font-size;
+    color: $color-darkGray;
+    line-height: 39px;
+    padding-top: 2px;
+    margin: 0px;
+  }
+  .article-text{
+    h2 {
+      padding: em-calc(15) 0 em-calc(5) 0;
+      line-height: 26px;
+      margin:0;
     }
-    .image-content{
-      width: 100%; 
+    h3, h4, h5, h6 {
+      padding: em-calc(10) 0 em-calc(4) 0;
+      line-height: 21px;
+      margin: 0 0 -14px 0;
     }
+    p {
+      color: $color-midgray1;
+      font-size: $paragraph-font-size;
+      padding: em-calc(9) 0 em-calc(9) 0;
+      line-height: 21px;
+      margin: 0;
+    }
+    ul {
+      list-style-type: disc;
+      padding: em-calc(9) 0 em-calc(9) em-calc(25);
+      line-height: 21px;
+      margin: 0;
+      li {
+        padding: em-calc(9) 0 em-calc(9) 0;
+        margin: 0;
+        ul {
+          list-style-type: circle;
+          padding-bottom: 0;
+          li:last-of-type{
+            padding-bottom: 0px;
+          }
+        }
+      }
+    }
+    a {
+      font-weight: $bolder;
+      color: $color-maroon;
+      &:hover {
+        color: $color-darkGray;
+      }
+    }
+    .article-additional{
+      width: 100%;
+      margin-bottom: 22px;
+      .image-content{
+        width: 100%; 
+      }
+      .caption {
+        background-color: $color-darkGray;
+        color: $color-white;
+        padding: em-calc(7) 0 em-calc(7) em-calc(10);
+        p {
+          color: $color-white;
+          padding: 0;
+          margin: 0;
+        }
+      }
     .video-content{
       position: relative;
       padding-bottom: 57.25%;
-      padding-top: emCalc(30); 
+      padding-top: em-calc(30); 
       height: 0; 
       overflow: hidden;
       margin-bottom: 0;
@@ -360,7 +602,5 @@ article {
       }
     }
   }
-  .article-text{
-
-  }
+}
 }

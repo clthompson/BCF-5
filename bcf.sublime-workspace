@@ -1,0 +1,642 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"inline"
+			],
+			[
+				"bol",
+				"bold"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"paddi",
+				"padding-mini"
+			],
+			[
+				"col",
+				"color-lightGray"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"di",
+				"DIV	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sass/_custom.scss",
+			"settings":
+			{
+				"buffer_size": 13596,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/app.css",
+			"settings":
+			{
+				"buffer_size": 239505,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/_settings.scss",
+			"settings":
+			{
+				"buffer_size": 36819,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/foundation/components/_orbit.scss",
+			"settings":
+			{
+				"buffer_size": 9334,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "articleBuild.html",
+			"settings":
+			{
+				"buffer_size": 10157,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 242.0,
+		"selected_items":
+		[
+			[
+				"color",
+				"Color picker"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git h",
+				"Git: Commit history"
+			],
+			[
+				"readme",
+				"ReadmePlease"
+			],
+			[
+				"pack i",
+				"Package Control: Install Package"
+			],
+			[
+				"pack I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"synt js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snip",
+				"Snippet: Function"
+			],
+			[
+				"synt j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synt ht",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopLayout.html",
+		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopArticleWithImage.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/statsHighlights.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_foundation.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_buttons.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/navOne.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_settings.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_type.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - footerScripts.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Content Video.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Home Page.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - News Landing Page.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Content Page.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Aside Spotlight.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Aside Advertisement.txt",
+		"/Z/Public/$BCF_Website/Development/003-Production5/articlesSectionForContent.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/css/app.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/articlesSection.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_grid.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/9733.php",
+		"/Z/Public/$BCF_Website/Development/003-Production5/asideColumn.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/navTwo.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/pageStructure.html",
+		"/Z/Public/$$Redesign/$Admin/Standards/Dev/9733.php",
+		"/Z/Public/$BCF_Website/Development/003-Production5/footer.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/header.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/gridtest.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/headFootSetup.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/primaryNav.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/index.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/headSetup.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_custom.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/config.rb",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/_normalize.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/services.html",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/foundation/components/_buttons.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/_custom.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/about.html",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/dogs.html",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/css/app.css",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/_settings.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/foundation/components/_panels.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/index.html",
+		"/Z/Public/$BCF_Website/Development/002-Production/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/002-Production/sass/_settings.scss",
+		"/Z/Public/$BCF_Website/Development/002-Production/sass/_custom.scss",
+		"/Z/Public/$BCF_Website/Development/002-Production/css/app.css",
+		"/Z/Public/$BCF_Website/Development/002-Production/sass/css",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/002-Production/index.html",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/foundation/components/_type.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/_foundation.scss",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/sass/foundation/components/_block-grid.scss",
+		"/Z/Public/$BCF_Website/Development/001-TestGit/css/foundation.css",
+		"/Z/Public/$BCF_Website/Development/002-Production/config.rb",
+		"/J/Training/Foundation - Incorporating Sass and Compass/Exercise Files/wisdompets/config.rb",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/ExampleSnippets.txt",
+		"/J/Training/CSS with LESS and Sass/Exercise Files",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_me.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/import_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/SASS_SampleDoc.html",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/format_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/format_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/funcs_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch5/mixargs_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/ops_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/SASS_SampleDoc.html",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/mixin_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/var_styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/nested_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/FirstSassExample.html",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.scss",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/var_styles.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch4/123.css",
+		"/J/Training/CSS with LESS and Sass/Exercise Files/Ch1/styles.less",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/LineEndings.sublime-settings",
+		"/Z/Public/$BCF_Website/Development/001-TestGit/001-TestGit.sublime-project",
+		"/Z/Public/$BCF_Website/Development/001-TestGit/practice.html",
+		"/Z/Public/$BCF_Website/Development/001-TestGit/index.html",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Emmet.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/readme.md",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/LineEndings/LineEndings.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Installed Packages/Package Control.sublime-package",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-solution.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/css/app.css",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/css/foundation.css",
+		"/C/Users/jdoe/Downloads/Up and Running with Sublime Text 2/Exercise Files/roux_website/_scripts/SpryTabbedPanels.js",
+		"/C/Users/jdoe/Downloads/Up and Running with Sublime Text 2/Exercise Files/roux_website/index.htm",
+		"/Z/Public/$BCF_Website/Development/001-TestGit/css/app.css",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-sections.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-reveal.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-orbit.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-clearing.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/4-breadcrumbs.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-stylechallenge.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-visibility.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-overridecss.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-video.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-thumbnails.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-panels.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-buttons.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-lists.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-typography.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/gridchallenge.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/blockgrid.html",
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/sourceordering.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\jdoe\\Downloads\\Foundation-4.3.2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"comen",
+			"-wrapper",
+			"breadcrumbs-bcf",
+			"articles-wrapper",
+			"see-all",
+			"breadcrumbs-bcf",
+			"$orbit-nav-arrow-color",
+			"opposite-dir",
+			"opposite-d",
+			"$orbit-nav-bg",
+			"$orbit-container-bg",
+			"emCalc",
+			"top-bar-section",
+			".top-bar-js-breakpoint",
+			"$topbar-breakpoint",
+			"only screen and",
+			"500px",
+			"not-cl",
+			"moved",
+			"dropdown",
+			".has-dropdown",
+			"display",
+			"none",
+			"display",
+			"show",
+			"hide",
+			"has-dropdown",
+			"height",
+			"$topbar-bg",
+			"height",
+			"has-dropdown",
+			"z-index",
+			"top-bar-section",
+			"$topbar-link-bg-active",
+			"$topbar-link-color-hover",
+			"$topbar-link-bg-hover",
+			"emCalc",
+			"top",
+			"inter",
+			"h1",
+			"rem-calc",
+			"medium-8",
+			"medium",
+			"minor",
+			"minor-padding",
+			"major-padding",
+			"mini-padding",
+			"gray-thin",
+			"grey",
+			"clear",
+			".columns",
+			"panel",
+			"top-bar",
+			"max-",
+			"www/",
+			"comenica",
+			"color",
+			"1.875",
+			"<p>",
+			"			<p>We",
+			"div",
+			"\"",
+			"row",
+			"normalize",
+			"co"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"em-calc",
+			"alt=\"",
+			"padding-minor",
+			"padding-major",
+			"padding-mini",
+			"thin-grey",
+			"www."
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sass/_custom.scss",
+					"settings":
+					{
+						"buffer_size": 13596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12844,
+								12844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7872.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/app.css",
+					"settings":
+					{
+						"buffer_size": 239505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238219,
+								238207
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 96188.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/_settings.scss",
+					"settings":
+					{
+						"buffer_size": 36819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6134,
+								6134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2447.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/foundation/components/_orbit.scss",
+					"settings":
+					{
+						"buffer_size": 9334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6124,
+								6232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3232.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "articleBuild.html",
+					"settings":
+					{
+						"buffer_size": 10157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3746,
+								3746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 375.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"doc",
+				"css/foundation.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 205.0,
+	"status_bar_visible": true
+}

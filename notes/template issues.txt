@@ -1,33 +1,17 @@
-stats stuff
-            <li>
-              <p class="title bolder all-caps">Scholarships & Awards</p>
-              <p class="detail">$7.3M</p>
-            </li>
-            <li>
-              <p class="title bolder all-caps">Students Benefitted</p>
-              <p class="detail">5,950</p>
-            </li>
-            <li>
-              <p class="title bolder all-caps">Gifts Received</p>
-              <p class="detail">35,913</p>
-            </li>
+            <!-- inside each li, need a conditional list element that references the actual page's side nav -->
 
+                <li>anchor and textGO</li>
+                    <!--<ul>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ul>-->
+                <li>A</li>
+                <li>DN</li>
+                <li>C</li>
 
-Orbit stuff
+<li><a href="http:www.brooklyn.cuny.edu/web/support/foundation/giving/13994.htm">Base 13994</a></li>
 
-            <!IoRangeList><div class="fermata_item"  style="clear:both;">
-                <div class="date_image">
-                    <span class="date"><%text_display_date%></span>
-                    <img src="<%img_teaser%>" alt="<%text_title%>" title="<%text_title%>" /a>
-                </div>                        
-                <div class="info">
-                    <h2><%list_news_items%><a href="<%IoPageInfo_Link%>"><%stf_source%><%stf_date%></a></h2>
-                    <p><%stf_teaser_blurb%></p>
-                        
-                </div>
-            
-        </div><!-- .news_item -->
-            <!/IoRangeList>
 
 HomePage
 
@@ -60,9 +44,49 @@ Articles Landing page
 
 
 content pages
-image
-title
-date
-category
-text content
-teaser blurb
+	image
+	title
+	date
+	category
+	text content
+	teaser blurb
+
+aside column
+	nav
+	adverts
+	spotlight
+	partners
+top stories
+
+
+            <div class="articles-wrapper">
+              <div class="breadcrumbs2">
+                <ul class="all-caps">
+                  <li><a href="#"><p class="bolder">Home</p></a></li>
+                  <!IoRangeConditional><li><%opt_siteCategory%></li><!/IoRangeConditional>
+                  <li><p class="bolder"><%stf_title%></p</li>
+                </ul>
+                <!IoRangeConditional><p class="article-category"><%opt_category%></p><!/IoRangeConditional>
+                <!IoRangeConditional><div class="hidden"><%stf_textTeaser%></div><!/IoRangeConditional>
+                <article>
+                  <h1><%stf_title%></h1>
+                  <!IoRangeConditional><p class="article-date"><%stf_date%></p><!/IoRangeConditional>
+                  <!IoRangeConditional><div class="article-text-additional"><%con_additional1%></div><!/IoRangeConditional>
+                  <div class="article-text">
+                    <%txt_content%>
+                  </div>
+                  <!IoRangeConditional><div class="article-text-additional"><%con_additional2%></div><!/IoRangeConditional>
+                </article>
+              </div>
+
+
+
+background image
+
+#consistent_nav li.webCentral {background: url(../images/yellow_arrow.png); margin: 0 10px 0 0; padding: 0; } 
+
+#consistent_nav li.webCentral a, #consistent_nav li.webCentral a:link
+#consistent_nav li.webCentral a:active, 
+#consistent_nav li.webCentral a:visited {background:#FAD129 url(../images/yellow_arrow.png) no-repeat 90px center;  padding: 5px 28px 5px 5px; border: 1px solid #bbb8b5; -moz-box-shadow: 2px 2px 5px #888; -webkit-box-shadow: 2px 2px 5px #888; box-shadow: 2px 2px 5px #888;}
+
+#consistent_nav li.webCentral a:hover { background: #cecdcc url(../images/gray_arrow.png) no-repeat 90px center; color: #333; border: 1px solid #bbb8b5;} 

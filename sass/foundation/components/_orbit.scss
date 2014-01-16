@@ -12,17 +12,17 @@ $orbit-caption-padding: em-calc(10,14) !default;
 $orbit-caption-height: auto !default;
 
 // We use these to control the left/right nav styles
-$orbit-nav-bg: rgba(0,0,0,0.6) !default;
-$orbit-nav-bg-hover: rgba(0,0,0,0.6) !default;
-$orbit-nav-arrow-color: #fff !default;
-$orbit-nav-arrow-color-hover: #ccc !default;
+$orbit-nav-bg: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)
+$orbit-nav-bg-hover: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)
+$orbit-nav-arrow-color: rgba(0,0,0,0.6); //#fff !default;
+$orbit-nav-arrow-color-hover: rgba(0,0,0,0.6); //#ccc !default;
 
 // We use these to control the timer styles
 $orbit-timer-bg: rgba(0,0,0,0.6) !default;
 $orbit-timer-show-progress-bar: true !default;
 
 // We use these to control the bullet nav styles
-$orbit-bullet-nav-color: #999 !default;
+$orbit-bullet-nav-color: #fff; //#999 !default;
 $orbit-bullet-nav-color-active: #555 !default;
 $orbit-bullet-radius: em-calc(12) !default;
 
@@ -121,7 +121,7 @@ $preloader-class: "preloader" !default;
     overflow: hidden;
     width: 100%;
     position: relative;
-    background: $orbit-container-bg;
+    background: transparent; // $orbit-container-bg;
 
     .orbit-slides-container {
       list-style: none;
@@ -225,13 +225,14 @@ $preloader-class: "preloader" !default;
     &:hover .orbit-timer > span { display: block; }
 
     // Let's get those controls to be right in the center on each side
-    .orbit-prev,
-    .orbit-next {
+    .orbit-prev{
+
       position: absolute;
       top: 50%;
       margin-top: -25px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow.png) no-repeat 0px 10px;
       background-color: $orbit-nav-bg;
-      width: 50px;
+      width: 30px;
       height: 60px;
       line-height: 50px;
       color: white;
@@ -239,7 +240,7 @@ $preloader-class: "preloader" !default;
       z-index: 10;
 
       &:hover {
-        background-color: $orbit-nav-bg-hover;
+        //background-color: $orbit-nav-bg-hover; 
       }
 
       & > span {
@@ -249,7 +250,34 @@ $preloader-class: "preloader" !default;
         display: block;
         width: 0;
         height: 0;
-        border: inset 16px;
+        //border: inset 16px;
+      }
+    }
+    .orbit-next {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow.png) no-repeat -10px 10px;
+      background-color: $orbit-nav-bg;
+      width: 30px;
+      height: 60px;
+      line-height: 50px;
+      color: white;
+      text-indent: -9999px !important;
+      z-index: 10;
+
+      &:hover {
+        background-color: $orbit-nav-bg-hover; 
+      }
+
+      & > span {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        display: block;
+        width: 0;
+        height: 0;
+        //border: inset 16px;
       }
     }
     .orbit-prev { #{$default-float}: 0;
@@ -277,11 +305,11 @@ $preloader-class: "preloader" !default;
   }
 
   .orbit-bullets {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 35px auto;
     overflow: hidden;
     position: relative;
-    top: 10px;
-
+    width: 12%;
+    top: 17.5px;
     li {
       display: block;
       width: $orbit-bullet-radius;
