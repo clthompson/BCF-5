@@ -5,7 +5,7 @@
 @import "normalize";
 
 // Comment out this import if you are customizing you imports below
-@import "foundation";
+//@import "foundation";
 
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
@@ -20,7 +20,7 @@
 @import "foundation/components/grid-5";
 // 
 
-// @import "foundation/components/visibility";
+ @import "foundation/components/visibility";
 // @import "foundation/components/block-grid";
 // @import "foundation/components/type";
 // @import "foundation/components/buttons";
@@ -31,8 +31,8 @@
 // @import "foundation/components/split-buttons"; // *requires components/buttons
 // @import "foundation/components/flex-video";
 // @import "foundation/components/section";
-// @import "foundation/components/top-bar";  // *requires components/grid
-// @import "foundation/components/orbit";
+ @import "foundation/components/top-bar";  // *requires components/grid
+ @import "foundation/components/orbit";
 // @import "foundation/components/reveal";
 // @import "foundation/components/joyride";
 // @import "foundation/components/clearing";
@@ -55,4 +55,5 @@
 // @import "foundation/components/dropdown";
 
 // Comment out this import if you don't want to use custom
+// @import "flexnav";
 @import "custom"; 

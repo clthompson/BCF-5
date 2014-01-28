@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"script"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
 				"in",
 				"inline"
 			],
 			[
 				"bol",
 				"bold"
-			],
-			[
-				"font-",
-				"font-weight"
 			],
 			[
 				"background",
@@ -83,7 +87,7 @@
 			"file": "sass/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 13596,
+				"buffer_size": 14145,
 				"line_ending": "Windows"
 			}
 		},
@@ -91,7 +95,7 @@
 			"file": "css/app.css",
 			"settings":
 			{
-				"buffer_size": 239505,
+				"buffer_size": 62938,
 				"line_ending": "Windows"
 			}
 		},
@@ -104,18 +108,29 @@
 			}
 		},
 		{
-			"file": "sass/foundation/components/_orbit.scss",
+			"file": "sass/app.scss",
 			"settings":
 			{
-				"buffer_size": 9334,
+				"buffer_size": 2498,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "navOne.html",
+			"settings":
+			{
+				"buffer_size": 2858,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "articleBuild.html",
+			"contents": "// Orbit Variables\n//\n$include-html-orbit-classes: $include-html-classes !default;\n\n// We use these to control the caption styles\n$orbit-container-bg: #f5f5f5 !default;\n$orbit-caption-bg: rgba(0,0,0,0.6) !default;\n$orbit-caption-font-color: #fff !default;\n$orbit-caption-font-size: em-calc(14) !default;\n$orbit-caption-position: \"bottom\" !default; // Supported values: \"bottom\", \"under\"\n$orbit-caption-padding: em-calc(10,14) !default;\n$orbit-caption-height: auto !default;\n\n// We use these to control the left/right nav styles\n$orbit-nav-bg: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)\n$orbit-nav-bg-hover: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)\n$orbit-nav-arrow-color: rgba(0,0,0,0.6); //#fff !default;\n$orbit-nav-arrow-color-hover: rgba(0,0,0,0.6); //#ccc !default;\n\n// We use these to control the timer styles\n$orbit-timer-bg: rgba(0,0,0,0.6) !default;\n$orbit-timer-show-progress-bar: true !default;\n\n// We use these to control the bullet nav styles\n$orbit-bullet-nav-color: #fff; //#999 !default;\n$orbit-bullet-nav-color-active: #555 !default;\n$orbit-bullet-radius: em-calc(12) !default;\n\n// We use these to controls the style of slide numbers\n$orbit-slide-number-bg: rgba(0,0,0,0) !default;\n$orbit-slide-number-font-color: #fff !default;\n$orbit-slide-number-padding: em-calc(5) !default;\n\n// Graceful Loading Wrapper and preloader\n$wrapper-class: \"slideshow-wrapper\" !default;\n$preloader-class: \"preloader\" !default;\n\n\n@if $include-html-orbit-classes != false {\n\n  @if $experimental {\n    @-webkit-keyframes rotate {\n      from { -webkit-transform: rotate(0deg); }\n      to { -webkit-transform: rotate(360deg); }\n    }\n    @-moz-keyframes rotate {\n      from { -moz-transform: rotate(0deg); }\n      to { -moz-transform: rotate(360deg); }\n    }\n    @-o-keyframes rotate {\n      from { -o-transform: rotate(0deg); }\n      to { -o-transform: rotate(360deg); }\n    }\n  }\n  @keyframes rotate {\n    from { transform: rotate(0deg); }\n    to { transform: rotate(360deg); }\n  }\n\n  /* Orbit Graceful Loading */\n  .#{$wrapper-class} {\n    position: relative;\n\n    ul {\n      // Prevent bullets showing before .orbit-container is loaded\n      list-style-type: none;\n      margin: 0;\n\n      // Hide all list items\n      li,\n      li .orbit-caption { display: none; }\n\n      // ...except for the first one\n      li:first-child { display: block; }\n    }\n\n    .orbit-container { background-color: transparent;\n\n      // Show images when .orbit-container is loaded\n      li { display: block;\n\n        .orbit-caption { display: block; }\n      }\n    }\n  }\n\n  // Orbit preloader\n  .#{$preloader-class} {\n    display: block;\n    width: 40px;\n    height: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -20px;\n    margin-left: -20px;\n    border: solid 3px;\n    border-color: #555 #fff;\n    @include radius(1000px);\n    @if $experimental {\n      -webkit-animation-name: rotate;\n      -webkit-animation-duration: 1.5s;\n      -webkit-animation-iteration-count: infinite;\n      -webkit-animation-timing-function: linear;\n      -moz-animation-name: rotate;\n      -moz-animation-duration: 1.5s;\n      -moz-animation-iteration-count: infinite;\n      -moz-animation-timing-function: linear;\n      -o-animation-name: rotate;\n      -o-animation-duration: 1.5s;\n      -o-animation-iteration-count: infinite;\n      -o-animation-timing-function: linear;\n    }\n    animation-name: rotate;\n    animation-duration: 1.5s;\n    animation-iteration-count: infinite;\n    animation-timing-function: linear;\n  }\n\n  .orbit-container {\n    overflow: hidden;\n    width: 100%;\n    position: relative;\n    background: transparent; // $orbit-container-bg;\n\n    .orbit-slides-container {\n      list-style: none;\n      margin: 0;\n      padding: 0;\n      position: relative;\n\n      img { display: block; max-width: 100%; }\n\n      &>* {\n        position: absolute;\n        top: 0;\n        width: 100%;\n        @if $text-direction == rtl {\n          margin-right: 100%;\n        }\n        @else {\n          margin-left: 100%;\n        }\n\n        &:first-child {\n          @if $text-direction == rtl {\n          margin-right: 0%;\n          }\n          @else {\n          margin-left: 0%;\n          }\n        }\n\n        .orbit-caption {\n          @if $orbit-caption-position == \"bottom\" {\n            position: absolute;\n            bottom: 0;\n          } @else if $orbit-caption-position == \"under\" {\n            position: relative;\n          }\n\n          background-color: $orbit-caption-bg;\n          color: $orbit-caption-font-color;\n          width: 100%;\n          padding: 10px 14px;\n          font-size: em-calc(14);\n        }\n      }\n    }\n\n    .orbit-slide-number {\n      position: absolute;\n      top: 10px;\n      #{$default-float}: 10px;\n      font-size: 12px;\n      span { font-weight: 700; padding: $orbit-slide-number-padding;}\n      color: $orbit-slide-number-font-color;\n      background: $orbit-slide-number-bg;\n      z-index: 10;\n    }\n\n    .orbit-timer {\n      position: absolute;\n      top: 10px;\n      #{$opposite-direction}: 10px;\n      height: 6px;\n      width: 100px;\n      z-index: 10;\n      .orbit-progress {\n        @if $orbit-timer-show-progress-bar {\n          height: 100%;\n          background-color: $orbit-timer-bg;\n          display: block;\n          width: 0%;\n        }\n      }\n\n      // Play button\n      & > span {\n        display: none;\n        position: absolute;\n        top: 10px;\n        #{$opposite-direction}: 0;\n        width: 11px;\n        height: 14px;\n        border: solid 4px #000;\n        border-top: none;\n        border-bottom: none;\n      }\n\n      // Pause button\n      &.paused {\n        & > span {\n          #{$opposite-direction}: -6px;\n          top: 9px;\n          width: 11px;\n          height: 14px;\n          border: inset 8px;\n          border-right-style: solid;\n          border-color: transparent transparent transparent #000;\n        }\n      }\n    }\n\n    &:hover .orbit-timer > span { display: block; }\n\n    // Let's get those controls to be right in the center on each side\n    .orbit-prev{\n\n      position: absolute;\n      top: 50%;\n      margin-top: -25px;\n      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow.png) no-repeat 0px 10px;\n      background-color: $orbit-nav-bg;\n      width: 30px;\n      height: 60px;\n      line-height: 50px;\n      color: white;\n      text-indent: -9999px !important;\n      z-index: 10;\n\n      &:hover {\n        //background-color: $orbit-nav-bg-hover; \n      }\n\n      & > span {\n        position: absolute;\n        top: 50%;\n        margin-top: -16px;\n        display: block;\n        width: 0;\n        height: 0;\n        //border: inset 16px;\n      }\n    }\n    .orbit-next {\n      position: absolute;\n      top: 50%;\n      margin-top: -25px;\n      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow.png) no-repeat -10px 10px;\n      background-color: $orbit-nav-bg;\n      width: 30px;\n      height: 60px;\n      line-height: 50px;\n      color: white;\n      text-indent: -9999px !important;\n      z-index: 10;\n\n      &:hover {\n        background-color: $orbit-nav-bg-hover; \n      }\n\n      & > span {\n        position: absolute;\n        top: 50%;\n        margin-top: -16px;\n        display: block;\n        width: 0;\n        height: 0;\n        //border: inset 16px;\n      }\n    }\n    .orbit-prev { #{$default-float}: 0;\n      & > span {\n        border-#{$opposite-direction}-style: solid;\n        border-color: transparent;\n        border-#{$opposite-direction}-color: $orbit-nav-arrow-color;\n      }\n      &:hover > span {\n        border-#{$opposite-direction}-color: $orbit-nav-arrow-color-hover;\n      }\n    }\n    .orbit-next { #{$opposite-direction}: 0;\n      & > span {\n        border-color: transparent;\n        border-#{$default-float}-style: solid;\n        border-#{$default-float}-color: $orbit-nav-arrow-color;\n        #{$default-float}: 50%;\n        margin-#{$default-float}: -8px;\n      }\n      &:hover > span {\n        border-#{$default-float}-color: $orbit-nav-arrow-color-hover;\n      }\n    }\n  }\n\n  .orbit-bullets {\n    margin: 0 auto 35px auto;\n    overflow: hidden;\n    position: relative;\n    width: 12%;\n    top: 17.5px;\n    li {\n      display: block;\n      width: $orbit-bullet-radius;\n      height: $orbit-bullet-radius;\n      background: $orbit-bullet-nav-color;\n      float: $default-float;\n      margin-#{$opposite-direction}: 6px;\n      border: solid 1px $orbit-bullet-nav-color-active;\n      @include radius(1000px);\n\n      &.active {\n        background: $orbit-bullet-nav-color-active;\n      }\n\n      &:last-child { margin-#{$opposite-direction}: 0; }\n    }\n  }\n\n  .touch {\n    .orbit-container {\n      .orbit-prev,\n      .orbit-next { display: none; }\n    }\n\n    .orbit-bullets { display: none; }\n  }\n\n\n  @media #{$small} {\n\n    .touch {\n      .orbit-container {\n        .orbit-prev,\n        .orbit-next { display: inherit; }\n      }\n\n      .orbit-bullets { display: block; }\n    }\n\n  }\n\n  @media only screen and (max-width: #{$small-screen}) {\n    .orbit-stack-on-small {\n      .orbit-slides-container {height: auto !important;}\n      .orbit-slides-container > * {\n        position: relative;\n        margin-left: 0% !important;\n      }\n      .orbit-timer,\n      .orbit-next,\n      .orbit-prev,\n      .orbit-bullets {display: none;}\n    }\n  }\n\n}\n",
+			"file": "sass/foundation/components/_orbit.scss",
+			"file_size": 9332,
+			"file_write_time": 130349822656506250,
 			"settings":
 			{
-				"buffer_size": 10157,
+				"buffer_size": 9334,
 				"line_ending": "Unix"
 			}
 		}
@@ -192,19 +207,33 @@
 	},
 	"file_history":
 	[
+		"/Z/Public/$$Redesign/Imagery/For the Website/Academics - Visual Media - COM/faculty.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild-FlexNav.html",
+		"/Z/Public/$BCF_Website/Development/Flexnav/README.md",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/FlexNavMod1.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/flexnav.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/navOne.html",
+		"/Z/Public/$BCF_Website/Development/Flexnav/index.html",
+		"/C/Users/jdoe/AppData/Local/Temp/Rar$DR56.616/flexnav-master/css/flexnav.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_orbit.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/navOne-FlexNav.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/css/flexnav.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/demo.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.slimmenu.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/css/slimmenu.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/articleBuild.html",
 		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopLayout.html",
 		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopArticleWithImage.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/statsHighlights.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_foundation.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_buttons.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/navOne.html",
-		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_settings.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.js",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_type.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - footerScripts.txt",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Content Video.txt",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Home Page.txt",
@@ -305,21 +334,7 @@
 		"/Z/Public/$BCF_Website/Development/001-TestGit/css/app.css",
 		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-sections.html",
 		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-reveal.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-orbit.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-clearing.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/4-breadcrumbs.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-stylechallenge.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-visibility.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-overridecss.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-video.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-thumbnails.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-panels.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-buttons.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-lists.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/3-typography.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/gridchallenge.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/blockgrid.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/sourceordering.html"
+		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-orbit.html"
 	],
 	"find":
 	{
@@ -338,6 +353,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"111121_Faculty_738x330_0",
+			"breakpoint",
+			"height",
+			"nav",
+			"style",
+			"has-dropdown",
+			"hidd",
+			"hide",
+			"section",
+			"self.settings.stick_topbar",
+			"-range",
+			"medium",
+			"flexnav",
+			"z-index",
+			"columns",
+			"z-index",
+			"z",
+			"href=\"/\"",
+			"http://jasonweaver.name/",
+			"title-bar",
+			"see-all",
 			"comen",
 			"-wrapper",
 			"breadcrumbs-bcf",
@@ -410,6 +446,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"SOV_Music_738x330_140127_0",
+			"flexnav-CLTT",
+			"#",
 			"em-calc",
 			"alt=\"",
 			"padding-minor",
@@ -427,7 +466,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -435,15 +474,15 @@
 					"file": "sass/_custom.scss",
 					"settings":
 					{
-						"buffer_size": 13596,
+						"buffer_size": 14145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12844,
-								12844
+								0,
+								14145
 							]
 						],
 						"settings":
@@ -453,7 +492,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7872.0,
+						"translation.y": 8332.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -463,15 +502,15 @@
 					"file": "css/app.css",
 					"settings":
 					{
-						"buffer_size": 239505,
+						"buffer_size": 62938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238219,
-								238207
+								0,
+								0
 							]
 						],
 						"settings":
@@ -481,7 +520,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 96188.0,
+						"translation.y": 31032.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -498,8 +537,8 @@
 						"selection":
 						[
 							[
-								6134,
-								6134
+								4599,
+								4397
 							]
 						],
 						"settings":
@@ -509,13 +548,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2447.0,
+						"translation.y": 1554.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "sass/app.scss",
+					"settings":
+					{
+						"buffer_size": 2498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1994,
+								1994
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "navOne.html",
+					"settings":
+					{
+						"buffer_size": 2858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1188,
+								1195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "sass/foundation/components/_orbit.scss",
 					"settings":
 					{
@@ -526,8 +619,8 @@
 						"selection":
 						[
 							[
-								6124,
-								6232
+								6441,
+								6441
 							]
 						],
 						"settings":
@@ -537,35 +630,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3232.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "articleBuild.html",
-					"settings":
-					{
-						"buffer_size": 10157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3746,
-								3746
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 375.0,
+						"translation.y": 3239.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

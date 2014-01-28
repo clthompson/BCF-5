@@ -240,7 +240,7 @@ $preloader-class: "preloader" !default;
       z-index: 10;
 
       &:hover {
-        //background-color: $orbit-nav-bg-hover; 
+        background-color: $orbit-nav-bg-hover; 
       }
 
       & > span {
