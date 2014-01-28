@@ -286,8 +286,8 @@
     },
 
     breakpoint : function () {
-        return !matchMedia(Foundation.media_queries['topbar']).matches;
-    }
+      return !matchMedia(Foundation.media_queries['topbar']).matches;
+    },
 
     assemble : function (topbar) {
       var self = this,

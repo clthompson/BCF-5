@@ -125,9 +125,9 @@ $default-float: left;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-// $large-screen: 1440px;
+$small-screen: 768px; // phones basically (smaller than iPad landscape) (was 768)
+$medium-screen: 900px; // iPad portrait (only) (was 1280)
+$large-screen: 950px; // iPad landscape and desktop (was 1440)
 
 // $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";
@@ -149,9 +149,9 @@ $default-float: left;
 // Grid Variables
 //
 
-// $row-width: em-calc(1000);
-// $column-gutter: em-calc(30);
-// $total-columns: 12;
+$row-width: em-calc(1040);
+$column-gutter: em-calc(0);
+$total-columns: 13;
 
 //
 // Block Grid Variables
@@ -172,7 +172,7 @@ $default-float: left;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: 'ComeniaSansCondRegular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -183,12 +183,12 @@ $default-float: left;
 
 // Control header font sizes
 
-// $h1-font-size: em-calc(44);
-// $h2-font-size: em-calc(37);
-// $h3-font-size: em-calc(27);
-// $h4-font-size: em-calc(23);
-// $h5-font-size: em-calc(18);
-// $h6-font-size: 1em;
+ $h1-font-size: em-calc(34); //44
+ $h2-font-size: em-calc(24); //37
+ $h3-font-size: em-calc(16); //27
+ $h4-font-size: em-calc(16); //23
+ $h5-font-size: em-calc(16); //18
+ $h6-font-size: em-calc(16); //1em
 
 // Control how subheaders are styled.
 
@@ -207,7 +207,7 @@ $default-float: left;
 
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1em;
+$paragraph-font-size: em-calc(15); // $paragraph-font-size: 1em;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: em-calc(20);
 // $paragraph-aside-font-size: em-calc(14);

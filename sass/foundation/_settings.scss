@@ -30,14 +30,14 @@
 
 // $include-html-grid-classes: $include-html-classes;
 
- $row-width: rem-calc(1040); // $row-width: rem-calc(1000);
- $column-gutter: rem-calc(0); // $column-gutter: rem-calc(30);
- $total-columns: 13; // $total-columns: 12;
+// $row-width: rem-calc(1000);
+// $column-gutter: rem-calc(30);
+// $total-columns: 12;
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
+// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -67,15 +67,10 @@ $body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; //
 // $shiny-edge-active-color: rgba(#000, .2);
 
 // Media Query Ranges
-
-$small-screen: 768px; // phones basically (smaller than iPad landscape) (was 768)
-$medium-screen: 900px; // iPad portrait (only) (was 1280)
-$large-screen: 950px; // iPad landscape and desktop (was 1440)
-
-$small-range: (0em, 48em); //768 // $small-range: (0em, 40em); 40=640px
-$medium-range: (48.063em, 56.25em); //900 // $medium-range: (40.063em, 64em); 64=1024px
-$large-range: (56.263em, 60em); //950 // $large-range: (64.063em, 90em); 90=1440px
-// $xlarge-range: (90.063em, 120em); 120=1920px
+// $small-range: (0em, 40em);
+// $medium-range: (40.063em, 64em);
+// $large-range: (64.063em, 90em);
+// $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em);
 
 // $screen: "only screen";
@@ -117,7 +112,7 @@ $large-range: (56.263em, 60em); //950 // $large-range: (64.063em, 90em); 90=1440
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: join("ComeniaSansCondRegular", $body-font-family); // $header-font-family: join("Open Sans", $body-font-family);
+// $header-font-family: join("Open Sans", $body-font-family);
 // $header-font-weight: 300;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -127,13 +122,12 @@ $header-font-family: join("ComeniaSansCondRegular", $body-font-family); // $head
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-
- $h1-font-size: rem-calc(34); // $h1-font-size: rem-calc(44);
- $h2-font-size: rem-calc(24); // $h2-font-size: rem-calc(37);
- $h3-font-size: rem-calc(16); // $h3-font-size: rem-calc(27);
- $h4-font-size: rem-calc(16); // $h4-font-size: rem-calc(23);
- $h5-font-size: rem-calc(16); // $h5-font-size: rem-calc(18);
- $h6-font-size: rem-calc(16); // $h6-font-size: 1rem;
+// $h1-font-size: rem-calc(44);
+// $h2-font-size: rem-calc(37);
+// $h3-font-size: rem-calc(27);
+// $h4-font-size: rem-calc(23);
+// $h5-font-size: rem-calc(18);
+// $h6-font-size: 1rem;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -149,7 +143,7 @@ $header-font-family: join("ComeniaSansCondRegular", $body-font-family); // $head
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-$paragraph-font-size: 0.9375rem; // $paragraph-font-size: 1rem;
+// $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -696,7 +690,7 @@ $paragraph-font-size: 0.9375rem; // $paragraph-font-size: 1rem;
 // $include-html-orbit-classes: $include-html-classes;
 
 // We use these to control the caption styles
-$orbit-container-bg: #fff; // $orbit-container-bg: none;
+// $orbit-container-bg: none;
 // $orbit-caption-bg: rgba(51,51,51, 0.8);
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: rem-calc(14);
@@ -1122,14 +1116,14 @@ $orbit-container-bg: #fff; // $orbit-container-bg: none;
 // TOP BAR
 //
 
-//$include-html-top-bar-classes: $include-html-classes;
+// $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: #333;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-//$topbar-height: 35px;
+// $topbar-height: 45px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1138,8 +1132,8 @@ $orbit-container-bg: #fff; // $orbit-container-bg: none;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
-//$topbar-dropdown-link-color: #222222; // $topbar-dropdown-link-color: #fff;
-//$topbar-dropdown-link-bg: #ffffff; // $topbar-dropdown-link-bg: #333;
+// $topbar-dropdown-link-color: #fff;
+// $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
@@ -1176,7 +1170,7 @@ $orbit-container-bg: #fff; // $orbit-container-bg: none;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
-$topbar-transition-speed: 300ms; // $topbar-transition-speed: 300ms;
+// $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{upper-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width: #{upper-bound($medium-range)})";
@@ -1187,7 +1181,7 @@ $topbar-transition-speed: 300ms; // $topbar-transition-speed: 300ms;
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
-$topbar-arrows: false; // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 
 //
 // VISIBILITY CLASSES

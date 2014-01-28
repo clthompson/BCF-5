@@ -1,4 +1,13 @@
-//
+@charset "utf-8";
+/* CSS Document */
+
+//Begin Styles Here
+
+
+
+  // ADDED STUFF FROM 003
+
+  //
 // Custom Styles
 //
 
@@ -31,9 +40,9 @@
   $color-white: #FFFFFF;
 
 // Overall Paddings
-  $padding-major: em-calc(32);
-  $padding-minor: em-calc(16);
-  $padding-mini: em-calc(8);
+  $padding-major: rem-calc(32);
+  $padding-minor: rem-calc(16);
+  $padding-mini: rem-calc(8);
 
 // Backgrounds
   $background-d: url('http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png');
@@ -95,17 +104,17 @@
 
 //Header Styles
   .logo {
-    padding: $padding-major 0 $padding-major em-calc(40);
+    padding: $padding-major 0 $padding-major rem-calc(40);
   }
 
   .mission-text p {
     //border: 1px solid #000000;
     color: $color-black;
     position: relative;
-    padding: em-calc(56) 0 0 em-calc(38);
-    height: em-calc(135);
-    letter-spacing: em-calc(-.4);
-    font-size: em-calc(18);
+    padding: rem-calc(56) 0 0 rem-calc(38);
+    height: rem-calc(135);
+    letter-spacing: rem-calc(-.4);
+    font-size: rem-calc(18);
     line-height: 130%;
   }
 
@@ -114,7 +123,7 @@
     top: 0; left: 0; bottom: 0; right: 0;
     width: 100%; 
     height: 60%;
-    min-width: em-calc(200);
+    min-width: rem-calc(200);
     padding: 10%;
     //border: 1px solid #666;
   }*/
@@ -124,15 +133,15 @@
     background-image: $background-d;
     background-repeat:repeat;
     border-top: $thick-maroon;
-    padding: em-calc(25) 0 em-calc(28) 0;
+    padding: rem-calc(25) 0 rem-calc(28) 0;
     .footer-address{
-      padding: 0 0 0 em-calc(40);
+      padding: 0 0 0 rem-calc(40);
       h1 {
-        font-size: em-calc(14);
+        font-size: rem-calc(14);
       }
       p {
-        font-size: em-calc(12);
-        padding: 0 0 em-calc(10) 0;
+        font-size: rem-calc(12);
+        padding: 0 0 rem-calc(10) 0;
         margin: 0;
       }
       .footer-title {
@@ -140,40 +149,118 @@
         margin-bottom: 0;
       }
       .footer-url {
-        padding-top: em-calc(20);
+        padding-top: rem-calc(20);
       }
     }
     .footer-nav {
       ul li {
-        font-size: em-calc(14);
-        padding-bottom: em-calc(2);
+        font-size: rem-calc(14);
+        padding-bottom: rem-calc(2);
         ul {
           display: none;
         }
       }
       .footer-copyright {
         padding: 0;
-        font-size: em-calc(12);
+        font-size: rem-calc(12);
         margin: 0;
       }
     }
   }
 
-// Nav One Styles
+// Nav One (TopBar) Styles
   .nav-one {
     background-color: $color-maroon;
-//    padding-top: em-calc(5);
-    max-height: em-calc(35);
+//    padding-top: rem-calc(5);
+    max-height: rem-calc(35);
     text-transform: uppercase;
     nav {
-      padding-left: 0 em-calc(40) 0 em-calc(40);
+      height: rem-calc(35);
+      line-height:35px;
+      margin-bottom:0px;
+      padding: 0 rem-calc(20) 0 rem-calc(20);
+      background-color: $color-maroon;
+      .title-area {
+        .name {
+          background-color: $color-maroon;
+        }
+        .menu-icon {
+          margin-top: rem-calc(-21);
+        }
+      }
+      .top-bar-section {
+        background-color: $color-maroon;
+        //height:35px;
+        ul { //top level
+          background-color: $color-maroon;
+          //height:35px;
+          li { //top level list items
+            background-color: none;
+            //height:35px;
+            a:not(.button) { //top level links
+              background-color: $color-maroon;
+              //height:35px;
+              line-height:35px;
+              &:hover{
+                background-color: $color-white;
+                color: #222;
+              }
+            }
+          }
+          .has-dropdown {
+            a:not(.button) { //top level links
+              background-color: $color-maroon;
+              //height:35px;
+              line-height:35px;
+              border-left: 3px solid $color-maroon;
+              border-right: 3px solid $color-maroon;
+              &:hover{
+                background-color: $color-white;
+                color: #222;
+                border-left: 3px solid #777;
+                border-right: 3px solid #777;
+              }
+            }
+            ul{ //subnavs
+              background-color: $color-white;
+              //height:35px;
+              padding-bottom: rem-calc(10);
+              border-left: 3px solid #777;
+              border-right: 3px solid #777;
+              border-bottom: 3px solid #777;
+              li { //subnav list items
+                background-color: $color-white;
+                //height:35px;
+                a:not(.button) { //subnav links
+                  border-left: none;
+                  border-right: none;
+                  background-color: $color-white;
+                  //height:35px;
+                  color: #222;
+                  padding: 0 rem-calc(15) 0 rem-calc(15);
+                  margin:0;
+                  &:hover{
+                    background-color: $color-white;
+                    border-left: none;
+                    border-right: none;
+                    color: $color-maroon;
+                  }
+                }
+              }
+            }
+        }
+      }
     }
   }
+}
+  
+
+
 
 //Nav Two Styles
   .nav-two {
     background-image: $background-d;
-    //height: em-calc(35); need this for real build
+    //height: rem-calc(35); need this for real build
     background-repeat:repeat;
     border-top: $thin-grey;
     border-bottom: $thin-grey;
@@ -183,7 +270,7 @@
       margin: auto;
       li {
       display: inline-block;
-      padding: em-calc(5) $padding-mini em-calc(5) $padding-mini;
+      padding: rem-calc(5) $padding-mini rem-calc(5) $padding-mini;
       }
     }
   }
@@ -191,7 +278,7 @@
 // Aside Styles
   aside {
     .aside-wrapper {
-      padding: em-calc(30) em-calc(40) em-calc(90) em-calc(65);
+      padding: rem-calc(30) rem-calc(40) rem-calc(90) rem-calc(65);
       .side-nav{ //to come
         li {
           //border-bottom;
@@ -201,18 +288,18 @@
         }
       }
       .advert {
-        padding: em-calc(15) 0 em-calc(40) 0;
+        padding: rem-calc(15) 0 rem-calc(40) 0;
         border-bottom: $thin-grey;
       }
       .spotlight {
-        padding: em-calc(15) 0 em-calc(15) 0;
+        padding: rem-calc(15) 0 rem-calc(15) 0;
         border-bottom: $thin-grey;
         .spotlight-header {
           h3 {
             padding: 0;
             margin: 0;
-            font-size: em-calc(15);
-            height: em-calc(21);
+            font-size: rem-calc(15);
+            height: rem-calc(21);
           }
         }
         .spotlight-image {
@@ -222,29 +309,29 @@
         }
         .spotlight-title {
           h3 {
-            padding-top: em-calc(13);
+            padding-top: rem-calc(13);
             margin: 0;
-            font-size: em-calc(18);
-            height: em-calc(33);
+            font-size: rem-calc(18);
+            height: rem-calc(33);
           }
         }
         .spotlight-text {
           p {
             padding: 0px 0px 5px 0px;
             margin: 3px 0px 0px 0px;
-            font-size: em-calc(14);
+            font-size: rem-calc(14);
             line-height: 19px;
           }
         }
       }
       .partners {
-        padding: em-calc(15) 0 em-calc(15) 0;
+        padding: rem-calc(15) 0 rem-calc(15) 0;
         .partners-title-bar{
           background-color: $color-lightGray;
-          height: em-calc(40);
+          height: rem-calc(40);
           h3 {
             padding: 4px 0px 0px 10px;
-            font-size: em-calc(18);
+            font-size: rem-calc(18);
             color: $color-midgray2;
           }
           .see-all {
@@ -271,7 +358,7 @@
 // Article Section Styles for Home Page and News Landing Page
   section .articles-wrapper {
     //border:1px solid #000;
-    padding: em-calc(32) em-calc(8) em-calc(90) em-calc(32);
+    padding: rem-calc(32) rem-calc(8) rem-calc(90) rem-calc(32);
     .title-bar {
       border-bottom: $thin-grey;
       height: 23px; 
@@ -283,9 +370,9 @@
         padding:0;
         .listed-article, .listed-article-landing {
           border-bottom: $thin-grey;
-          padding: em-calc(25) 0 em-calc(25) 0;
+          padding: rem-calc(25) 0 rem-calc(25) 0;
           .article-image {
-            margin-right: em-calc(30);
+            margin-right: rem-calc(30);
             overflow:hidden; // this is important
             position:relative; // this is important too
             width: 250px;
@@ -297,8 +384,8 @@
           .article-tag {
             padding: 0;
             margin: 0;
-            font-size: em-calc(12);
-            height: em-calc(9);
+            font-size: rem-calc(12);
+            height: rem-calc(9);
             a {
               color: $color-midgray2;
               &:hover {
@@ -311,9 +398,9 @@
             padding: 0;
             margin: 8px 0 -6px 0;
             h2 {
-              font-size: em-calc(20);
+              font-size: rem-calc(20);
             }
-            //height: em-calc(37);
+            //height: rem-calc(37);
             a {
               color: $color-darkGray;
               &:hover {
@@ -326,7 +413,7 @@
             padding: 0;
             margin-bottom: -11px;
             p {
-              font-size: em-calc(16);
+              font-size: rem-calc(16);
               line-height: 19px;
             }
           }
@@ -335,7 +422,7 @@
             padding: 0;
             margin: 0;
             a {
-              font-size: em-calc(16);
+              font-size: rem-calc(16);
               color: $color-maroon;
               &:hover {
                 color: $color-midgray2;
@@ -367,7 +454,7 @@
   }
 
   section .stats-wrapper {
-    padding: em-calc(22) 0 em-calc(22) 0;
+    padding: rem-calc(22) 0 rem-calc(22) 0;
     height: 118px;
     margin: 0;
     ul {
@@ -380,16 +467,16 @@
       li {
         display: inline-block;
         width: 33%;
-        margin: em-calc(7) 0 em-calc(7) 0;
+        margin: rem-calc(7) 0 rem-calc(7) 0;
         text-align:center;
-        height: em-calc(60);
+        height: rem-calc(60);
         border-left: $thin-grey;
         .title {
           display: block;
           color: $color-midgray1;
           font-weight: 300;
-          font-size: em-calc(16);
-          padding-top: em-calc(0);
+          font-size: rem-calc(16);
+          padding-top: rem-calc(0);
           margin: -5px;
         }
         .detail {
@@ -398,7 +485,7 @@
           display: block;
           color: $color-midgray2;
           font-weight: 600;
-          font-size: em-calc(48); 
+          font-size: rem-calc(48); 
           padding: 0;
           margin: 0;
         }
@@ -413,18 +500,18 @@
   .highlights {
     ul {
       li { //(each highlight)
-        padding: 0 em-calc(40) 0 em-calc(40);
+        padding: 0 rem-calc(40) 0 rem-calc(40);
         .hightlighted-article { //(content) 
           .article-image {
-            padding-right: em-calc(25);
+            padding-right: rem-calc(25);
           }
           .article-text-elements {
             background-color: #fff;
-            padding: em-calc(36) em-calc(25) 0 0;
+            padding: rem-calc(36) rem-calc(25) 0 0;
             .article-title {
               h2 {
                 text-transform: uppercase;
-                font-size: em-calc(30);
+                font-size: rem-calc(30);
                 line-height: 30px;
                 a {
                   color: $color-darkGray;
@@ -437,7 +524,7 @@
             .article-teaser {
               p{
                 padding-top: 2px; 
-                font-size: em-calc(19);
+                font-size: rem-calc(19);
                 //font-weight: $bolder;
                 line-height: 21px;
               }
@@ -446,10 +533,10 @@
               p {
                 a {
                   color: $color-white;
-                  font-size: em-calc(19);
+                  font-size: rem-calc(19);
                   //font-weight: $bolder;
                   background-color: $color-maroon;
-                  padding: em-calc(12) em-calc(10) em-calc(7) em-calc(10);
+                  padding: rem-calc(12) rem-calc(10) rem-calc(7) rem-calc(10);
                   &:hover {
                     //asas
                   }
@@ -461,6 +548,61 @@
       }
     }
   }
+  // Orbit buttons culled from _orbit.scss
+    .orbit-prev{
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow.png) no-repeat 0px 10px;
+      background-color: $orbit-nav-bg;
+      width: 30px;
+      height: 60px;
+      line-height: 50px;
+      color: white;
+      text-indent: -9999px !important;
+      z-index: 10;
+
+      &:hover {
+        background-color: $color-white; 
+      }
+
+      & > span {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        display: block;
+        width: 0;
+        height: 0;
+        //border: inset 16px;
+      }
+    }
+    .orbit-next {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow.png) no-repeat -10px 10px;
+      background-color: $orbit-nav-bg;
+      width: 30px;
+      height: 60px;
+      line-height: 50px;
+      color: white;
+      text-indent: -9999px !important;
+      z-index: 10;
+
+      &:hover {
+        background-color: $color-white; 
+      }
+
+      & > span {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        display: block;
+        width: 0;
+        height: 0;
+        //border: inset 16px;
+      }
+    }
 
 // Content Pages
 
@@ -471,13 +613,13 @@
     overflow: hidden;
     border-bottom: $medium-grey;
     width: 100%;
-    font-size: em-calc(12);
+    font-size: rem-calc(12);
     p {
       padding: 0;
       margin:0;
       span {
         color: $color-midgray1;
-        padding: 0 em-calc(25) 0 em-calc(5);
+        padding: 0 rem-calc(25) 0 rem-calc(5);
         margin: 0;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
         a {
@@ -506,7 +648,7 @@
 .article-category {
     padding: 0; 
     margin: 0;
-    font-size: em-calc(10);
+    font-size: rem-calc(10);
     a {
     color: $color-lightGray;
       &:hover{
@@ -530,29 +672,29 @@ article {
   }
   .article-text{
     h2 {
-      padding: em-calc(15) 0 em-calc(5) 0;
+      padding: rem-calc(15) 0 rem-calc(5) 0;
       line-height: 26px;
       margin:0;
     }
     h3, h4, h5, h6 {
-      padding: em-calc(10) 0 em-calc(4) 0;
+      padding: rem-calc(10) 0 rem-calc(4) 0;
       line-height: 21px;
       margin: 0 0 -14px 0;
     }
     p {
       color: $color-midgray1;
       font-size: $paragraph-font-size;
-      padding: em-calc(9) 0 em-calc(9) 0;
+      padding: rem-calc(9) 0 rem-calc(9) 0;
       line-height: 21px;
       margin: 0;
     }
     ul {
       list-style-type: disc;
-      padding: em-calc(9) 0 em-calc(9) em-calc(25);
+      padding: rem-calc(9) 0 rem-calc(9) rem-calc(25);
       line-height: 21px;
       margin: 0;
       li {
-        padding: em-calc(9) 0 em-calc(9) 0;
+        padding: rem-calc(9) 0 rem-calc(9) 0;
         margin: 0;
         ul {
           list-style-type: circle;
@@ -579,7 +721,7 @@ article {
       .caption {
         background-color: $color-darkGray;
         color: $color-white;
-        padding: em-calc(7) 0 em-calc(7) em-calc(10);
+        padding: rem-calc(7) 0 rem-calc(7) rem-calc(10);
         p {
           color: $color-white;
           padding: 0;
@@ -589,7 +731,7 @@ article {
     .video-content{
       position: relative;
       padding-bottom: 57.25%;
-      padding-top: em-calc(30); 
+      padding-top: rem-calc(30); 
       height: 0; 
       overflow: hidden;
       margin-bottom: 0;
