@@ -68,13 +68,13 @@ $body-font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; //
 
 // Media Query Ranges
 
-$small-screen: 768px; // phones basically (smaller than iPad landscape) (was 768)
-$medium-screen: 900px; // iPad portrait (only) (was 1280)
-$large-screen: 950px; // iPad landscape and desktop (was 1440)
+$small-screen: 767px; // phones basically (smaller than iPad landscape) (was 768)
+$medium-screen: 768px; // iPad portrait (only) (was 1280)
+$large-screen: 850px; // iPad landscape and desktop (was 1440)
 
-$small-range: (0em, 48em); //768 // $small-range: (0em, 40em); 40=640px
-$medium-range: (48.063em, 56.25em); //900 // $medium-range: (40.063em, 64em); 64=1024px
-$large-range: (56.263em, 60em); //950 // $large-range: (64.063em, 90em); 90=1440px
+$small-range: (0em, 47.9375em); //768 // $small-range: (0em, 40em); 40=640px
+$medium-range: (48em, 59.3125em); //900 // $medium-range: (40.063em, 64em); 64=1024px
+$large-range: (53.125em, 60em); //950 // $large-range: (64.063em, 90em); 90=1440px
 // $xlarge-range: (90.063em, 120em); 120=1920px
 // $xxlarge-range: (120.063em);
 
@@ -130,7 +130,7 @@ $header-font-family: join("ComeniaSansCondRegular", $body-font-family); // $head
 
  $h1-font-size: rem-calc(34); // $h1-font-size: rem-calc(44);
  $h2-font-size: rem-calc(24); // $h2-font-size: rem-calc(37);
- $h3-font-size: rem-calc(16); // $h3-font-size: rem-calc(27);
+ $h3-font-size: rem-calc(20); // $h3-font-size: rem-calc(27);
  $h4-font-size: rem-calc(16); // $h4-font-size: rem-calc(23);
  $h5-font-size: rem-calc(16); // $h5-font-size: rem-calc(18);
  $h6-font-size: rem-calc(16); // $h6-font-size: 1rem;
@@ -143,7 +143,7 @@ $header-font-family: join("ComeniaSansCondRegular", $body-font-family); // $head
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-// $small-font-size: 60%;
+$small-font-size: 100%;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
@@ -529,8 +529,8 @@ $paragraph-font-size: 0.9375rem; // $paragraph-font-size: 1rem;
 // $input-error-message-font-color-alt: #333;
 
 // We use this to style the glowing effect of inputs when focused
-// $glowing-effect-fade-time: 0.45s;
-// $glowing-effect-color: $input-focus-border-color;
+ $glowing-effect-fade-time: 0; // 0.45s;
+ $glowing-effect-color: none; // $input-focus-border-color;
 
 // Select variables
 // $select-bg-color: #fafafa;

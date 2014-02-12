@@ -4,12 +4,40 @@
 		"selected_items":
 		[
 			[
-				"s",
-				"script"
+				"n",
+				"normal"
+			],
+			[
+				"color",
+				"color-darkGray"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"co",
+				"color-white"
+			],
+			[
+				"last",
+				"last-of-type"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"color-",
+				"color-white"
 			],
 			[
 				"font-",
-				"font-size"
+				"font-weight"
+			],
+			[
+				"s",
+				"script"
 			],
 			[
 				"in",
@@ -36,20 +64,12 @@
 				"text-transform"
 			],
 			[
-				"n",
-				"none"
-			],
-			[
 				"paddi",
 				"padding-mini"
 			],
 			[
 				"col",
 				"color-lightGray"
-			],
-			[
-				"border",
-				"border-bottom"
 			],
 			[
 				"inline",
@@ -87,15 +107,23 @@
 			"file": "sass/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 14145,
+				"buffer_size": 41530,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/$BCF_Website/Development/slimmenu/slimmenu.css",
+			"settings":
+			{
+				"buffer_size": 4028,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/app.css",
 			"settings":
 			{
-				"buffer_size": 62938,
+				"buffer_size": 116722,
 				"line_ending": "Windows"
 			}
 		},
@@ -103,34 +131,31 @@
 			"file": "sass/_settings.scss",
 			"settings":
 			{
-				"buffer_size": 36819,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "sass/app.scss",
-			"settings":
-			{
-				"buffer_size": 2498,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "navOne.html",
-			"settings":
-			{
-				"buffer_size": 2858,
+				"buffer_size": 40180,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "// Orbit Variables\n//\n$include-html-orbit-classes: $include-html-classes !default;\n\n// We use these to control the caption styles\n$orbit-container-bg: #f5f5f5 !default;\n$orbit-caption-bg: rgba(0,0,0,0.6) !default;\n$orbit-caption-font-color: #fff !default;\n$orbit-caption-font-size: em-calc(14) !default;\n$orbit-caption-position: \"bottom\" !default; // Supported values: \"bottom\", \"under\"\n$orbit-caption-padding: em-calc(10,14) !default;\n$orbit-caption-height: auto !default;\n\n// We use these to control the left/right nav styles\n$orbit-nav-bg: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)\n$orbit-nav-bg-hover: rgba(255,255,255,0.6) !default; //rgba(0,0,0,0.6)\n$orbit-nav-arrow-color: rgba(0,0,0,0.6); //#fff !default;\n$orbit-nav-arrow-color-hover: rgba(0,0,0,0.6); //#ccc !default;\n\n// We use these to control the timer styles\n$orbit-timer-bg: rgba(0,0,0,0.6) !default;\n$orbit-timer-show-progress-bar: true !default;\n\n// We use these to control the bullet nav styles\n$orbit-bullet-nav-color: #fff; //#999 !default;\n$orbit-bullet-nav-color-active: #555 !default;\n$orbit-bullet-radius: em-calc(12) !default;\n\n// We use these to controls the style of slide numbers\n$orbit-slide-number-bg: rgba(0,0,0,0) !default;\n$orbit-slide-number-font-color: #fff !default;\n$orbit-slide-number-padding: em-calc(5) !default;\n\n// Graceful Loading Wrapper and preloader\n$wrapper-class: \"slideshow-wrapper\" !default;\n$preloader-class: \"preloader\" !default;\n\n\n@if $include-html-orbit-classes != false {\n\n  @if $experimental {\n    @-webkit-keyframes rotate {\n      from { -webkit-transform: rotate(0deg); }\n      to { -webkit-transform: rotate(360deg); }\n    }\n    @-moz-keyframes rotate {\n      from { -moz-transform: rotate(0deg); }\n      to { -moz-transform: rotate(360deg); }\n    }\n    @-o-keyframes rotate {\n      from { -o-transform: rotate(0deg); }\n      to { -o-transform: rotate(360deg); }\n    }\n  }\n  @keyframes rotate {\n    from { transform: rotate(0deg); }\n    to { transform: rotate(360deg); }\n  }\n\n  /* Orbit Graceful Loading */\n  .#{$wrapper-class} {\n    position: relative;\n\n    ul {\n      // Prevent bullets showing before .orbit-container is loaded\n      list-style-type: none;\n      margin: 0;\n\n      // Hide all list items\n      li,\n      li .orbit-caption { display: none; }\n\n      // ...except for the first one\n      li:first-child { display: block; }\n    }\n\n    .orbit-container { background-color: transparent;\n\n      // Show images when .orbit-container is loaded\n      li { display: block;\n\n        .orbit-caption { display: block; }\n      }\n    }\n  }\n\n  // Orbit preloader\n  .#{$preloader-class} {\n    display: block;\n    width: 40px;\n    height: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -20px;\n    margin-left: -20px;\n    border: solid 3px;\n    border-color: #555 #fff;\n    @include radius(1000px);\n    @if $experimental {\n      -webkit-animation-name: rotate;\n      -webkit-animation-duration: 1.5s;\n      -webkit-animation-iteration-count: infinite;\n      -webkit-animation-timing-function: linear;\n      -moz-animation-name: rotate;\n      -moz-animation-duration: 1.5s;\n      -moz-animation-iteration-count: infinite;\n      -moz-animation-timing-function: linear;\n      -o-animation-name: rotate;\n      -o-animation-duration: 1.5s;\n      -o-animation-iteration-count: infinite;\n      -o-animation-timing-function: linear;\n    }\n    animation-name: rotate;\n    animation-duration: 1.5s;\n    animation-iteration-count: infinite;\n    animation-timing-function: linear;\n  }\n\n  .orbit-container {\n    overflow: hidden;\n    width: 100%;\n    position: relative;\n    background: transparent; // $orbit-container-bg;\n\n    .orbit-slides-container {\n      list-style: none;\n      margin: 0;\n      padding: 0;\n      position: relative;\n\n      img { display: block; max-width: 100%; }\n\n      &>* {\n        position: absolute;\n        top: 0;\n        width: 100%;\n        @if $text-direction == rtl {\n          margin-right: 100%;\n        }\n        @else {\n          margin-left: 100%;\n        }\n\n        &:first-child {\n          @if $text-direction == rtl {\n          margin-right: 0%;\n          }\n          @else {\n          margin-left: 0%;\n          }\n        }\n\n        .orbit-caption {\n          @if $orbit-caption-position == \"bottom\" {\n            position: absolute;\n            bottom: 0;\n          } @else if $orbit-caption-position == \"under\" {\n            position: relative;\n          }\n\n          background-color: $orbit-caption-bg;\n          color: $orbit-caption-font-color;\n          width: 100%;\n          padding: 10px 14px;\n          font-size: em-calc(14);\n        }\n      }\n    }\n\n    .orbit-slide-number {\n      position: absolute;\n      top: 10px;\n      #{$default-float}: 10px;\n      font-size: 12px;\n      span { font-weight: 700; padding: $orbit-slide-number-padding;}\n      color: $orbit-slide-number-font-color;\n      background: $orbit-slide-number-bg;\n      z-index: 10;\n    }\n\n    .orbit-timer {\n      position: absolute;\n      top: 10px;\n      #{$opposite-direction}: 10px;\n      height: 6px;\n      width: 100px;\n      z-index: 10;\n      .orbit-progress {\n        @if $orbit-timer-show-progress-bar {\n          height: 100%;\n          background-color: $orbit-timer-bg;\n          display: block;\n          width: 0%;\n        }\n      }\n\n      // Play button\n      & > span {\n        display: none;\n        position: absolute;\n        top: 10px;\n        #{$opposite-direction}: 0;\n        width: 11px;\n        height: 14px;\n        border: solid 4px #000;\n        border-top: none;\n        border-bottom: none;\n      }\n\n      // Pause button\n      &.paused {\n        & > span {\n          #{$opposite-direction}: -6px;\n          top: 9px;\n          width: 11px;\n          height: 14px;\n          border: inset 8px;\n          border-right-style: solid;\n          border-color: transparent transparent transparent #000;\n        }\n      }\n    }\n\n    &:hover .orbit-timer > span { display: block; }\n\n    // Let's get those controls to be right in the center on each side\n    .orbit-prev{\n\n      position: absolute;\n      top: 50%;\n      margin-top: -25px;\n      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow.png) no-repeat 0px 10px;\n      background-color: $orbit-nav-bg;\n      width: 30px;\n      height: 60px;\n      line-height: 50px;\n      color: white;\n      text-indent: -9999px !important;\n      z-index: 10;\n\n      &:hover {\n        //background-color: $orbit-nav-bg-hover; \n      }\n\n      & > span {\n        position: absolute;\n        top: 50%;\n        margin-top: -16px;\n        display: block;\n        width: 0;\n        height: 0;\n        //border: inset 16px;\n      }\n    }\n    .orbit-next {\n      position: absolute;\n      top: 50%;\n      margin-top: -25px;\n      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow.png) no-repeat -10px 10px;\n      background-color: $orbit-nav-bg;\n      width: 30px;\n      height: 60px;\n      line-height: 50px;\n      color: white;\n      text-indent: -9999px !important;\n      z-index: 10;\n\n      &:hover {\n        background-color: $orbit-nav-bg-hover; \n      }\n\n      & > span {\n        position: absolute;\n        top: 50%;\n        margin-top: -16px;\n        display: block;\n        width: 0;\n        height: 0;\n        //border: inset 16px;\n      }\n    }\n    .orbit-prev { #{$default-float}: 0;\n      & > span {\n        border-#{$opposite-direction}-style: solid;\n        border-color: transparent;\n        border-#{$opposite-direction}-color: $orbit-nav-arrow-color;\n      }\n      &:hover > span {\n        border-#{$opposite-direction}-color: $orbit-nav-arrow-color-hover;\n      }\n    }\n    .orbit-next { #{$opposite-direction}: 0;\n      & > span {\n        border-color: transparent;\n        border-#{$default-float}-style: solid;\n        border-#{$default-float}-color: $orbit-nav-arrow-color;\n        #{$default-float}: 50%;\n        margin-#{$default-float}: -8px;\n      }\n      &:hover > span {\n        border-#{$default-float}-color: $orbit-nav-arrow-color-hover;\n      }\n    }\n  }\n\n  .orbit-bullets {\n    margin: 0 auto 35px auto;\n    overflow: hidden;\n    position: relative;\n    width: 12%;\n    top: 17.5px;\n    li {\n      display: block;\n      width: $orbit-bullet-radius;\n      height: $orbit-bullet-radius;\n      background: $orbit-bullet-nav-color;\n      float: $default-float;\n      margin-#{$opposite-direction}: 6px;\n      border: solid 1px $orbit-bullet-nav-color-active;\n      @include radius(1000px);\n\n      &.active {\n        background: $orbit-bullet-nav-color-active;\n      }\n\n      &:last-child { margin-#{$opposite-direction}: 0; }\n    }\n  }\n\n  .touch {\n    .orbit-container {\n      .orbit-prev,\n      .orbit-next { display: none; }\n    }\n\n    .orbit-bullets { display: none; }\n  }\n\n\n  @media #{$small} {\n\n    .touch {\n      .orbit-container {\n        .orbit-prev,\n        .orbit-next { display: inherit; }\n      }\n\n      .orbit-bullets { display: block; }\n    }\n\n  }\n\n  @media only screen and (max-width: #{$small-screen}) {\n    .orbit-stack-on-small {\n      .orbit-slides-container {height: auto !important;}\n      .orbit-slides-container > * {\n        position: relative;\n        margin-left: 0% !important;\n      }\n      .orbit-timer,\n      .orbit-next,\n      .orbit-prev,\n      .orbit-bullets {display: none;}\n    }\n  }\n\n}\n",
-			"file": "sass/foundation/components/_orbit.scss",
-			"file_size": 9332,
-			"file_write_time": 130349822656506250,
+			"file": "sass/_foundation.scss",
 			"settings":
 			{
-				"buffer_size": 9334,
+				"buffer_size": 1450,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "HomePageBaseWithSlimmenu.html",
+			"settings":
+			{
+				"buffer_size": 25671,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Public/$BCF_Website/Development/slimmenu/jquery.slimmenu.js",
+			"settings":
+			{
+				"buffer_size": 5468,
 				"line_ending": "Unix"
 			}
 		}
@@ -207,21 +232,33 @@
 	},
 	"file_history":
 	[
+		"/Z/Public/$BCF_Website/Development/slimmenu/demo.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
+		"/Z/Public/$BCF_Website/Development/slimmenu/HomePageBaseWithSlimmenu.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/EFT/EFTContentTemplate.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/EFT/css/app.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/EFTContentTemplate.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/ContentPageBase.html",
+		"/Z/Public/2013 Admissions Marketing Materials/DIGITAL/website/production/013/css/admissions2013.css",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sidenav.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_orbit.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_foundation.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_type.scss",
+		"/Z/Public/2013 Admissions Marketing Materials/DIGITAL/website/production/013/js/response.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/elder.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/navOne.html",
 		"/Z/Public/$$Redesign/Imagery/For the Website/Academics - Visual Media - COM/faculty.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild-FlexNav.html",
 		"/Z/Public/$BCF_Website/Development/Flexnav/README.md",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
 		"/Z/Public/$BCF_Website/Development/003-Production5/pageBuild.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/FlexNavMod1.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/flexnav.scss",
-		"/Z/Public/$BCF_Website/Development/003-Production5/navOne.html",
 		"/Z/Public/$BCF_Website/Development/Flexnav/index.html",
 		"/C/Users/jdoe/AppData/Local/Temp/Rar$DR56.616/flexnav-master/css/flexnav.css",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_orbit.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/navOne-FlexNav.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/css/flexnav.css",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/demo.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.slimmenu.js",
 		"/Z/Public/$BCF_Website/Development/003-Production5/css/slimmenu.css",
@@ -229,11 +266,9 @@
 		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopLayout.html",
 		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopArticleWithImage.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/statsHighlights.html",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_foundation.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_buttons.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_settings.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.js",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_type.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - footerScripts.txt",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Content Video.txt",
 		"/Z/Public/$BCF_Website/Development/003-Production5/OT-Templates/Foundation - Home Page.txt",
@@ -324,17 +359,7 @@
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
-		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
-		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/HTML.sublime-settings",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-solution.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/css/app.css",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/css/foundation.css",
-		"/C/Users/jdoe/Downloads/Up and Running with Sublime Text 2/Exercise Files/roux_website/_scripts/SpryTabbedPanels.js",
-		"/C/Users/jdoe/Downloads/Up and Running with Sublime Text 2/Exercise Files/roux_website/index.htm",
-		"/Z/Public/$BCF_Website/Development/001-TestGit/css/app.css",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-sections.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-reveal.html",
-		"/C/Users/jdoe/Downloads/Foundation-4.3.2/5-orbit.html"
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings"
 	],
 	"find":
 	{
@@ -353,6 +378,53 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$input-focus-border-color",
+			"font-weight: normal;",
+			"height",
+			"border",
+			"mar",
+			"border-b",
+			"expanded",
+			"resizeWidth",
+			"@",
+			"section",
+			"scroll",
+			"class=\"dropdown\"",
+			"class=\"has-dropdown\"",
+			"/foundation2",
+			"..img",
+			"http://www.brooklyn.cuny.edu/web/sup_foundation",
+			"/foundation2",
+			"css-triangle",
+			"$topbar-arrows",
+			"$topbar-arrows2",
+			"$topbar-arrows",
+			"$topbar-arrows$topbar-arrows",
+			"css-triangle",
+			"nav",
+			"top-bar",
+			"h2",
+			"small",
+			"font-size: 100%",
+			"h2",
+			" h1 small",
+			"0.875rem",
+			"$small-screen",
+			"small",
+			"h1 small",
+			"h2",
+			"aside",
+			"$iPadLandscape",
+			"article-date",
+			"listed-article",
+			"css-triangle",
+			"stats-disclaimer",
+			"landing",
+			"listed-article",
+			"right",
+			"breadcrumbs-bcf",
+			"aside",
+			"articles-wrapper",
 			"111121_Faculty_738x330_0",
 			"breakpoint",
 			"height",
@@ -433,12 +505,7 @@
 			"color",
 			"1.875",
 			"<p>",
-			"			<p>We",
-			"div",
-			"\"",
-			"row",
-			"normalize",
-			"co"
+			"			<p>We"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -446,6 +513,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"/foundation",
+			"../img",
+			"..img",
+			"img",
+			"/foundation",
+			"$iPadPortrait",
 			"SOV_Music_738x330_140127_0",
 			"flexnav-CLTT",
 			"#",
@@ -474,15 +548,15 @@
 					"file": "sass/_custom.scss",
 					"settings":
 					{
-						"buffer_size": 14145,
+						"buffer_size": 41530,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								14145
+								7327,
+								7327
 							]
 						],
 						"settings":
@@ -492,25 +566,53 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8332.0,
+						"translation.y": 3550.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "css/app.css",
+					"file": "/Z/Public/$BCF_Website/Development/slimmenu/slimmenu.css",
 					"settings":
 					{
-						"buffer_size": 62938,
+						"buffer_size": 4028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3508,
+								3514
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1476.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/app.css",
+					"settings":
+					{
+						"buffer_size": 116722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84066,
+								84066
 							]
 						],
 						"settings":
@@ -520,25 +622,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 31032.0,
+						"translation.y": 43298.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "sass/_settings.scss",
 					"settings":
 					{
-						"buffer_size": 36819,
+						"buffer_size": 40180,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4599,
-								4397
+								17612,
+								17617
 							]
 						],
 						"settings":
@@ -548,30 +650,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1554.0,
+						"translation.y": 2622.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "sass/app.scss",
+					"buffer": 4,
+					"file": "sass/_foundation.scss",
 					"settings":
 					{
-						"buffer_size": 2498,
+						"buffer_size": 1450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1994,
-								1994
+								1307,
+								1307
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -580,19 +684,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "navOne.html",
+					"buffer": 5,
+					"file": "HomePageBaseWithSlimmenu.html",
 					"settings":
 					{
-						"buffer_size": 2858,
+						"buffer_size": 25671,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1188,
-								1195
+								7545,
+								7125
 							]
 						],
 						"settings":
@@ -602,35 +706,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 967.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "sass/foundation/components/_orbit.scss",
+					"buffer": 6,
+					"file": "/Z/Public/$BCF_Website/Development/slimmenu/jquery.slimmenu.js",
 					"settings":
 					{
-						"buffer_size": 9334,
+						"buffer_size": 5468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6441,
-								6441
+								3513,
+								3513
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3239.0,
+						"translation.y": 658.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

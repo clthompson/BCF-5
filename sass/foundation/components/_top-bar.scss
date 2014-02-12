@@ -502,7 +502,7 @@ $topbar-arrows: true !default; //Set false to remove the triangle icon from the 
             & > a {
               &:after {
                 border: none;
-                content: "\00bb";
+                content: "\00bb"; //commented out the extra arrows that F5 shows after a .has-dropdown
                 top: 1rem;
                 margin-top: -2px;
                 #{$opposite-direction}: 5px;
