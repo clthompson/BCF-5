@@ -2278,6 +2278,37 @@ select {
       .sub-nav li.active a:hover {
         background: #0078a0; }
 
+table {
+  background: white;
+  margin-bottom: 1.25rem;
+  border: solid 1px white; }
+  table thead,
+  table tfoot {
+    background: whitesmoke; }
+    table thead tr th,
+    table thead tr td,
+    table tfoot tr th,
+    table tfoot tr td {
+      padding: 0.5rem 0.625rem 0.625rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #222222;
+      text-align: left; }
+  table tr th,
+  table tr td {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    color: #222222; }
+  table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: whitesmoke; }
+  table thead tr th,
+  table tfoot tr th,
+  table tbody tr td,
+  table tr td,
+  table tfoot tr td {
+    display: table-cell;
+    line-height: 1.125rem; }
+
 /* Typography resets */
 div,
 dl,
@@ -3047,7 +3078,8 @@ th.hide-for-touch {
     clear: both; }
 
 a {
-  color: #762141; }
+  color: #7c2142;
+  font-weight: bold; }
   a:hover {
     color: #222222; }
 
@@ -3065,23 +3097,27 @@ ul {
   text-transform: uppercase; }
 
 .bolder {
-  font-weight: bolder; }
+  font-weight: bold; }
 
-.see-all {
+p.see-all {
+  color: #7c2142;
+  float: right;
+  margin-bottom: 0;
   font-size: 0.9375rem;
   padding-right: 12px;
-  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 50px 6px; }
+  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 56px 6px; }
   @media screen and (max-width: 767px) {
-    .see-all {
+    p.see-all {
+      padding-right: 20px;
       font-size: 0.8125rem;
-      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 45px 5px; } }
-  .see-all:hover {
-    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 50px 5px;
-    color: #555; }
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 52px 6px; } }
+  p.see-all:hover {
+    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 56px 6px;
+    color: #666666; }
     @media screen and (max-width: 767px) {
-      .see-all:hover {
+      p.see-all:hover {
         font-size: 0.8125rem;
-        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 45px 5px; } }
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 52px 6px; } }
 
 .logo {
   padding: 2rem 0 2rem 2.5rem; }
@@ -3102,7 +3138,7 @@ ul {
   line-height: 130%; }
 
 .donate-now {
-  background: #762141; }
+  background: #7c2142; }
   .donate-now a p {
     text-align: center;
     text-transform: uppercase;
@@ -3123,16 +3159,25 @@ ul {
 .footer-wrapper {
   background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat;
-  border-top: 7px solid #762141;
+  border-top: 8px solid #7c2142;
   padding: 1.5625rem 0 1.75rem 0; }
+  .footer-wrapper a {
+    color: #7c2142;
+    font-weight: normal; }
+    .footer-wrapper a:hover {
+      color: #666666; }
   .footer-wrapper .footer-address {
     padding: 0 0 0 2.5rem; }
     @media screen and (max-width: 767px) {
       .footer-wrapper .footer-address {
         padding: 0 0 0 1rem; } }
     .footer-wrapper .footer-address h1 {
+      font-family: 'ComeniaSansCondBold';
+      text-transform: uppercase;
+      color: #222222;
       font-size: 0.875rem; }
     .footer-wrapper .footer-address p {
+      color: #555555;
       font-size: 0.75rem;
       padding: 0 0 0.625rem 0;
       margin: 0; }
@@ -3149,13 +3194,15 @@ ul {
       padding-bottom: 0.125rem; }
       .footer-wrapper .footer-nav ul li ul {
         display: none; }
+    .footer-wrapper .footer-nav ul li.search-element {
+      display: none; }
   .footer-wrapper .footer-nav .footer-copyright {
     padding: 0;
     font-size: 0.75rem;
     margin: 0; }
 
 ul.slimmenu li .sub-collapser {
-  background: none repeat scroll 0 0 rgba(150, 150, 150, 0.4);
+  background: none repeat scroll 0 0 rgba(126, 126, 126, 0.4);
   position: absolute;
   right: 0;
   top: 0;
@@ -3202,7 +3249,7 @@ ul.slimmenu li > ul > li ul {
   width: 100%; }
 
 .nav-one {
-  background-color: #762141;
+  background-color: #7c2142;
   max-height: 2.1875rem;
   text-transform: uppercase;
   z-index: 9999; }
@@ -3242,7 +3289,7 @@ ul.slimmenu li > ul > li ul {
           top: 0px;
           right: 0px; } }
       .nav-one nav .menu-collapser:hover {
-        background-color: #222222; }
+        background-color: #333333; }
       .nav-one nav .menu-collapser .collapse-button {
         position: absolute;
         right: 0px;
@@ -3274,28 +3321,28 @@ ul.slimmenu li > ul > li ul {
       margin: 0;
       padding: 0;
       width: 100%;
-      background-color: #762141; }
+      background-color: #7c2142; }
       @media screen and (max-width: 767px) {
         .nav-one nav ul.slimmenu {
-          background-color: #222222;
+          background-color: #333333;
           position: absolute;
           top: 35px; } }
       .nav-one nav ul.slimmenu > li {
         margin-right: -5px;
-        border-left: 1px solid #999; }
+        border-left: 1px solid #b7b7b7; }
         .nav-one nav ul.slimmenu > li:first-child {
           border-left: 0; }
         .nav-one nav ul.slimmenu > li:last-child {
           margin-right: 0; }
       .nav-one nav ul.slimmenu li {
-        background-color: #762141;
+        background-color: #7c2142;
         margin-right: 0px;
         position: relative;
         display: inline-block;
         border-left: none; }
         @media screen and (max-width: 767px) {
           .nav-one nav ul.slimmenu li {
-            background-color: #222222; } }
+            background-color: #333333; } }
         .nav-one nav ul.slimmenu li a {
           display: block;
           color: white;
@@ -3312,12 +3359,12 @@ ul.slimmenu li > ul > li ul {
               height: 32px;
               font-weight: normal; } }
           .nav-one nav ul.slimmenu li a:hover {
-            background-color: #762141;
+            background-color: #7c2142;
             opacity: 1;
             text-decoration: none; }
             @media screen and (max-width: 767px) {
               .nav-one nav ul.slimmenu li a:hover {
-                background-color: #222222;
+                background-color: #333333;
                 opacity: 1; } }
         @media screen and (min-width: 850px) {
           .nav-one nav ul.slimmenu li .sub-collapser {
@@ -3329,25 +3376,25 @@ ul.slimmenu li > ul > li ul {
           margin: 0;
           list-style-type: none;
           padding: 5px 0 10px 0;
-          background-color: #762141; }
+          background-color: #7c2142; }
           @media screen and (max-width: 767px) {
             .nav-one nav ul.slimmenu li ul {
-              background-color: #222222; } }
+              background-color: #333333; } }
           .nav-one nav ul.slimmenu li ul li {
             background-color: #BBB;
             width: 100%; }
             .nav-one nav ul.slimmenu li ul li a {
-              background-color: #762141;
+              background-color: #7c2142;
               font-weight: normal; }
               @media screen and (max-width: 767px) {
                 .nav-one nav ul.slimmenu li ul li a {
-                  background-color: #222222;
+                  background-color: #333333;
                   padding: 0 0 0 30px; } }
               .nav-one nav ul.slimmenu li ul li a:hover {
                 opacity: 1; }
                 @media screen and (max-width: 767px) {
                   .nav-one nav ul.slimmenu li ul li a:hover {
-                    background-color: #222222;
+                    background-color: #333333;
                     opacity: 1; } }
             .nav-one nav ul.slimmenu li ul li ul {
               position: fixed; }
@@ -3378,11 +3425,11 @@ ul.slimmenu li > ul > li ul {
           width: 165px;
           height: 29px;
           border: none;
-          background: rgba(255, 255, 255, 0.4);
-          color: white;
+          background: rgba(255, 255, 255, 0.45);
+          color: #222222;
           padding-left: 5px; }
           .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field:focus {
-            border: none; }
+            border: 1px solid #cccccc; }
           @media screen and (max-width: 849px) and (min-width: 768px) {
             .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
               width: 125px; } }
@@ -3391,7 +3438,7 @@ ul.slimmenu li > ul > li ul {
               height: 25px;
               width: 250px; } }
         .nav-one nav ul.slimmenu li.search-element .bcf-search .submit {
-          background: rgba(255, 255, 255, 0.4) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
+          background: rgba(255, 255, 255, 0.45) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
           width: 29px;
           height: 29px;
           padding-left: 0px;
@@ -3410,7 +3457,7 @@ ul.slimmenu li > ul > li ul {
       -webkit-box-sizing: border-box; }
       .nav-one nav ul.slimmenu.collapsed li a {
         display: block;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #222222;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -3547,7 +3594,7 @@ ul.slimmenu li > ul > li ul {
       font-size: 0.875rem;
       font-weight: bolder;
       display: inline-block;
-      padding: 0.3125rem 0.5rem 0.3125rem 0.5rem; }
+      padding: 0.3125rem 1rem 0.3125rem 1rem; }
       @media screen and (max-width: 849px) and (min-width: 768px) {
         .nav-two ul li {
           font-size: 0.75rem; } }
@@ -3556,9 +3603,9 @@ ul.slimmenu li > ul > li ul {
           font-size: 0.625rem;
           padding: 0.125rem 0.3125rem 0.125rem 0.3125rem; } }
       .nav-two ul li a {
-        color: #222; }
+        color: #222222; }
         .nav-two ul li a:hover {
-          color: #762141; }
+          color: #7c2142; }
 
 aside .aside-wrapper {
   padding: 1.875rem 2.5rem 5.625rem 4.0625rem; }
@@ -3584,7 +3631,8 @@ aside .aside-wrapper {
         border-top: 1px solid #cccccc;
         padding: 0.8125rem 1rem 0.9375rem 1rem; } }
     aside .aside-wrapper .spotlight .spotlight-header h3 {
-      font-weight: bolder;
+      color: #333333;
+      font-weight: bold;
       text-transform: uppercase;
       padding: 0;
       margin: 0;
@@ -3600,7 +3648,8 @@ aside .aside-wrapper {
         aside .aside-wrapper .spotlight .spotlight-image img {
           width: 125px; } }
     aside .aside-wrapper .spotlight .spotlight-title h3 {
-      font-weight: bolder;
+      color: black;
+      font-weight: bold;
       text-transform: uppercase;
       padding-top: 0.8125rem;
       padding-bottom: 0.8125rem;
@@ -3614,10 +3663,16 @@ aside .aside-wrapper {
           line-height: 16px;
           padding-bottom: 0.375rem; } }
     aside .aside-wrapper .spotlight .spotlight-text p {
+      color: #222222;
       padding: 0px 0px 5px 0px;
       margin: 0px 0px 0px 0px;
       font-size: 0.9375rem;
       line-height: 18px; }
+      aside .aside-wrapper .spotlight .spotlight-text p a {
+        color: #7c2142;
+        font-weight: bold; }
+        aside .aside-wrapper .spotlight .spotlight-text p a:hover {
+          color: #222222; }
       @media screen and (max-width: 767px) {
         aside .aside-wrapper .spotlight .spotlight-text p {
           font-size: 0.875rem;
@@ -3628,15 +3683,15 @@ aside .aside-wrapper {
       aside .aside-wrapper .partners {
         padding: 0.9375rem 1rem 0.9375rem 1rem; } }
     aside .aside-wrapper .partners .partners-title-bar {
-      background-color: #cccccc;
+      background-color: #f0f0f0;
       height: 2.375rem; }
       aside .aside-wrapper .partners .partners-title-bar h3 {
-        font-weight: bolder;
+        font-weight: bold;
         text-transform: uppercase;
         padding: 0.4375rem 0 0 0.625rem;
         font-size: 1.1875rem;
         line-height: 19px;
-        color: #666666;
+        color: #333333;
         float: left; }
         @media screen and (max-width: 767px) {
           aside .aside-wrapper .partners .partners-title-bar h3 {
@@ -3656,81 +3711,70 @@ aside .aside-wrapper {
       margin: 0;
       width: 100%;
       background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png"); }
-      @media screen and (max-width: 767px) {
-        aside .aside-wrapper .partners .partners-list ul {
-          border: 1px solid #cccccc; } }
-      aside .aside-wrapper .partners .partners-list ul .sponsor {
-        border-left: 1px solid #cccccc;
-        border-right: 1px solid #cccccc;
-        border-bottom: 1px solid #cccccc;
+      aside .aside-wrapper .partners .partners-list ul .partners .partners-text {
+        position: relative;
         height: 60px; }
-        @media screen and (max-width: 767px) {
-          aside .aside-wrapper .partners .partners-list ul .sponsor {
-            display: inline-block;
-            width: 33%;
-            border-left: none;
-            border-bottom: none;
-            height: 30px;
-            margin: 10px 0 10px 0px; }
-            aside .aside-wrapper .partners .partners-list ul .sponsor:last-of-type {
-              border-right: none; } }
-        @media screen and (max-width: 500px) {
-          aside .aside-wrapper .partners .partners-list ul .sponsor {
-            height: 18x; } }
-        aside .aside-wrapper .partners .partners-list ul .sponsor img {
-          padding: 0;
-          margin: 6px 0px 0px 25px; }
-          @media screen and (max-width: 767px) {
-            aside .aside-wrapper .partners .partners-list ul .sponsor img {
-              display: block;
-              margin: 0 auto;
-              height: 35px; } }
-          @media screen and (max-width: 500px) {
-            aside .aside-wrapper .partners .partners-list ul .sponsor img {
-              height: 25px; } }
+        aside .aside-wrapper .partners .partners-list ul .partners .partners-text p {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+          height: 70%;
+          border: 1px solid #e2e2e2;
+          font-size: 1rem;
+          color: #606060;
+          font-weight: bold;
+          line-height: 16px; }
 
 @media screen and (max-width: 767px) {
   #sidebar {
     border-top: 1px solid #cccccc;
     padding: 0.9375rem 1rem 0.9375rem 1rem; } }
-#sidebar .sidebar-header {
-  background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
-  background-repeat: repeat;
-  font-size: 0.8125rem;
-  font-weight: bolder;
-  color: #555;
-  padding: 10px;
-  text-transform: uppercase; }
 #sidebar #subnav {
   margin: 0; }
+  #sidebar #subnav .sidebar-header {
+    background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
+    background-repeat: repeat;
+    color: #222222;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase; }
   #sidebar #subnav a {
-    border-bottom: 1px solid #DEDEDD;
-    color: #222;
+    border-bottom: 1px solid #cccccc;
+    color: #222222;
     display: block;
     font-size: 0.875rem;
     line-height: 1.2;
     padding: 0.625rem;
     text-transform: uppercase; }
     #sidebar #subnav a:hover {
-      background-color: #762141;
+      background-color: #7c2142;
       color: #fff; }
-    #sidebar #subnav a.selected, #sidebar #subnav a.selected:hover {
-      background: #762141;
-      border-bottom: 1px solid #762141;
+    #sidebar #subnav a.selected {
+      background: #7c2142;
+      border-bottom: 1px solid #cccccc;
       color: white;
       padding-left: 0.625rem; }
+      #sidebar #subnav a.selected:hover {
+        background: #222222;
+        border-bottom: 1px solid #cccccc; }
   #sidebar #subnav ul {
-    border-bottom: 1px solid #DEDEDD;
-    padding: 5px 0 10px 30px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0.3125rem 0 0.625rem 1.875rem;
     margin: 0; }
     #sidebar #subnav ul a {
       border-bottom: none;
       font-size: 0.875rem;
-      padding: 6px 0;
+      padding: 0.375rem 0;
+      color: #666666;
       text-transform: none; }
       #sidebar #subnav ul a:hover {
-        background-color: transparent;
-        color: #782241; }
+        background-color: white;
+        color: #7c2142; }
 
 section .articles-wrapper {
   padding: 2rem 0.5rem 5.625rem 2.5rem; }
@@ -3746,10 +3790,13 @@ section .articles-wrapper {
     @media screen and (max-width: 767px) {
       section .articles-wrapper .title-bar {
         height: 17px; } }
-    section .articles-wrapper .title-bar .title {
+    section .articles-wrapper .title-bar p.title {
+      margin-bottom: 0;
+      float: left;
+      text-transform: uppercase;
       font-size: 1.0625rem; }
       @media screen and (max-width: 767px) {
-        section .articles-wrapper .title-bar .title {
+        section .articles-wrapper .title-bar p.title {
           font-size: 0.75rem; } }
   section .articles-wrapper ul {
     padding: 0;
@@ -3757,7 +3804,7 @@ section .articles-wrapper {
     section .articles-wrapper ul li {
       padding: 0; }
       section .articles-wrapper ul li .listed-article, section .articles-wrapper ul li .listed-article-landing {
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #e2e2e2;
         padding: 1.5rem 0 0.9375rem 0; }
         @media screen and (max-width: 767px) {
           section .articles-wrapper ul li .listed-article, section .articles-wrapper ul li .listed-article-landing {
@@ -3787,16 +3834,15 @@ section .articles-wrapper {
           position: relative;
           top: -8px; }
           section .articles-wrapper ul li .listed-article .article-tag a, section .articles-wrapper ul li .listed-article-landing .article-tag a {
-            color: #666666;
+            color: #939393;
             font-size: 0.6875rem; }
             section .articles-wrapper ul li .listed-article .article-tag a:hover, section .articles-wrapper ul li .listed-article-landing .article-tag a:hover {
-              color: #762141; }
+              color: #cccccc; }
         section .articles-wrapper ul li .listed-article .article-title, section .articles-wrapper ul li .listed-article-landing .article-title {
           padding: 0;
           margin: -1.5625rem 0 0 0; }
           section .articles-wrapper ul li .listed-article .article-title h2, section .articles-wrapper ul li .listed-article-landing .article-title h2 {
             font-size: 1.25rem;
-            font-weight: bolder;
             line-height: 23px; }
             @media screen and (max-width: 500px) {
               section .articles-wrapper ul li .listed-article .article-title h2, section .articles-wrapper ul li .listed-article-landing .article-title h2 {
@@ -3806,18 +3852,19 @@ section .articles-wrapper {
             color: #222222; }
             @media screen and (max-width: 767px) {
               section .articles-wrapper ul li .listed-article .article-title a, section .articles-wrapper ul li .listed-article-landing .article-title a {
-                color: #762141; } }
+                color: #7c2142; } }
             section .articles-wrapper ul li .listed-article .article-title a:hover, section .articles-wrapper ul li .listed-article-landing .article-title a:hover {
-              color: #762141; }
+              color: #7c2142; }
               @media screen and (max-width: 767px) {
                 section .articles-wrapper ul li .listed-article .article-title a:hover, section .articles-wrapper ul li .listed-article-landing .article-title a:hover {
                   color: #222222; } }
         section .articles-wrapper ul li .listed-article .article-date p, section .articles-wrapper ul li .listed-article-landing .article-date p {
-          color: #666666;
+          color: #939393;
           font-size: 0.75rem;
           padding: 0px 0px 5px 0;
           margin: 0; }
         section .articles-wrapper ul li .listed-article .article-teaser p, section .articles-wrapper ul li .listed-article-landing .article-teaser p {
+          color: #222222;
           padding: 0;
           margin-bottom: 0px;
           font-size: 0.9375rem;
@@ -3831,14 +3878,14 @@ section .articles-wrapper {
           padding: 0; }
           section .articles-wrapper ul li .listed-article .article-readmore p a, section .articles-wrapper ul li .listed-article-landing .article-readmore p a {
             font-size: 0.9375rem;
-            color: #762141; }
+            color: #7c2142; }
             @media screen and (max-width: 500px) {
               section .articles-wrapper ul li .listed-article .article-readmore p a, section .articles-wrapper ul li .listed-article-landing .article-readmore p a {
                 font-size: 0.75rem; } }
             section .articles-wrapper ul li .listed-article .article-readmore p a:hover, section .articles-wrapper ul li .listed-article-landing .article-readmore p a:hover {
-              color: #666666; }
+              color: #cccccc; }
     section .articles-wrapper ul li:first-child .listed-article {
-      padding: 0 0 0.9375rem 0; }
+      padding: 0.9375rem 0 0.9375rem 0; }
       section .articles-wrapper ul li:first-child .listed-article .article-image {
         width: 250px;
         height: 200px; }
@@ -3859,6 +3906,11 @@ section .articles-wrapper {
             section .articles-wrapper ul li:first-child .listed-article .article-image img {
               max-width: 266px;
               height: 160px; } }
+          @media screen and (max-width: 500px) {
+            section .articles-wrapper ul li:first-child .listed-article .article-image img {
+              max-width: 166px;
+              height: 100px;
+              left: -30px; } }
     @media screen and (max-width: 767px) {
       section .articles-wrapper ul li:last-child .listed-article, section .articles-wrapper ul li:last-child .listed-article-landing {
         border-bottom: none; } }
@@ -3900,7 +3952,7 @@ section .stats-wrapper {
           height: 1.875rem; } }
       section .stats-wrapper ul li .title {
         display: block;
-        color: #333333;
+        color: #666666;
         font-weight: 300;
         font-size: 0.875rem;
         padding-top: 0;
@@ -3912,7 +3964,7 @@ section .stats-wrapper {
         position: relative;
         top: -11px;
         display: block;
-        color: #666666;
+        color: #555555;
         font-weight: bolder;
         font-size: 2.875rem;
         padding: 0;
@@ -3926,7 +3978,7 @@ section .stats-wrapper {
   section .stats-wrapper .stats-disclaimer p {
     float: right;
     font-size: 0.75rem;
-    color: #333333;
+    color: #7e7e7e;
     padding: 0.375rem 0.5rem 0.375rem 0;
     margin: 0; }
     @media screen and (max-width: 767px) {
@@ -3983,12 +4035,13 @@ section .stats-wrapper {
             line-height: 30px;
             padding-bottom: 0.25rem; } }
         .highlights ul li .hightlighted-article .article-text-elements .article-title h2 a {
-          color: #222222; }
+          color: black; }
           .highlights ul li .hightlighted-article .article-text-elements .article-title h2 a:hover {
-            color: #762141; }
+            color: black; }
       .highlights ul li .hightlighted-article .article-text-elements .article-teaser p {
         padding-top: 2px;
         font-size: 1.1875rem;
+        color: #222222;
         line-height: 21px; }
         @media screen and (max-width: 849px) and (min-width: 768px) {
           .highlights ul li .hightlighted-article .article-text-elements .article-teaser p {
@@ -4001,10 +4054,13 @@ section .stats-wrapper {
             font-size: 1.1875rem;
             line-height: 21px; } }
       .highlights ul li .hightlighted-article .article-text-elements .article-readmore p a {
+        background-color: #7c2142;
         color: white;
         font-size: 0.9375rem;
-        background-color: #762141;
         padding: 0.4375rem 0.625rem 0.4375rem 0.625rem; }
+        .highlights ul li .hightlighted-article .article-text-elements .article-readmore p a:hover {
+          background-color: #222222;
+          color: white; }
         @media screen and (max-width: 849px) and (min-width: 768px) {
           .highlights ul li .hightlighted-article .article-text-elements .article-readmore p a {
             font-size: 0.75rem;
@@ -4042,7 +4098,7 @@ section .stats-wrapper {
       .orbit-container .orbit-prev {
         left: 16px;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow-Rev.png) no-repeat 5px 12px;
-        background-color: #222222;
+        background-color: #666666;
         opacity: 0.8; } }
     @media screen and (max-width: 767px) {
       .orbit-container .orbit-prev {
@@ -4076,7 +4132,7 @@ section .stats-wrapper {
       .orbit-container .orbit-next {
         right: 16px;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow-Rev.png) no-repeat 6px 12px;
-        background-color: #222222;
+        background-color: #666666;
         opacity: 0.8; } }
     @media screen and (max-width: 767px) {
       .orbit-container .orbit-next {
@@ -4086,40 +4142,33 @@ section .stats-wrapper {
     padding: 0 0 0 0; }
     .orbit-container .orbit-bullets li {
       margin: 0 0.4375rem 0 0.4375rem;
-      border: 1px solid #999;
+      border: 1px solid #222222;
       background-color: white;
       height: 0.75rem;
-      width: 0.75rem;
-      background-color: #ffffff; }
+      width: 0.75rem; }
       .orbit-container .orbit-bullets li.active {
-        border: 1px solid #222;
-        background-color: #222; }
+        border: 1px solid #222222;
+        background-color: #222222; }
 
 .breadcrumbs-bcf {
   padding: 0px;
   margin: 0 0 20px 0;
   overflow: hidden;
-  border-bottom: 3px solid #cccccc;
+  border-bottom: 4px solid #c3c3c3;
   width: 100%; }
   .breadcrumbs-bcf p {
     padding: 0;
     margin: 0; }
     .breadcrumbs-bcf p span {
       font-size: 0.6875rem;
-      color: #333333;
+      color: #666666;
       padding: 0 0.9375rem 0 0;
       margin: 0;
       background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center; }
       .breadcrumbs-bcf p span a {
-        color: #333333; }
+        color: #666666; }
         .breadcrumbs-bcf p span a:hover {
-          color: #762141; }
-      .breadcrumbs-bcf p span:first-child {
-        padding-left: 0; }
-        .breadcrumbs-bcf p span:first-child a {
-          color: #762141; }
-          .breadcrumbs-bcf p span:first-child a:hover {
-            color: #333333; }
+          color: #7c2142; }
       .breadcrumbs-bcf p span:last-of-type {
         background: none; }
 
@@ -4128,37 +4177,114 @@ section .stats-wrapper {
   margin: 0;
   font-size: 0.625rem; }
   .article-category a {
-    color: #cccccc; }
+    color: #939393;
+    font-weight: bold; }
     .article-category a:hover {
-      color: #762141; }
+      color: #cccccc; }
 
 article {
   width: 100%; }
   article .article-date {
-    color: #cccccc;
-    padding: 8px 0px 0px 0px;
+    color: #7a7a7a;
+    padding: 0.5rem 0px 0px 0px;
     margin: 0; }
   article h1 {
     font-size: 2.125rem;
-    color: #222222;
+    color: black;
+    font-family: 'ComeniaSansCondBold';
     line-height: 39px;
     padding-top: 2px; }
   article .article-text, article .article-text .article-additional {
     padding: 0;
-    margin: 15px 0 0 0; }
+    margin: 0.9375rem 0 0 0; }
     article .article-text h2, article .article-text .article-additional h2 {
-      padding: 0.5rem 0 0.3125rem 0;
-      line-height: 26px; }
+      font-family: 'ComeniaSansCondBold';
+      color: #222222;
+      padding: 0.5rem 0 0.125rem 0;
+      line-height: 24px; }
     article .article-text h3, article .article-text h4, article .article-text h5, article .article-text h6, article .article-text .article-additional h3, article .article-text .article-additional h4, article .article-text .article-additional h5, article .article-text .article-additional h6 {
-      padding: 0.625rem 0 0.25rem 0;
+      font-family: 'ComeniaSansCondBold';
+      color: #222222;
+      padding: 0.625rem 0 0.6875rem 0;
       line-height: 21px;
-      margin: 0 0 -14px 0; }
+      margin: 0 0 -0.25rem 0; }
     article .article-text p, article .article-text .article-additional p {
       color: #333333;
       font-size: 0.9375rem;
       padding: 0.5625rem 0 0.5625rem 0;
       line-height: 21px;
       margin: 0; }
+    article .article-text blockquote, article .article-text .article-additional blockquote {
+      color: #333333;
+      padding: 0 1rem 0 1rem;
+      margin: 0.375rem 0 0 0;
+      font-style: italic;
+      border: none; }
+    @media screen and (max-width: 767px) {
+      article .article-text table, article .article-text .article-additional table {
+        border: 1px solid #e2e2e2; } }
+    article .article-text table th, article .article-text .article-additional table th {
+      border-bottom: 1px solid #e2e2e2;
+      font-weight: bold;
+      padding: 0.5625rem 0.625rem;
+      text-align: center; }
+      @media screen and (max-width: 849px) and (min-width: 768px) {
+        article .article-text table th, article .article-text .article-additional table th {
+          font-size: 0.75rem; } }
+      @media screen and (max-width: 767px) {
+        article .article-text table th, article .article-text .article-additional table th {
+          font-size: 0.6875rem; } }
+    article .article-text table td, article .article-text .article-additional table td {
+      border-bottom: 1px solid #e2e2e2;
+      padding: 0.5625rem 0.625rem;
+      text-align: left; }
+      @media screen and (max-width: 849px) and (min-width: 768px) {
+        article .article-text table td, article .article-text .article-additional table td {
+          font-size: 0.8125rem; } }
+      @media screen and (max-width: 767px) {
+        article .article-text table td, article .article-text .article-additional table td {
+          font-size: 0.6875rem; } }
+    @media screen and (max-width: 767px) {
+      article .article-text table.responsive, article .article-text .article-additional table.responsive {
+        margin-bottom: 0; }
+        article .article-text table.responsive th, article .article-text table.responsive td, article .article-text .article-additional table.responsive th, article .article-text .article-additional table.responsive td {
+          position: relative;
+          white-space: nowrap;
+          overflow: hidden; }
+          article .article-text table.responsive th:first-child, article .article-text table.responsive td:first-child, article .article-text .article-additional table.responsive th:first-child, article .article-text .article-additional table.responsive td:first-child {
+            display: none; }
+        article .article-text table.responsive.pinned td, article .article-text .article-additional table.responsive.pinned td {
+          display: none; } }
+    @media screen and (max-width: 767px) {
+      article .article-text .pinned, article .article-text .article-additional .pinned {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: white;
+        width: 50%;
+        overflow: hidden;
+        overflow-x: scroll;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc; }
+        article .article-text .pinned table, article .article-text .article-additional .pinned table {
+          border-right: none;
+          border-left: none;
+          width: 100%; }
+          article .article-text .pinned table th, article .article-text .pinned table td, article .article-text .article-additional .pinned table th, article .article-text .article-additional .pinned table td {
+            white-space: nowrap; }
+        article .article-text .pinned td:last-child, article .article-text .article-additional .pinned td:last-child {
+          border-bottom: 0; } }
+    @media screen and (max-width: 767px) {
+      article .article-text div.table-wrapper, article .article-text .article-additional div.table-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-right: 1px solid #cccccc; }
+        article .article-text div.table-wrapper div.scrollable, article .article-text .article-additional div.table-wrapper div.scrollable {
+          overflow: scroll;
+          overflow-y: hidden; }
+          article .article-text div.table-wrapper div.scrollable table, article .article-text .article-additional div.table-wrapper div.scrollable table {
+            margin-left: 50%; } }
     article .article-text ul, article .article-text .article-additional ul {
       list-style-type: disc;
       padding: 0.25rem 0 0.25rem 1.5625rem;
@@ -4173,8 +4299,8 @@ article {
           article .article-text ul li ul li:last-of-type, article .article-text .article-additional ul li ul li:last-of-type {
             padding-bottom: 0px; }
     article .article-text a, article .article-text .article-additional a {
-      font-weight: bolder;
-      color: #762141; }
+      color: #7c2142;
+      font-weight: bold; }
       article .article-text a:hover, article .article-text .article-additional a:hover {
         color: #222222; }
     article .article-text .article-additional, article .article-text .article-additional .article-additional {

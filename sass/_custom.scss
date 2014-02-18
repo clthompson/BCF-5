@@ -29,31 +29,38 @@
   }
 
 // Colors
-  $color-maroon: #762141;
-  $color-darkGray: #222222;
-  $color-lightGray: #cccccc;
-  $color-maroon: #762141;
-  $color-maroon: #762141;
-  $color-black: #000000;
-  $color-midgray1: #333333;
-  $color-midgray2: #666666;
-  $color-white: #FFFFFF;
-
-// Overall Paddings
-  $padding-major: rem-calc(32);
-  $padding-minor: rem-calc(16);
-  $padding-mini: rem-calc(8);
+  $color-maroon: #7c2142;
+  $color-black: #000;
+  $color-white: #fff;
+  $color-grayApollo: #222;      //the God of the Sun and the Music
+  $color-grayBoreas: #333;      //the Wind of the North
+  $color-grayChiron: #555;      //the Wise and Gentle Tutor
+  $color-grayDanae: #606060;    //the mother of Perseus
+  $color-grayErato: #666;       //the Muse of Love Poetry
+  $color-grayFates: #7a7a7a;    //the Spinners of the Thread of Life
+  $color-grayGaea: #7e7e7e;     //Mother Earth
+  $color-grayHermes: #939393;   //the Messenger of the gods
+  $color-grayIris: #b7b7b7;     //the personification of the rainbow
+  $color-grayJason: #c3c3c3;    //the leader of the Argonauts
+  $color-grayKallipygos: #ccc;  //title of the Greek god Aphrodite
+  $color-grayLinus: #e2e2e2;    //the Music teacher of Heracles
+  $color-grayMinotaur: #f0f0f0; //the creature with the head of a bull
 
 // Backgrounds
   $background-d: url('http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png');
 
 // Borders
-  $thick-maroon: 7px solid $color-maroon;
-  $medium-grey: 3px solid $color-lightGray;
-  $thin-grey: 1px solid $color-lightGray;
+  $thick-maroon: 8px solid $color-maroon;
+  $medium-grayJason: 4px solid $color-grayJason;
+  $thin-maroon: 1px solid $color-maroon;
+  $thin-grayApollo: 1px solid $color-grayApollo;
+  $thin-grayIris: 1px solid $color-grayIris;
+  $thin-grayJason: 1px solid $color-grayJason;
+  $thin-grayKallipygos: 1px solid $color-grayKallipygos;
+  $thin-grayLinus: 1px solid $color-grayLinus;
 
 // Text
-  $bolder: bolder;
+  $bold: bold;
 
 // Screens
   $Desktop: "screen and (min-width: 850px)";
@@ -73,8 +80,9 @@
 
   a {
     color: $color-maroon;
+    font-weight: $bold;
     &:hover {
-      color: $color-darkGray;
+      color: $color-grayApollo;
     }
   }
 
@@ -96,31 +104,34 @@
   }
 
   .bolder {
-    font-weight: $bolder;
+    font-weight: $bold;
   }
 
-  .see-all{
-  //border: $thin-grey;
+  p.see-all{
+  color: $color-maroon;
+  float: right;
+  margin-bottom: 0;
   font-size: rem-calc(15);
   padding-right: 12px;
-  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 50px 6px;
+  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 56px 6px;
   @media #{$Phone} {
+    padding-right: 20px;
     font-size: rem-calc(13);
-    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 45px 5px;
+    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 52px 6px;
   }
   &:hover {
-      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 50px 5px;
-      color: #555;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 56px 6px;
+      color: $color-grayErato;
       @media #{$Phone} {
         font-size: rem-calc(13);
-        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 45px 5px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 52px 6px;
       } 
     }
   }
 
 //Header Styles
   .logo {
-    padding: $padding-major 0 $padding-major rem-calc(40);
+    padding: rem-calc(32) 0 rem-calc(32) rem-calc(40);
     @media #{$iPadPortrait} {
       padding: rem-calc(16) 0 rem-calc(16) rem-calc(16);
     }
@@ -168,15 +179,26 @@
     background-repeat:repeat;
     border-top: $thick-maroon;
     padding: rem-calc(25) 0 rem-calc(28) 0;
+    a {
+      color: $color-maroon;
+      font-weight: normal;
+      &:hover {
+        color: $color-grayErato;
+      }
+    }
     .footer-address{
       padding: 0 0 0 rem-calc(40);
       @media #{$Phone} {
         padding: 0 0 0 rem-calc(16);
       }
       h1 {
+        font-family: 'ComeniaSansCondBold';
+        text-transform: uppercase;
+        color: $color-grayApollo;
         font-size: rem-calc(14);
       }
       p {
+        color: $color-grayChiron;
         font-size: rem-calc(12);
         padding: 0 0 rem-calc(10) 0;
         margin: 0;
@@ -200,6 +222,9 @@
             display: none;
           }
         }
+        li.search-element {
+          display: none;
+        }
       }
       .footer-copyright {
         padding: 0;
@@ -214,7 +239,7 @@
 // Slimmenu styles - default ------------------------------------------------------------------
 
 ul.slimmenu li .sub-collapser {
-  background: none repeat scroll 0 0 rgba(150, 150, 150, 0.40);
+  background: none repeat scroll 0 0 rgba(126, 126, 126, 0.40);
   position: absolute;
   right: 0;
   top: 0;
@@ -270,7 +295,6 @@ ul.slimmenu li > ul > li ul {
     width: 100%;
 }
 
-
 // Slimmenu styles - default end ------------------------------------------------------------------
 
   .nav-one {
@@ -313,7 +337,7 @@ ul.slimmenu li > ul > li ul {
           right: 0px; //35px - once the search object gets made 
         }
         &:hover {
-          background-color: $color-darkGray;
+          background-color: $color-grayBoreas;
         }
        .collapse-button {
         position: absolute;
@@ -367,13 +391,13 @@ ul.slimmenu li > ul > li ul {
         width: 100%;
         background-color: $color-maroon;
         @media #{$Phone} {
-          background-color: $color-darkGray;
+          background-color: $color-grayBoreas;
           position:absolute;
           top:35px;
         }
         & > li { 
           margin-right: -5px; 
-          border-left: 1px solid #999;
+          border-left: $thin-grayIris;
           &:first-child { 
             border-left: 0;
           }
@@ -388,7 +412,7 @@ ul.slimmenu li > ul > li ul {
           display: inline-block;
           border-left: none;
           @media #{$Phone} {
-            background-color: $color-darkGray;
+            background-color: $color-grayBoreas;
           }
           a {
             display: block;
@@ -417,7 +441,7 @@ ul.slimmenu li > ul > li ul {
               opacity: 1;
               text-decoration: none;
               @media #{$Phone} {
-                background-color: $color-darkGray;
+                background-color: $color-grayBoreas;
                 opacity: 1;
               }
             }
@@ -442,7 +466,7 @@ ul.slimmenu li > ul > li ul {
             padding: 5px 0 10px 0;
             background-color: $color-maroon;
             @media #{$Phone} {
-              background-color: $color-darkGray;
+              background-color: $color-grayBoreas;
             }
             li {
               background-color: #BBB;
@@ -451,13 +475,13 @@ ul.slimmenu li > ul > li ul {
                 background-color: $color-maroon;
                 font-weight: normal;
                 @media #{$Phone} {
-                  background-color: $color-darkGray;
+                  background-color: $color-grayBoreas;
                   padding: 0 0 0 30px;
                 }
                 &:hover {
                   opacity: 1;
                   @media #{$Phone} {
-                    background-color: $color-darkGray;
+                    background-color: $color-grayBoreas;
                     opacity: 1;
                   }
                 }
@@ -506,11 +530,11 @@ ul.slimmenu li > ul > li ul {
               width: 165px;
               height: 29px;
               border: none;
-              background: rgba(255, 255, 255, 0.40);
-              color: $color-white;
+              background: rgba(255, 255, 255, 0.45);
+              color: $color-grayApollo;
               padding-left: 5px;
               &:focus{
-                border: none;;
+                border: $thin-grayKallipygos;
               }
               @media #{$iPadPortrait} {
                 width: 125px;
@@ -524,7 +548,7 @@ ul.slimmenu li > ul > li ul {
               //position: absolute;
               //right: 20px;
               //background-image: url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
-              background: rgba(255, 255, 255, 0.40) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
+              background: rgba(255, 255, 255, 0.45) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
               width: 29px;
               height: 29px;
               padding-left: 0px;
@@ -548,7 +572,7 @@ ul.slimmenu li > ul > li ul {
           -webkit-box-sizing: border-box;
           a {
             display: block;
-            border-bottom: 1px solid rgba(0, 0, 0, 1); 
+            border-bottom: $thin-grayApollo; 
 
             box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -573,10 +597,6 @@ ul.slimmenu li > ul > li ul {
       }
     }
   }
-
-
-
-
 
   //@media #{$Phone} { //nav-one foundation5 sttempt - NOT USED
       //display:none;
@@ -701,8 +721,8 @@ ul.slimmenu li > ul > li ul {
     background-image: $background-d;
     //height: rem-calc(35); need this for real build
     background-repeat:repeat;
-    border-top: $thin-grey;
-    border-bottom: $thin-grey;
+    border-top: $thin-grayKallipygos;
+    border-bottom: $thin-grayKallipygos;
     text-align:center;
     ul {
       display: inline-block;
@@ -711,7 +731,7 @@ ul.slimmenu li > ul > li ul {
         font-size: rem-calc(14);
         font-weight: bolder;
         display: inline-block;
-        padding: rem-calc(5) $padding-mini rem-calc(5) $padding-mini;
+        padding: rem-calc(5) rem-calc(16) rem-calc(5) rem-calc(16);
         @media #{$iPadPortrait} {
           font-size: rem-calc(12);
         }
@@ -720,7 +740,7 @@ ul.slimmenu li > ul > li ul {
           padding: rem-calc(2) rem-calc(5) rem-calc(2) rem-calc(5);
         }
         a {
-          color: #222;
+          color: $color-grayApollo;
           &:hover {
             color: $color-maroon;
           }
@@ -741,7 +761,7 @@ ul.slimmenu li > ul > li ul {
         }
         .advert {
           padding: rem-calc(15) 0 rem-calc(40) 0;
-          border-bottom: $thin-grey;
+          border-bottom: $thin-grayKallipygos;
           @media #{$Phone} {
             padding: rem-calc(0) 0 rem-calc(15) 0;
             border-bottom: none;
@@ -749,15 +769,16 @@ ul.slimmenu li > ul > li ul {
         }
         .spotlight {
           padding: rem-calc(15) 0 rem-calc(15) 0;
-          border-bottom: $thin-grey;
+          border-bottom: $thin-grayKallipygos;
           border-top: none;
           @media #{$Phone} {
-            border-top: $thin-grey;
+            border-top: $thin-grayKallipygos;
             padding: rem-calc(13) rem-calc(16) rem-calc(15) rem-calc(16);
           }
           .spotlight-header {
             h3 {
-              font-weight: bolder;
+              color: $color-grayBoreas;
+              font-weight: $bold;
               text-transform: uppercase;
               padding: 0;
               margin: 0;
@@ -779,7 +800,8 @@ ul.slimmenu li > ul > li ul {
           }
           .spotlight-title {
             h3 {
-              font-weight: bolder;
+              color: $color-black;
+              font-weight: $bold;
               text-transform: uppercase;
               padding-top: rem-calc(13);
               padding-bottom: rem-calc(13);
@@ -796,11 +818,19 @@ ul.slimmenu li > ul > li ul {
           }
           .spotlight-text {
             p {
+              color: $color-grayApollo;
               padding: 0px 0px 5px 0px;
               margin: 0px 0px 0px 0px;
               font-size: rem-calc(15);
               line-height: 18px;
-               @media #{$Phone} {
+              a {
+                color: $color-maroon;
+                font-weight: $bold;
+                &:hover {
+                  color: $color-grayApollo;
+                }
+              }
+              @media #{$Phone} {
                 font-size: rem-calc(14);
                 line-height: 16px;
               }
@@ -813,15 +843,15 @@ ul.slimmenu li > ul > li ul {
             padding: rem-calc(15) rem-calc(16) rem-calc(15) rem-calc(16);
           }
           .partners-title-bar{
-            background-color: $color-lightGray;
+            background-color: $color-grayMinotaur;
             height: rem-calc(38);
             h3 {
-              font-weight: bolder;
+              font-weight: $bold;
               text-transform: uppercase;
               padding: rem-calc(7) 0 0 rem-calc(10);
               font-size: rem-calc(19);
               line-height: 19px;
-              color: $color-midgray2;
+              color: $color-grayBoreas;
               float: left;
               @media #{$Phone} {
                padding: rem-calc(8) 0 0 rem-calc(10);
@@ -845,40 +875,78 @@ ul.slimmenu li > ul > li ul {
               margin:0;
               width:100%;
               background-image: $background-d;
-              @media #{$Phone} {
-                border: $thin-grey;
-              }
-              .sponsor{
-                border-left: $thin-grey;
-                border-right: $thin-grey;
-                border-bottom: $thin-grey;
-                height: 60px;
-                @media #{$Phone} {
-                  display: inline-block;
-                  width: 33%;
-                  border-left: none;
-                  border-bottom: none;
-                  height: 30px;
-                  margin: 10px 0 10px 0px;
-                  &:last-of-type {
-                    border-right: none;
+              //@media #{$Phone} {
+              //  border: $thin-grayLinus;
+              //}
+              .partners {
+                
+                
+                //border-left: $thin-grayLinus;
+                //border-right: $thin-grayLinus;
+                //border-bottom: $thin-grayLinus;
+                
+                //@media #{$Phone} {
+                //  display: inline-block;
+                //  width: 33%;
+                //  border-left: none;
+                //  border-bottom: none;
+                //  height: 30px;
+                //  margin: 10px 0 10px 0px;
+                //  padding: 9px 0px 9px 0px;
+                //  &:last-of-type {
+                //    border-right: none;
+                //  }
+                //}
+                //@media #{$Five00} {
+                //  height: 18x;
+                //  padding: 4px 0px 4px 0px;
+                //}
+                .partners-text {
+                  position: relative;
+height:60px;
+
+                  p {
+                                      position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin: auto;
+  width:100%;
+  height: 70%;
+  border: $thin-grayLinus;
+                    font-size: rem-calc(16);
+                    color: $color-grayDanae;
+                    font-weight: $bold;
+                    //padding: 22px 0px 22px 15px;
+                    line-height: 16px;
+                    //@media #{$Phone} {
+                    //  font-size: rem-calc(12);
+                    //  line-height: 12px;
+                    //  display: block;
+                    //  padding: 0;
+                    //  margin: auto;
+                    //  width: 100%;
+                    //  text-align: center;
+                    //}
+                    //@media #{$Five00} {
+                    //  font-size: rem-calc(9);
+                    //  line-height: 9px;
+                    //}
                   }
                 }
-                @media #{$Five00} {
-                  height: 18x;
-                }
-                img {
-                  padding:0;
-                  margin: 6px 0px 0px 25px;
-                  @media #{$Phone} {
-                    display: block;
-                    margin: 0 auto;
-                    height: 35px;
-                  }
-                  @media #{$Five00} {
-                    height: 25px;
-                  }
-                }
+                //img {
+                //  padding:0;
+                //  margin: 6px 0px 0px 25px;
+                //  @media #{$Phone} {
+                //    display: block;
+                //    margin: 0 auto;
+                //    height: 35px;
+                //  }
+                //  @media #{$Five00} {
+                //    height: 25px;
+                //  }
+                //}
               }
             }
           }
@@ -889,24 +957,23 @@ ul.slimmenu li > ul > li ul {
     // Right-Side Navigation
         #sidebar {    
           @media #{$Phone} {
-            border-top: $thin-grey;
+            border-top: $thin-grayKallipygos;
             padding: rem-calc(15) rem-calc(16) rem-calc(15) rem-calc(16);
           }
-          .sidebar-header {
-            background-image: $background-d;
-            background-repeat:repeat;  
-            font-size: rem-calc(13);
-            font-weight: bolder;
-            color: #555;
-            padding: 10px;
-            text-transform: uppercase; 
-          }
           #subnav {
-            // border-top: 1px solid #DEDEDD; 
             margin: 0;
+            .sidebar-header {
+              background-image: $background-d;
+              background-repeat: repeat;
+              color: $color-grayApollo;
+              font-size: rem-calc(13);
+              font-weight: $bold;
+              padding: 10px;
+              text-transform: uppercase; 
+            }
             a { 
-              border-bottom: 1px solid #DEDEDD; 
-              color: #222; 
+              border-bottom: $thin-grayKallipygos; 
+              color: $color-grayApollo; 
               display: block;  
               font-size: rem-calc(14); 
               line-height: 1.2; 
@@ -916,25 +983,30 @@ ul.slimmenu li > ul > li ul {
                 background-color: $color-maroon;
                 color: #fff; 
               }
-              &.selected, &.selected:hover {
+              &.selected {
                 background: $color-maroon; 
-                border-bottom: 1px solid $color-maroon; 
+                border-bottom: $thin-grayKallipygos;
                 color: $color-white; 
                 padding-left: rem-calc(10);
+                &:hover {
+                  background: $color-grayApollo;
+                  border-bottom: $thin-grayKallipygos;
+                }
               }
             }
             ul { 
-              border-bottom: 1px solid #DEDEDD; 
-              padding: 5px 0 10px 30px;
+              border-bottom: $thin-grayKallipygos; 
+              padding: rem-calc(5) 0 rem-calc(10) rem-calc(30);
               margin: 0;
               a { 
                 border-bottom: none; 
                 font-size: rem-calc(14); 
-                padding: 6px 0; 
+                padding: rem-calc(6) 0;
+                color: $color-grayErato; 
                 text-transform: none;
                 &:hover {
-                  background-color: transparent; 
-                  color: #782241; 
+                  background-color: $color-white; 
+                  color: $color-maroon; 
                 }
               }
             }
@@ -952,12 +1024,15 @@ ul.slimmenu li > ul > li ul {
       padding: rem-calc(20) rem-calc(16) rem-calc(16) rem-calc(16);
     }
     .title-bar {
-      border-bottom: $thin-grey;
+      border-bottom: $thin-grayKallipygos;
       height: 24px;
       @media #{$Phone} {
         height: 17px;
       }
-      .title {
+      p.title {
+        margin-bottom: 0;
+        float: left;
+        text-transform: uppercase; 
         font-size: rem-calc(17);
         @media #{$Phone} {
           font-size: rem-calc(12);
@@ -970,7 +1045,7 @@ ul.slimmenu li > ul > li ul {
       li {
         padding:0;
         .listed-article, .listed-article-landing {
-          border-bottom: $thin-grey;
+          border-bottom: $thin-grayLinus;
           padding: rem-calc(24) 0 rem-calc(15) 0;
           @media #{$Phone} {
             padding: rem-calc(12) 0 rem-calc(12) 0;
@@ -1002,10 +1077,10 @@ ul.slimmenu li > ul > li ul {
             position: relative;
             top:-8px;
             a {
-              color: $color-midgray2;
+              color: $color-grayHermes;
               font-size: rem-calc(11);
               &:hover {
-                color: $color-maroon;
+                color: $color-grayKallipygos;
               }
             }
           }
@@ -1015,7 +1090,6 @@ ul.slimmenu li > ul > li ul {
             margin: rem-calc(-25) 0 0 0;
             h2 {
               font-size: rem-calc(20);
-              font-weight: bolder;
               line-height: 23px;
               @media #{$Five00} {
                 font-size: rem-calc(18);
@@ -1023,26 +1097,26 @@ ul.slimmenu li > ul > li ul {
               }
             }
             a {
-              color: $color-darkGray;
+              color: $color-grayApollo;
               @media #{$Phone} {
                 color: $color-maroon;
               }
               &:hover {
                 color: $color-maroon;
                  @media #{$Phone} {
-                  color: $color-darkGray;
+                  color: $color-grayApollo;
                 }
               }
             }
           }
-          .article-date p{
-            color: $color-midgray2;
+          .article-date p {
+            color: $color-grayHermes;
             font-size: rem-calc(12);
             padding: 0px 0px 5px 0;
             margin:0;
           }
           .article-teaser p{
-            //border: 1px solid #000; 
+            color: $color-grayApollo;
             padding: 0;
             margin-bottom: 0px;
             font-size: rem-calc(15);
@@ -1063,7 +1137,7 @@ ul.slimmenu li > ul > li ul {
                 font-size: rem-calc(12);
               }
               &:hover {
-                color: $color-midgray2;
+                color: $color-grayKallipygos;
               }
             }
           }
@@ -1071,7 +1145,7 @@ ul.slimmenu li > ul > li ul {
       }
       li:first-child {
         .listed-article {
-          padding: 0 0 rem-calc(15) 0;
+          padding: rem-calc(15) 0 rem-calc(15) 0;
           .article-image {
             width: 250px;
             height: 200px;
@@ -1083,7 +1157,7 @@ ul.slimmenu li > ul > li ul {
             @media #{$Five00} {
               width: 125px;
               height: 100px;
-            }
+            } 
             img {
               max-width: 333px;
               height: 200px;
@@ -1092,7 +1166,11 @@ ul.slimmenu li > ul > li ul {
                 max-width: 266px;
                 height: 160px;
               }
-
+              @media #{$Five00} {
+                max-width: 166px;
+                height: 100px;
+                left:-30px;
+              }
             }
           }
         }
@@ -1126,8 +1204,8 @@ ul.slimmenu li > ul > li ul {
     } //768
     ul {
       width: 100%;
-      border-top: $thin-grey;
-      border-bottom: $thin-grey;
+      border-top: $thin-grayKallipygos;
+      border-bottom: $thin-grayKallipygos;
       height: 75px;
       margin: auto;
       text-align:center;
@@ -1140,13 +1218,13 @@ ul.slimmenu li > ul > li ul {
         margin: rem-calc(7) 0 rem-calc(7) 0;
         text-align:center;
         height: rem-calc(60);
-        border-left: $thin-grey;
+        border-left: $thin-grayKallipygos;
         @media #{$Phone} {
           height: rem-calc(30);
         }
         .title {
           display: block;
-          color: $color-midgray1;
+          color: $color-grayErato;
           font-weight: 300;
           font-size: rem-calc(14);
           padding-top: rem-calc(0);
@@ -1159,7 +1237,7 @@ ul.slimmenu li > ul > li ul {
           position: relative;
           top: -11px;
           display: block;
-          color: $color-midgray2;
+          color: $color-grayChiron;
           font-weight: bolder;
           font-size: rem-calc(46); 
           padding: 0;
@@ -1177,7 +1255,7 @@ ul.slimmenu li > ul > li ul {
     .stats-disclaimer p {
       float: right;
       font-size: rem-calc(12);
-      color: $color-midgray1;
+      color: $color-grayGaea;
       padding: rem-calc(6) rem-calc(8) rem-calc(6) 0;
       margin: 0;
       @media #{$Phone} {
@@ -1241,18 +1319,18 @@ ul.slimmenu li > ul > li ul {
                   padding-bottom: rem-calc(4);
                 }
                 a {
-                  color: $color-darkGray;
+                  color: $color-black;
                   &:hover {
-                    color: $color-maroon;
+                    color: $color-black;
                   }
                 }
               }
             }
             .article-teaser {
-              p{
+              p {
                 padding-top: 2px; 
                 font-size: rem-calc(19);
-                //font-weight: $bolder;
+                color: $color-grayApollo;
                 line-height: 21px;
                 @media #{$iPadPortrait} {
                   font-size: rem-calc(13);
@@ -1269,11 +1347,14 @@ ul.slimmenu li > ul > li ul {
             .article-readmore {
               p {
                 a {
+                  background-color: $color-maroon;
                   color: $color-white;
                   font-size: rem-calc(15);
-                  //font-weight: $bolder;
-                  background-color: $color-maroon;
                   padding: rem-calc(7) rem-calc(10) rem-calc(7) rem-calc(10);
+                  &:hover {
+                    background-color: $color-grayApollo;
+                    color: $color-white;
+                  }
                   @media #{$iPadPortrait} {
                     font-size: rem-calc(12);
                     padding: rem-calc(6) rem-calc(9) rem-calc(6) rem-calc(9);
@@ -1323,8 +1404,8 @@ ul.slimmenu li > ul > li ul {
       @media #{$iPadPortrait} {
         left: 16px;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow-Rev.png) no-repeat 5px 12px;
-        background-color: $color-darkGray;
-        opacity:0.8;
+        background-color: $color-grayErato;
+        opacity: 0.8;
         //&:hover {
         //  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow.png) no-repeat 5px 12px;
         //  background-color: $color-darkGray;
@@ -1367,7 +1448,7 @@ ul.slimmenu li > ul > li ul {
       @media #{$iPadPortrait} {
         right: 16px;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow-Rev.png) no-repeat 6px 12px;
-        background-color: $color-darkGray;
+        background-color: $color-grayErato;
         opacity:0.8;
         //&:hover {
         //  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow.png) no-repeat -12px 12px;
@@ -1384,14 +1465,13 @@ ul.slimmenu li > ul > li ul {
         padding: 0 0 0 0; 
         li {
         margin: 0 rem-calc(7) 0 rem-calc(7);
-        border: 1px solid #999;
+        border: $thin-grayApollo;
         background-color: $color-white;
         height: rem-calc(12);
         width: rem-calc(12);
-        background-color: #ffffff;
         &.active {
-          border: 1px solid #222;
-          background-color: #222;
+          border: $thin-grayApollo;
+          background-color: $color-grayApollo;
         }
       }
     }
@@ -1404,32 +1484,32 @@ ul.slimmenu li > ul > li ul {
     padding: 0px;
     margin: 0 0 20px 0; 
     overflow: hidden;
-    border-bottom: $medium-grey;
+    border-bottom: $medium-grayJason;
     width: 100%;
     p {
       padding: 0;
       margin:0;
       span {
         font-size: rem-calc(11);
-        color: $color-midgray1;
+        color: $color-grayErato;
         padding: 0 rem-calc(15) 0 rem-calc(0);
         margin: 0;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
         a {
-          color: $color-midgray1;
+          color: $color-grayErato;
             &:hover{
             color: $color-maroon;
           }
         }
-        &:first-child {
-          padding-left: 0;
-          a {
-            color: $color-maroon;
-            &:hover{
-              color: $color-midgray1;
-            }
-          }
-        }
+        //&:first-child {
+        //  padding-left: 0;
+        //  a {
+        //    color: $color-maroon;
+        //    &:hover{
+        //      color: $color-midgray1;
+        //    }
+        //  }
+        //}
         &:last-of-type {
           background: none;
         }
@@ -1443,9 +1523,10 @@ ul.slimmenu li > ul > li ul {
     margin: 0;
     font-size: rem-calc(10);
     a {
-    color: $color-lightGray;
+    color: $color-grayHermes;
+    font-weight: $bold;
       &:hover{
-      color: $color-maroon;
+      color: $color-grayKallipygos;
     }
   }
 }
@@ -1453,34 +1534,133 @@ ul.slimmenu li > ul > li ul {
 article {
   width: 100%;
   .article-date{
-    color: $color-lightGray;
-    padding: 8px 0px 0px 0px;
+    color: $color-grayFates;
+    padding: rem-calc(8) 0px 0px 0px;
     margin: 0;
   }
   h1 {
     font-size: $h1-font-size;
-    color: $color-darkGray;
+    color: $color-black;
+    font-family: 'ComeniaSansCondBold';
+    //font-weight: $bold;
     line-height: 39px;
     padding-top: 2px;
   }
   .article-text, .article-text .article-additional {
     padding:0;
-    margin: 15px 0 0 0;
+    margin: rem-calc(15) 0 0 0;
     h2 {
-      padding: rem-calc(8) 0 rem-calc(5) 0;
-      line-height: 26px;
+      font-family: 'ComeniaSansCondBold';
+      color: $color-grayApollo;
+      padding: rem-calc(8) 0 rem-calc(2) 0;
+      line-height: 24px;
     }
     h3, h4, h5, h6 {
-      padding: rem-calc(10) 0 rem-calc(4) 0;
+      font-family: 'ComeniaSansCondBold';
+      color: $color-grayApollo;
+      padding: rem-calc(10) 0 rem-calc(11) 0;
       line-height: 21px;
-      margin: 0 0 -14px 0;
+      margin: 0 0 rem-calc(-4) 0;
     }
     p {
-      color: $color-midgray1;
+      color: $color-grayBoreas;
       font-size: $paragraph-font-size;
       padding: rem-calc(9) 0 rem-calc(9) 0;
       line-height: 21px;
       margin: 0;
+    }
+    blockquote {
+      color: $color-grayBoreas;
+      padding: 0 rem-calc(16) 0 rem-calc(16);
+      margin: rem-calc(6) 0 0 0;
+      font-style: italic;
+      border: none;
+    }
+    //table
+    table {
+      @media #{$Phone} {
+        border: $thin-grayLinus;
+      }
+      th { 
+        border-bottom: $thin-grayLinus;
+        font-weight: $bold;
+        padding: rem-calc(9) rem-calc(10);
+        text-align: center;
+        @media #{$iPadPortrait} {
+          font-size: rem-calc(12);
+        }
+        @media #{$Phone} {
+          font-size: rem-calc(11);
+        }
+      }
+      td {
+        border-bottom: $thin-grayLinus;
+        padding: rem-calc(9) rem-calc(10);
+        text-align: left;
+        @media #{$iPadPortrait} {
+          font-size: rem-calc(13);
+        }
+        @media #{$Phone} {
+          font-size: rem-calc(11);
+        }
+      }
+      @media #{$Phone} {
+        &.responsive {
+          margin-bottom: 0;
+          th, td {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            &:first-child {
+              display: none;
+            }
+          }
+          &.pinned {
+            td {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .pinned {
+      @media #{$Phone} {
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        background: $color-white; 
+        width: 50%; 
+        overflow: hidden; 
+        overflow-x: scroll; 
+        border-right: $thin-grayKallipygos; 
+        border-left: $thin-grayKallipygos;
+        table {
+          border-right: none; 
+          border-left: none; 
+          width: 100%;
+          th, td {
+            white-space: nowrap; 
+          }
+        }
+        td:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    div.table-wrapper { 
+      @media #{$Phone} {
+        position: relative; 
+        margin-bottom: 20px; 
+        overflow: hidden; 
+        border-right: $thin-grayKallipygos;
+        div.scrollable {
+          overflow: scroll; 
+          overflow-y: hidden;
+          table { 
+            margin-left: 50%;
+          }
+        }
+      }
     }
     ul {
       list-style-type: disc;
@@ -1500,10 +1680,10 @@ article {
       }
     }
     a {
-      font-weight: $bolder;
       color: $color-maroon;
+      font-weight: $bold;
       &:hover {
-        color: $color-darkGray;
+        color: $color-grayApollo;
       }
     }
     .article-additional{
@@ -1516,7 +1696,7 @@ article {
         width: 100%; 
       }
       .caption {
-        background-color: $color-darkGray;
+        background-color: $color-grayApollo;
         color: $color-white;
         padding: rem-calc(7) 0 rem-calc(7) rem-calc(10);
         p {
