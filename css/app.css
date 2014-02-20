@@ -2186,7 +2186,7 @@ select {
 
 .touch .orbit-container .orbit-prev,
 .touch .orbit-container .orbit-next {
-  display: none; }
+  display: block; }
 .touch .orbit-bullets {
   display: none; }
 
@@ -2206,7 +2206,7 @@ select {
   .orbit-stack-on-small .orbit-next,
   .orbit-stack-on-small .orbit-prev,
   .orbit-stack-on-small .orbit-bullets {
-    display: none; } }
+    display: block; } }
 .side-nav {
   display: block;
   margin: 0;
@@ -3099,25 +3099,28 @@ ul {
 .bolder {
   font-weight: bold; }
 
-p.see-all {
+.see-all {
+  position: relative;
+  right: 0;
+  width: 65px;
   color: #7c2142;
   float: right;
   margin-bottom: 0;
   font-size: 0.9375rem;
-  padding-right: 12px;
-  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 56px 6px; }
+  padding-right: 0.5rem;
+  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat right center; }
   @media screen and (max-width: 767px) {
-    p.see-all {
-      padding-right: 20px;
+    .see-all {
+      padding-right: 0.25rem;
       font-size: 0.8125rem;
-      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 52px 6px; } }
-  p.see-all:hover {
-    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 56px 6px;
+      width: 50px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat right center; } }
+  .see-all:hover {
+    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
     color: #666666; }
     @media screen and (max-width: 767px) {
-      p.see-all:hover {
-        font-size: 0.8125rem;
-        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 52px 6px; } }
+      .see-all:hover {
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat right center; } }
 
 .logo {
   padding: 2rem 0 2rem 2.5rem; }
@@ -3126,7 +3129,9 @@ p.see-all {
       padding: 1rem 0 1rem 1rem; } }
   @media screen and (max-width: 767px) {
     .logo {
-      padding: 1rem 0 1rem 1rem; } }
+      padding: 1rem 0 1rem 1rem; }
+      .logo img {
+        height: 3.75rem; } }
 
 .mission-text p {
   color: black;
@@ -3142,20 +3147,11 @@ p.see-all {
   .donate-now a p {
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.875rem;
+    font-size: 1.25rem;
     color: white;
     height: 2.5rem;
     line-height: 60px; }
 
-/* .absolute-center {
-   margin: auto;
-   top: 0; left: 0; bottom: 0; right: 0;
-   width: 100%; 
-   height: 60%;
-   min-width: rem-calc(200);
-   padding: 10%;
-   //border: 1px solid #666;
- }*/
 .footer-wrapper {
   background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat;
@@ -3182,6 +3178,7 @@ p.see-all {
       padding: 0 0 0.625rem 0;
       margin: 0; }
     .footer-wrapper .footer-address .footer-title {
+      text-transform: uppercase;
       font-weight: bolder;
       padding-bottom: 0;
       margin-bottom: 0; }
@@ -3272,10 +3269,8 @@ ul.slimmenu li > ul > li ul {
       color: #FFF;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
       width: 100%;
-      height: 35px;
-      /* 48*/
+      height: 50px;
       line-height: 35px;
-      /* 48*/
       font-size: 16px;
       padding: 0 8px;
       box-sizing: border-box;
@@ -3283,7 +3278,7 @@ ul.slimmenu li > ul > li ul {
       -webkit-box-sizing: border-box; }
       @media screen and (max-width: 767px) {
         .nav-one nav .menu-collapser {
-          width: 35px;
+          width: 50px;
           float: right;
           position: absolute;
           top: 0px;
@@ -3292,7 +3287,7 @@ ul.slimmenu li > ul > li ul {
         background-color: #333333; }
       .nav-one nav .menu-collapser .collapse-button {
         position: absolute;
-        right: 0px;
+        right: 12px;
         top: 50%;
         width: 35px;
         color: #FFFFFF;
@@ -3311,11 +3306,10 @@ ul.slimmenu li > ul > li ul {
         .nav-one nav .menu-collapser .collapse-button .icon-bar {
           background-color: #F5F5F5;
           border-radius: 1px 1px 1px 1px;
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
           display: block;
-          height: 2px;
-          width: 16px;
-          margin: 2px 0; }
+          height: 4px;
+          width: 26px;
+          margin: 3px 0; }
     .nav-one nav ul.slimmenu {
       list-style-type: none;
       margin: 0;
@@ -3326,7 +3320,7 @@ ul.slimmenu li > ul > li ul {
         .nav-one nav ul.slimmenu {
           background-color: #333333;
           position: absolute;
-          top: 35px; } }
+          top: 50px; } }
       .nav-one nav ul.slimmenu > li {
         margin-right: -5px;
         border-left: 1px solid #b7b7b7; }
@@ -3360,7 +3354,7 @@ ul.slimmenu li > ul > li ul {
               font-weight: normal; } }
           .nav-one nav ul.slimmenu li a:hover {
             background-color: #7c2142;
-            opacity: 1;
+            opacity: 0.40;
             text-decoration: none; }
             @media screen and (max-width: 767px) {
               .nav-one nav ul.slimmenu li a:hover {
@@ -3381,17 +3375,15 @@ ul.slimmenu li > ul > li ul {
             .nav-one nav ul.slimmenu li ul {
               background-color: #333333; } }
           .nav-one nav ul.slimmenu li ul li {
-            background-color: #BBB;
             width: 100%; }
             .nav-one nav ul.slimmenu li ul li a {
-              background-color: #7c2142;
               font-weight: normal; }
               @media screen and (max-width: 767px) {
                 .nav-one nav ul.slimmenu li ul li a {
                   background-color: #333333;
                   padding: 0 0 0 30px; } }
               .nav-one nav ul.slimmenu li ul li a:hover {
-                opacity: 1; }
+                opacity: 0.40; }
                 @media screen and (max-width: 767px) {
                   .nav-one nav ul.slimmenu li ul li a:hover {
                     background-color: #333333;
@@ -3419,36 +3411,50 @@ ul.slimmenu li > ul > li ul {
         @media screen and (max-width: 767px) {
           .nav-one nav ul.slimmenu li.search-element {
             float: none;
-            padding: 4px 16px 4px 10px;
+            padding: 4px 7px 4px 8px;
             height: 34px; } }
-        .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
-          width: 165px;
-          height: 29px;
-          border: none;
-          background: rgba(255, 255, 255, 0.45);
-          color: #222222;
-          padding-left: 5px; }
-          .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field:focus {
-            border: 1px solid #cccccc; }
-          @media screen and (max-width: 849px) and (min-width: 768px) {
-            .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
-              width: 125px; } }
-          @media screen and (max-width: 767px) {
-            .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
-              height: 25px;
-              width: 250px; } }
-        .nav-one nav ul.slimmenu li.search-element .bcf-search .submit {
-          background: rgba(255, 255, 255, 0.45) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
-          width: 29px;
-          height: 29px;
-          padding-left: 0px;
-          border: none;
-          margin-left: -5px;
-          cursor: pointer; }
-          @media screen and (max-width: 767px) {
-            .nav-one nav ul.slimmenu li.search-element .bcf-search .submit {
-              width: 25px;
-              height: 25px; } }
+        .nav-one nav ul.slimmenu li.search-element .bcf-search {
+          padding: 0;
+          margin: 0; }
+          .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+            width: 165px;
+            height: 29px;
+            border: none;
+            background: rgba(255, 255, 255, 0.45);
+            color: #222222;
+            padding: 0 0 0 0.3125rem; }
+            .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field:focus {
+              border: 1px solid #cccccc; }
+            @media screen and (max-width: 910px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+                width: 140px; } }
+            @media screen and (max-width: 885px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+                width: 125px; } }
+            @media screen and (max-width: 870px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+                width: 100px; } }
+            @media screen and (max-width: 849px) and (min-width: 768px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+                width: 100px; } }
+            @media screen and (max-width: 767px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .form-field {
+                height: 25px;
+                width: 283px; } }
+          .nav-one nav ul.slimmenu li.search-element .bcf-search .hidden {
+            display: none; }
+          .nav-one nav ul.slimmenu li.search-element .bcf-search .submit {
+            background: rgba(255, 255, 255, 0.45) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
+            width: 29px;
+            height: 29px;
+            padding: 0px;
+            border: none;
+            margin: 0 0 0 -0.3125rem;
+            cursor: pointer; }
+            @media screen and (max-width: 767px) {
+              .nav-one nav ul.slimmenu li.search-element .bcf-search .submit {
+                width: 25px;
+                height: 25px; } }
     .nav-one nav ul.slimmenu.collapsed li {
       display: block;
       width: 100%;
@@ -3582,6 +3588,7 @@ ul.slimmenu li > ul > li ul {
   }
 } */
 .nav-two {
+  text-transform: uppercase;
   background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
   background-repeat: repeat;
   border-top: 1px solid #cccccc;
@@ -3601,7 +3608,7 @@ ul.slimmenu li > ul > li ul {
       @media screen and (max-width: 767px) {
         .nav-two ul li {
           font-size: 0.625rem;
-          padding: 0.125rem 0.3125rem 0.125rem 0.3125rem; } }
+          padding: 0.125rem 0.375rem 0.125rem 0.375rem; } }
       .nav-two ul li a {
         color: #222222; }
         .nav-two ul li a:hover {
@@ -3711,38 +3718,76 @@ aside .aside-wrapper {
       margin: 0;
       width: 100%;
       background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png"); }
-      aside .aside-wrapper .partners .partners-list ul .partners .partners-text {
+      aside .aside-wrapper .partners .partners-list ul li {
+        height: 3.75rem;
         position: relative;
-        height: 60px; }
-        aside .aside-wrapper .partners .partners-list ul .partners .partners-text p {
+        border-left: 1px solid #e2e2e2;
+        border-right: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2; }
+        aside .aside-wrapper .partners .partners-list ul li .partner {
           position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          width: 100%;
-          height: 70%;
-          border: 1px solid #e2e2e2;
-          font-size: 1rem;
-          color: #606060;
-          font-weight: bold;
-          line-height: 16px; }
+          display: table;
+          height: 3.75rem; }
+          aside .aside-wrapper .partners .partners-list ul li .partner p {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 0.9375rem 0 0.9375rem;
+            color: #555555;
+            line-height: 15px; }
+  @media screen and (max-width: 767px) {
+    aside .aside-wrapper .more-stories {
+      padding: 0.9375rem 1rem 0.9375rem 1rem;
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc; } }
+  aside .aside-wrapper .more-stories .more-stories-list {
+    margin: 0; }
+    aside .aside-wrapper .more-stories .more-stories-list .more-stories-header {
+      background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
+      background-repeat: repeat;
+      color: #222222;
+      font-size: 0.8125rem;
+      font-weight: bold;
+      padding: 0.625rem;
+      text-transform: uppercase;
+      line-height: 1.6; }
+      aside .aside-wrapper .more-stories .more-stories-list .more-stories-header a {
+        padding: 0.0625rem 1.25rem 0.0625rem 0;
+        color: #222222;
+        display: block; }
+        aside .aside-wrapper .more-stories .more-stories-list .more-stories-header a:hover {
+          color: #7c2142; }
+    aside .aside-wrapper .more-stories .more-stories-list li {
+      font-size: 0.75rem;
+      line-height: 14px;
+      padding: 0.625rem; }
+      aside .aside-wrapper .more-stories .more-stories-list li a {
+        color: #222222; }
+        aside .aside-wrapper .more-stories .more-stories-list li a:hover {
+          color: #7c2142; }
 
 @media screen and (max-width: 767px) {
   #sidebar {
     border-top: 1px solid #cccccc;
     padding: 0.9375rem 1rem 0.9375rem 1rem; } }
-#sidebar #subnav {
+#sidebar ul {
   margin: 0; }
-  #sidebar #subnav .sidebar-header {
+  #sidebar ul .sidebar-header {
     background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
     background-repeat: repeat;
     color: #222222;
     font-size: 0.8125rem;
     font-weight: bold;
-    padding: 10px;
-    text-transform: uppercase; }
+    padding: 0.625rem;
+    text-transform: uppercase;
+    line-height: 1.6; }
+    #sidebar ul .sidebar-header a {
+      padding: 0.0625rem 1.25rem 0.0625rem 0;
+      color: #222222;
+      display: block; }
+      #sidebar ul .sidebar-header a:hover {
+        color: #7c2142; }
+#sidebar #subnav {
+  margin: 0; }
   #sidebar #subnav a {
     border-bottom: 1px solid #cccccc;
     color: #222222;
@@ -3785,14 +3830,14 @@ section .articles-wrapper {
     section .articles-wrapper {
       padding: 1.25rem 1rem 1rem 1rem; } }
   section .articles-wrapper .title-bar {
+    width: 100%;
     border-bottom: 1px solid #cccccc;
-    height: 24px; }
-    @media screen and (max-width: 767px) {
-      section .articles-wrapper .title-bar {
-        height: 17px; } }
+    padding-bottom: 0;
+    margin: 0; }
     section .articles-wrapper .title-bar p.title {
-      margin-bottom: 0;
-      float: left;
+      width: 50%;
+      padding: 0;
+      margin: 0;
       text-transform: uppercase;
       font-size: 1.0625rem; }
       @media screen and (max-width: 767px) {
@@ -3830,6 +3875,7 @@ section .articles-wrapper {
           section .articles-wrapper ul li .listed-article .article-image img, section .articles-wrapper ul li .listed-article-landing .article-image img {
             position: absolute; }
         section .articles-wrapper ul li .listed-article .article-tag, section .articles-wrapper ul li .listed-article-landing .article-tag {
+          text-transform: uppercase;
           padding: 0;
           position: relative;
           top: -8px; }
@@ -3929,7 +3975,7 @@ section .stats-wrapper {
   @media screen and (max-width: 767px) {
     section .stats-wrapper {
       padding: 0.3125rem 0 0.3125rem 0;
-      height: 50px; } }
+      height: 40px; } }
   section .stats-wrapper ul {
     width: 100%;
     border-top: 1px solid #cccccc;
@@ -3939,7 +3985,7 @@ section .stats-wrapper {
     text-align: center; }
     @media screen and (max-width: 767px) {
       section .stats-wrapper ul {
-        height: 45px; } }
+        height: 40px; } }
     section .stats-wrapper ul li {
       display: inline-block;
       width: 33%;
@@ -3949,7 +3995,7 @@ section .stats-wrapper {
       border-left: 1px solid #cccccc; }
       @media screen and (max-width: 767px) {
         section .stats-wrapper ul li {
-          height: 1.875rem; } }
+          height: 1.5625rem; } }
       section .stats-wrapper ul li .title {
         display: block;
         color: #666666;
@@ -3959,7 +4005,7 @@ section .stats-wrapper {
         margin: -5px; }
         @media screen and (max-width: 767px) {
           section .stats-wrapper ul li .title {
-            font-size: 0.5625rem; } }
+            font-size: 0.4375rem; } }
       section .stats-wrapper ul li .detail {
         position: relative;
         top: -11px;
@@ -3972,7 +4018,7 @@ section .stats-wrapper {
         @media screen and (max-width: 767px) {
           section .stats-wrapper ul li .detail {
             top: -3px;
-            font-size: 1.625rem; } }
+            font-size: 1.25rem; } }
     section .stats-wrapper ul li:first-child {
       border-left: none; }
   section .stats-wrapper .stats-disclaimer p {
@@ -4102,7 +4148,10 @@ section .stats-wrapper {
         opacity: 0.8; } }
     @media screen and (max-width: 767px) {
       .orbit-container .orbit-prev {
-        display: none; } }
+        top: 100px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow-Rev.png) no-repeat 6px 12px;
+        background-color: #333333;
+        opacity: 0.8; } }
   .orbit-container .orbit-next {
     position: absolute;
     top: 50%;
@@ -4136,13 +4185,16 @@ section .stats-wrapper {
         opacity: 0.8; } }
     @media screen and (max-width: 767px) {
       .orbit-container .orbit-next {
-        display: none; } }
+        top: 100px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow-Rev.png) no-repeat 6px 12px;
+        background-color: #333333;
+        opacity: 0.8; } }
   .orbit-container .orbit-bullets {
     margin: 0 0 20px 0;
     padding: 0 0 0 0; }
     .orbit-container .orbit-bullets li {
       margin: 0 0.4375rem 0 0.4375rem;
-      border: 1px solid #222222;
+      border: 1px solid #b7b7b7;
       background-color: white;
       height: 0.75rem;
       width: 0.75rem; }
@@ -4151,6 +4203,7 @@ section .stats-wrapper {
         background-color: #222222; }
 
 .breadcrumbs-bcf {
+  text-transform: uppercase;
   padding: 0px;
   margin: 0 0 20px 0;
   overflow: hidden;
@@ -4173,6 +4226,7 @@ section .stats-wrapper {
         background: none; }
 
 .article-category {
+  text-transform: uppercase;
   padding: 0;
   margin: 0;
   font-size: 0.625rem; }
@@ -4196,7 +4250,7 @@ article {
     padding-top: 2px; }
   article .article-text, article .article-text .article-additional {
     padding: 0;
-    margin: 0.9375rem 0 0 0; }
+    margin: 0 0 0 0; }
     article .article-text h2, article .article-text .article-additional h2 {
       font-family: 'ComeniaSansCondBold';
       color: #222222;
@@ -4220,41 +4274,43 @@ article {
       margin: 0.375rem 0 0 0;
       font-style: italic;
       border: none; }
-    @media screen and (max-width: 767px) {
-      article .article-text table, article .article-text .article-additional table {
-        border: 1px solid #e2e2e2; } }
-    article .article-text table th, article .article-text .article-additional table th {
-      border-bottom: 1px solid #e2e2e2;
-      font-weight: bold;
-      padding: 0.5625rem 0.625rem;
-      text-align: center; }
-      @media screen and (max-width: 849px) and (min-width: 768px) {
-        article .article-text table th, article .article-text .article-additional table th {
-          font-size: 0.75rem; } }
+    article .article-text table, article .article-text .article-additional table {
+      margin-top: 0.625rem; }
       @media screen and (max-width: 767px) {
-        article .article-text table th, article .article-text .article-additional table th {
-          font-size: 0.6875rem; } }
-    article .article-text table td, article .article-text .article-additional table td {
-      border-bottom: 1px solid #e2e2e2;
-      padding: 0.5625rem 0.625rem;
-      text-align: left; }
-      @media screen and (max-width: 849px) and (min-width: 768px) {
-        article .article-text table td, article .article-text .article-additional table td {
-          font-size: 0.8125rem; } }
+        article .article-text table, article .article-text .article-additional table {
+          border: 1px solid #e2e2e2; } }
+      article .article-text table th, article .article-text .article-additional table th {
+        border-bottom: 1px solid #e2e2e2;
+        font-weight: bold;
+        padding: 0.5625rem 0.625rem;
+        text-align: center; }
+        @media screen and (max-width: 849px) and (min-width: 768px) {
+          article .article-text table th, article .article-text .article-additional table th {
+            font-size: 0.75rem; } }
+        @media screen and (max-width: 767px) {
+          article .article-text table th, article .article-text .article-additional table th {
+            font-size: 0.6875rem; } }
+      article .article-text table td, article .article-text .article-additional table td {
+        border-bottom: 1px solid #e2e2e2;
+        padding: 0.5625rem 0.625rem;
+        text-align: left; }
+        @media screen and (max-width: 849px) and (min-width: 768px) {
+          article .article-text table td, article .article-text .article-additional table td {
+            font-size: 0.8125rem; } }
+        @media screen and (max-width: 767px) {
+          article .article-text table td, article .article-text .article-additional table td {
+            font-size: 0.6875rem; } }
       @media screen and (max-width: 767px) {
-        article .article-text table td, article .article-text .article-additional table td {
-          font-size: 0.6875rem; } }
-    @media screen and (max-width: 767px) {
-      article .article-text table.responsive, article .article-text .article-additional table.responsive {
-        margin-bottom: 0; }
-        article .article-text table.responsive th, article .article-text table.responsive td, article .article-text .article-additional table.responsive th, article .article-text .article-additional table.responsive td {
-          position: relative;
-          white-space: nowrap;
-          overflow: hidden; }
-          article .article-text table.responsive th:first-child, article .article-text table.responsive td:first-child, article .article-text .article-additional table.responsive th:first-child, article .article-text .article-additional table.responsive td:first-child {
-            display: none; }
-        article .article-text table.responsive.pinned td, article .article-text .article-additional table.responsive.pinned td {
-          display: none; } }
+        article .article-text table.responsive, article .article-text .article-additional table.responsive {
+          margin-bottom: 0; }
+          article .article-text table.responsive th, article .article-text table.responsive td, article .article-text .article-additional table.responsive th, article .article-text .article-additional table.responsive td {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden; }
+            article .article-text table.responsive th:first-child, article .article-text table.responsive td:first-child, article .article-text .article-additional table.responsive th:first-child, article .article-text .article-additional table.responsive td:first-child {
+              display: none; }
+          article .article-text table.responsive.pinned td, article .article-text .article-additional table.responsive.pinned td {
+            display: none; } }
     @media screen and (max-width: 767px) {
       article .article-text .pinned, article .article-text .article-additional .pinned {
         position: absolute;
@@ -4304,7 +4360,7 @@ article {
       article .article-text a:hover, article .article-text .article-additional a:hover {
         color: #222222; }
     article .article-text .article-additional, article .article-text .article-additional .article-additional {
-      padding: 0.9375rem 0 0.9375rem 0;
+      padding: 0.5rem 0 0.5rem 0;
       width: 100%; }
       @media screen and (max-width: 767px) {
         article .article-text .article-additional, article .article-text .article-additional .article-additional {
@@ -4314,7 +4370,7 @@ article {
       article .article-text .article-additional .caption, article .article-text .article-additional .article-additional .caption {
         background-color: #222222;
         color: white;
-        padding: 0.4375rem 0 0.4375rem 0.625rem; }
+        padding: 0.4375rem 0.625rem 0.4375rem 0.625rem; }
         article .article-text .article-additional .caption p, article .article-text .article-additional .article-additional .caption p {
           color: white;
           padding: 0;
@@ -4332,3 +4388,104 @@ article {
           left: 0;
           width: 100%;
           height: 100%; }
+      article .article-text .article-additional section form, article .article-text .article-additional .article-additional section form {
+        width: 100%;
+        border-top: 1px solid #cccccc;
+        margin: 3px 0px 0px 0px;
+        padding: 0.9375rem 0 0 0; }
+        article .article-text .article-additional section form *:focus, article .article-text .article-additional .article-additional section form *:focus {
+          outline: none; }
+        article .article-text .article-additional section form p, article .article-text .article-additional .article-additional section form p {
+          display: none; }
+        article .article-text .article-additional section form fieldset, article .article-text .article-additional .article-additional section form fieldset {
+          border: none;
+          padding: 0;
+          margin: 0; }
+          article .article-text .article-additional section form fieldset ul, article .article-text .article-additional .article-additional section form fieldset ul {
+            min-height: 150px;
+            margin: 0;
+            padding: 0;
+            display: block; }
+            article .article-text .article-additional section form fieldset ul li, article .article-text .article-additional .article-additional section form fieldset ul li {
+              display: inline-block;
+              width: 70%;
+              position: relative;
+              list-style-type: none;
+              margin: 0 0 1.5625rem 0;
+              padding: 0; }
+              @media screen and (max-width: 767px) {
+                article .article-text .article-additional section form fieldset ul li, article .article-text .article-additional .article-additional section form fieldset ul li {
+                  width: 100%; } }
+              article .article-text .article-additional section form fieldset ul li label, article .article-text .article-additional .article-additional section form fieldset ul li label {
+                font-family: 'ComeniaSansCondRegular';
+                font-size: 1.125rem;
+                font-weight: normal;
+                color: #333333;
+                padding: 0 0.3125rem 0 0; }
+              article .article-text .article-additional section form fieldset ul li .formSectionLabel, article .article-text .article-additional .article-additional section form fieldset ul li .formSectionLabel {
+                font-family: 'ComeniaSansCondRegular';
+                font-size: 1.1875rem;
+                font-weight: bold;
+                color: #333333;
+                padding: 0 0.3125rem 0 0; }
+              article .article-text .article-additional section form fieldset ul li div label, article .article-text .article-additional .article-additional section form fieldset ul li div label {
+                font-family: 'ComeniaSansCondRegular';
+                font-size: 1.125rem;
+                font-weight: normal;
+                color: #333333;
+                padding: 0 0.3125rem 0 0; }
+              article .article-text .article-additional section form fieldset ul li textarea, article .article-text .article-additional .article-additional section form fieldset ul li textarea {
+                position: relative;
+                width: 100%;
+                margin: 0;
+                border: 1px solid #b7b7b7; }
+              article .article-text .article-additional section form fieldset ul li .textAreaLabel, article .article-text .article-additional .article-additional section form fieldset ul li .textAreaLabel {
+                display: inline-block;
+                vertical-align: top; }
+            article .article-text .article-additional section form fieldset ul .bcf-form-button, article .article-text .article-additional .article-additional section form fieldset ul .bcf-form-button {
+              width: 100%; }
+              article .article-text .article-additional section form fieldset ul .bcf-form-button input[type=submit], article .article-text .article-additional section form fieldset ul .bcf-form-button input[type=reset], article .article-text .article-additional .article-additional section form fieldset ul .bcf-form-button input[type=submit], article .article-text .article-additional .article-additional section form fieldset ul .bcf-form-button input[type=reset] {
+                background-color: #7c2142;
+                color: white;
+                font-size: 0.9375rem;
+                padding: 0.4375rem 0.625rem 0.4375rem 0.625rem;
+                border-radius: 0;
+                border: none;
+                margin: 0; }
+                article .article-text .article-additional section form fieldset ul .bcf-form-button input[type=submit]:hover, article .article-text .article-additional section form fieldset ul .bcf-form-button input[type=reset]:hover, article .article-text .article-additional .article-additional section form fieldset ul .bcf-form-button input[type=submit]:hover, article .article-text .article-additional .article-additional section form fieldset ul .bcf-form-button input[type=reset]:hover {
+                  background-color: #222222;
+                  color: white; }
+            article .article-text .article-additional section form fieldset ul .oneColumn, article .article-text .article-additional .article-additional section form fieldset ul .oneColumn {
+              width: 100%; }
+            article .article-text .article-additional section form fieldset ul .required label:before, article .article-text .article-additional .article-additional section form fieldset ul .required label:before {
+              color: #e32;
+              content: '*';
+              font-weight: normal;
+              display: inline; }
+              article .article-text .article-additional section form fieldset ul .required label:before.requiredBut:before, article .article-text .article-additional .article-additional section form fieldset ul .required label:before.requiredBut:before {
+                color: #e32;
+                content: '';
+                font-weight: normal;
+                display: inline; }
+              article .article-text .article-additional section form fieldset ul .required label:before div.requiredBut label:before, article .article-text .article-additional .article-additional section form fieldset ul .required label:before div.requiredBut label:before {
+                color: #e32;
+                content: '';
+                font-weight: normal;
+                display: inline; }
+          article .article-text .article-additional section form fieldset .horizontal, article .article-text .article-additional .article-additional section form fieldset .horizontal {
+            display: inline-block; }
+            article .article-text .article-additional section form fieldset .horizontal li, article .article-text .article-additional .article-additional section form fieldset .horizontal li {
+              display: inline-block;
+              padding-right: 15px; }
+        article .article-text .article-additional section form .fieldsetHighlight, article .article-text .article-additional .article-additional section form .fieldsetHighlight {
+          border: 1px solid #cccccc;
+          padding: 1.25rem 0.3125rem 0 0;
+          margin: 0 0 1.25rem 0; }
+        article .article-text .article-additional section form legend, article .article-text .article-additional .article-additional section form legend {
+          display: none; }
+      article .article-text .article-additional .formNote, article .article-text .article-additional .article-additional .formNote {
+        font-size: 0.8125rem;
+        color: #666666;
+        margin-top: 8px; }
+      article .article-text .article-additional .redText, article .article-text .article-additional .article-additional .redText {
+        color: #e32; }

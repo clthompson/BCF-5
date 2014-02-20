@@ -1,13 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-//Begin Styles Here
-
-
-
-  // ADDED STUFF FROM 003
-
-  //
+//
 // Custom Styles
 //
 
@@ -27,6 +21,8 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  $font-lucida: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; //use this for all lucida elements
 
 // Colors
   $color-maroon: #7c2142;
@@ -64,7 +60,7 @@
 
 // Screens
   $Desktop: "screen and (min-width: 850px)";
-  $iPadPortrait: "screen and (max-width: 849px) and (min-width: 768px)";
+  $iPadPortrait: "screen and (max-width: 849px) and (min-width: 768px)"; // 
   $Phone: "screen and (max-width: 767px)";
   $Five00: "screen and (max-width: 500px)";
 
@@ -107,24 +103,27 @@
     font-weight: $bold;
   }
 
-  p.see-all{
-  color: $color-maroon;
-  float: right;
-  margin-bottom: 0;
-  font-size: rem-calc(15);
-  padding-right: 12px;
-  background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat 56px 6px;
+  .see-all {
+    position: relative;
+    right:0;
+    width: 65px;
+    color: $color-maroon;
+    float: right;
+    margin-bottom: 0;
+    font-size: rem-calc(15);
+    padding-right: rem-calc(8);
+    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat right center;
   @media #{$Phone} {
-    padding-right: 20px;
+    padding-right: rem-calc(4);
     font-size: rem-calc(13);
-    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat 52px 6px;
+    width: 50px;
+    background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat right center;
   }
   &:hover {
-      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat 56px 6px;
+      background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
       color: $color-grayErato;
       @media #{$Phone} {
-        font-size: rem-calc(13);
-        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat 52px 6px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover-Mini.png) no-repeat right center;
       } 
     }
   }
@@ -137,11 +136,13 @@
     }
       @media #{$Phone} {
       padding: rem-calc(16) 0 rem-calc(16) rem-calc(16);
+      img {
+        height: rem-calc(60);
+      }
     }
   }
 
   .mission-text p {
-    //border: 1px solid #000000;
     color: $color-black;
     position: relative;
     padding: rem-calc(56) 0 0 rem-calc(38);
@@ -156,22 +157,12 @@
     a p {
       text-align: center; 
       text-transform: uppercase;
-      font-size: rem-calc(30);
+      font-size: rem-calc(20); //30
       color: white;
-      height: rem-calc(40);
-      line-height: 60px;
+      height: rem-calc(40); //40
+      line-height: 60px; //60
     }
   }
-
- /* .absolute-center {
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    width: 100%; 
-    height: 60%;
-    min-width: rem-calc(200);
-    padding: 10%;
-    //border: 1px solid #666;
-  }*/
 
 //Footer Styles
   .footer-wrapper {
@@ -204,6 +195,7 @@
         margin: 0;
       }
       .footer-title {
+        text-transform: uppercase;
         font-weight: bolder;
         padding-bottom: 0;
         margin-bottom: 0;
@@ -312,7 +304,7 @@ ul.slimmenu li > ul > li ul {
         padding: 0;
         position:absolute; 
         top: 0px;
-        right:0;
+        right: 0;
         z-index: 9999;
         width: 325px;
       }
@@ -322,15 +314,15 @@ ul.slimmenu li > ul > li ul {
         color: #FFF;
         text-shadow: 0 1px 0 rgba(0,0,0,0.5);
         width: 100%;
-        height: 35px; /* 48*/
-        line-height: 35px; /* 48*/
+        height: 50px; //48 .. 35
+        line-height: 35px; //48 ..35
         font-size: 16px;
         padding: 0 8px;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         @media #{$Phone} {
-          width: 35px; 
+          width: 50px; 
           float:right; 
           position:absolute; 
           top: 0px;
@@ -341,7 +333,7 @@ ul.slimmenu li > ul > li ul {
         }
        .collapse-button {
         position: absolute;
-        right: 0px;
+        right: 12px;
         top: 50%;
         width: 35px;
         //background-color: #0E0E0E;
@@ -376,11 +368,11 @@ ul.slimmenu li > ul > li ul {
         .icon-bar {
           background-color: #F5F5F5;
           border-radius: 1px 1px 1px 1px;
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+          //box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); //adds a bit of shadow to the lines
           display: block;
-          height: 2px;
-          width: 16px;
-          margin: 2px 0;
+          height: 4px;
+          width: 26px;
+          margin: 3px 0;
         }
        }
       }
@@ -393,7 +385,7 @@ ul.slimmenu li > ul > li ul {
         @media #{$Phone} {
           background-color: $color-grayBoreas;
           position:absolute;
-          top:35px;
+          top: 50px;
         }
         & > li { 
           margin-right: -5px; 
@@ -438,7 +430,7 @@ ul.slimmenu li > ul > li ul {
             }
             &:hover {
               background-color: $color-maroon;
-              opacity: 1;
+              opacity: 0.40;
               text-decoration: none;
               @media #{$Phone} {
                 background-color: $color-grayBoreas;
@@ -469,17 +461,18 @@ ul.slimmenu li > ul > li ul {
               background-color: $color-grayBoreas;
             }
             li {
-              background-color: #BBB;
+              //background-color: #BBB;
               width:100%;
               a {
-                background-color: $color-maroon;
+                //background-color: $color-maroon;
+                //color: $color-white;
                 font-weight: normal;
                 @media #{$Phone} {
                   background-color: $color-grayBoreas;
                   padding: 0 0 0 30px;
                 }
                 &:hover {
-                  opacity: 1;
+                  opacity: 0.40;
                   @media #{$Phone} {
                     background-color: $color-grayBoreas;
                     opacity: 1;
@@ -520,10 +513,12 @@ ul.slimmenu li > ul > li ul {
           padding: 3px 20px 3px 0px;
           @media #{$Phone} {
             float:none;
-            padding: 4px 16px 4px 10px;
-            height:34px;
+            padding: 4px 7px 4px 8px;
+            height: 34px;
           }
           .bcf-search{
+            padding: 0;
+            margin: 0;
             .form-field{
               //position:absolute;
               //right: 45px;
@@ -532,17 +527,29 @@ ul.slimmenu li > ul > li ul {
               border: none;
               background: rgba(255, 255, 255, 0.45);
               color: $color-grayApollo;
-              padding-left: 5px;
+              padding: 0 0 0 rem-calc(5);
               &:focus{
                 border: $thin-grayKallipygos;
               }
-              @media #{$iPadPortrait} {
+              @media screen and (max-width: 910px) {
+                width: 140px;
+              }
+               @media screen and (max-width: 885px) {
                 width: 125px;
+              }
+              @media screen and (max-width: 870px) {
+                width: 100px;
+              }
+              @media #{$iPadPortrait} {
+                width: 100px;
               }
               @media #{$Phone} {
                 height: 25px;
-                width: 250px;
+                width: 283px;
               }
+            }
+            .hidden {
+              display: none;
             }
             .submit {
               //position: absolute;
@@ -551,9 +558,9 @@ ul.slimmenu li > ul > li ul {
               background: rgba(255, 255, 255, 0.45) url(http://www.brooklyn.cuny.edu/web/sup_foundation/search.png) no-repeat;
               width: 29px;
               height: 29px;
-              padding-left: 0px;
+              padding: 0px;
               border: none;
-              margin-left: -5px;
+              margin: 0 0 0 rem-calc(-5);
               cursor: pointer;
               @media #{$Phone} {
                 width: 25px;
@@ -718,6 +725,7 @@ ul.slimmenu li > ul > li ul {
 
 //Nav Two Styles
   .nav-two {
+    text-transform: uppercase;
     background-image: $background-d;
     //height: rem-calc(35); need this for real build
     background-repeat:repeat;
@@ -737,7 +745,7 @@ ul.slimmenu li > ul > li ul {
         }
         @media #{$Phone} {
           font-size: rem-calc(10);
-          padding: rem-calc(2) rem-calc(5) rem-calc(2) rem-calc(5);
+          padding: rem-calc(2) rem-calc(6) rem-calc(2) rem-calc(6);
         }
         a {
           color: $color-grayApollo;
@@ -878,75 +886,64 @@ ul.slimmenu li > ul > li ul {
               //@media #{$Phone} {
               //  border: $thin-grayLinus;
               //}
-              .partners {
-                
-                
-                //border-left: $thin-grayLinus;
-                //border-right: $thin-grayLinus;
-                //border-bottom: $thin-grayLinus;
-                
-                //@media #{$Phone} {
-                //  display: inline-block;
-                //  width: 33%;
-                //  border-left: none;
-                //  border-bottom: none;
-                //  height: 30px;
-                //  margin: 10px 0 10px 0px;
-                //  padding: 9px 0px 9px 0px;
-                //  &:last-of-type {
-                //    border-right: none;
-                //  }
-                //}
-                //@media #{$Five00} {
-                //  height: 18x;
-                //  padding: 4px 0px 4px 0px;
-                //}
-                .partners-text {
-                  position: relative;
-height:60px;
-
+              li {
+                height: rem-calc(60);
+                position: relative;
+                border-left: $thin-grayLinus;
+                border-right: $thin-grayLinus;
+                border-bottom: $thin-grayLinus;
+                .partner {
+                  position: absolute;
+                  display: table;
+                  height: rem-calc(60);
                   p {
-                                      position: absolute;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
-  margin: auto;
-  width:100%;
-  height: 70%;
-  border: $thin-grayLinus;
-                    font-size: rem-calc(16);
-                    color: $color-grayDanae;
-                    font-weight: $bold;
-                    //padding: 22px 0px 22px 15px;
-                    line-height: 16px;
-                    //@media #{$Phone} {
-                    //  font-size: rem-calc(12);
-                    //  line-height: 12px;
-                    //  display: block;
-                    //  padding: 0;
-                    //  margin: auto;
-                    //  width: 100%;
-                    //  text-align: center;
-                    //}
-                    //@media #{$Five00} {
-                    //  font-size: rem-calc(9);
-                    //  line-height: 9px;
-                    //}
+                    display: table-cell; 
+                    vertical-align: middle; 
+                    padding: 0 rem-calc(15) 0 rem-calc(15);
+                    color: $color-grayChiron;
+                    line-height: 15px;
                   }
                 }
-                //img {
-                //  padding:0;
-                //  margin: 6px 0px 0px 25px;
-                //  @media #{$Phone} {
-                //    display: block;
-                //    margin: 0 auto;
-                //    height: 35px;
-                //  }
-                //  @media #{$Five00} {
-                //    height: 25px;
-                //  }
-                //}
+              }
+            }
+          }
+        }
+        .more-stories {
+          //padding: rem-calc(15) 0 rem-calc(40) 0;
+          @media #{$Phone} {
+            padding: rem-calc(15) rem-calc(16) rem-calc(15) rem-calc(16);
+            border-top: $thin-grayKallipygos;
+            border-bottom: $thin-grayKallipygos;
+          }
+          .more-stories-list{
+            margin: 0;
+            .more-stories-header {
+              background-image: $background-d;
+              background-repeat: repeat;
+              color: $color-grayApollo;
+              font-size: rem-calc(13);
+              font-weight: $bold;
+              padding: rem-calc(10);
+              text-transform: uppercase; 
+              line-height: 1.6;
+              a {
+                padding: rem-calc(1) rem-calc(20) rem-calc(1) 0;
+                color: $color-grayApollo; 
+                display: block;
+                &:hover {
+                  color: $color-maroon;
+                }
+              }
+            }
+            li {
+              font-size: rem-calc(12);
+              line-height: 14px;
+              padding: rem-calc(10);
+              a {
+                color: $color-grayApollo;
+                &:hover {
+                  color: $color-maroon;
+                }
               }
             }
           }
@@ -960,7 +957,7 @@ height:60px;
             border-top: $thin-grayKallipygos;
             padding: rem-calc(15) rem-calc(16) rem-calc(15) rem-calc(16);
           }
-          #subnav {
+          ul {
             margin: 0;
             .sidebar-header {
               background-image: $background-d;
@@ -968,9 +965,21 @@ height:60px;
               color: $color-grayApollo;
               font-size: rem-calc(13);
               font-weight: $bold;
-              padding: 10px;
+              padding: rem-calc(10);
               text-transform: uppercase; 
+              line-height: 1.6;
+              a {
+                padding: rem-calc(1) rem-calc(20) rem-calc(1) 0;
+                color: $color-grayApollo; 
+                display: block;
+                &:hover {
+                  color: $color-maroon;
+                }
+              }
             }
+          }
+          #subnav {
+            margin: 0;
             a { 
               border-bottom: $thin-grayKallipygos; 
               color: $color-grayApollo; 
@@ -1024,14 +1033,18 @@ height:60px;
       padding: rem-calc(20) rem-calc(16) rem-calc(16) rem-calc(16);
     }
     .title-bar {
+      width: 100%;
       border-bottom: $thin-grayKallipygos;
-      height: 24px;
-      @media #{$Phone} {
-        height: 17px;
-      }
+      padding-bottom: 0;
+      margin:0;
+      //@media #{$Phone} {
+      //  height: 17px;
+      //}
       p.title {
-        margin-bottom: 0;
-        float: left;
+        //float: left;
+        width: 50%;
+        padding:0;
+        margin:0;
         text-transform: uppercase; 
         font-size: rem-calc(17);
         @media #{$Phone} {
@@ -1073,6 +1086,7 @@ height:60px;
             }
           }
           .article-tag {
+            text-transform: uppercase;
             padding: 0;
             position: relative;
             top:-8px;
@@ -1200,7 +1214,7 @@ height:60px;
     }
     @media #{$Phone} {
       padding: rem-calc(5) 0 rem-calc(5) 0;
-      height: 50px;
+      height: 40px;
     } //768
     ul {
       width: 100%;
@@ -1210,7 +1224,7 @@ height:60px;
       margin: auto;
       text-align:center;
       @media #{$Phone} {
-        height: 45px;
+        height: 40px;
       }
       li {
         display: inline-block;
@@ -1220,7 +1234,7 @@ height:60px;
         height: rem-calc(60);
         border-left: $thin-grayKallipygos;
         @media #{$Phone} {
-          height: rem-calc(30);
+          height: rem-calc(25);
         }
         .title {
           display: block;
@@ -1230,7 +1244,7 @@ height:60px;
           padding-top: rem-calc(0);
           margin: -5px;
           @media #{$Phone} {
-           font-size: rem-calc(9);
+           font-size: rem-calc(7);
          }
         }
         .detail {
@@ -1244,7 +1258,7 @@ height:60px;
           margin: 0;
           @media #{$Phone} {
             top: -3px;
-            font-size: rem-calc(26); 
+            font-size: rem-calc(20); 
           }
         }
       }
@@ -1412,8 +1426,11 @@ height:60px;
         //  opacity:0.6;
         //}
       }
-      @media #{$Phone} {
-        display: none;
+      @media #{$Phone} { //had to turn this on in _orbit.scss
+        top: 100px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-LeftArrow-Rev.png) no-repeat 6px 12px;
+        background-color: $color-grayBoreas;
+        opacity:0.8;
       }
     }
     .orbit-next {
@@ -1435,7 +1452,6 @@ height:60px;
         background-color: $orbit-nav-bg;
         opacity:0.6;  
       }
-
       & > span {
         position: absolute;
         top: 50%;
@@ -1456,8 +1472,11 @@ height:60px;
         //  opacity:0.6;
         //}
       }
-      @media #{$Phone} {
-        display: none;
+      @media #{$Phone} {  //had to turn this on in _orbit.scss
+        top: 100px;
+        background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/slideshow-RightArrow-Rev.png) no-repeat 6px 12px;
+        background-color: $color-grayBoreas;
+        opacity:0.8;
       }
     }
     .orbit-bullets {
@@ -1465,7 +1484,7 @@ height:60px;
         padding: 0 0 0 0; 
         li {
         margin: 0 rem-calc(7) 0 rem-calc(7);
-        border: $thin-grayApollo;
+        border: $thin-grayIris;
         background-color: $color-white;
         height: rem-calc(12);
         width: rem-calc(12);
@@ -1481,6 +1500,7 @@ height:60px;
 
 // Breadcrumbs
   .breadcrumbs-bcf {
+    text-transform: uppercase;
     padding: 0px;
     margin: 0 0 20px 0; 
     overflow: hidden;
@@ -1492,7 +1512,7 @@ height:60px;
       span {
         font-size: rem-calc(11);
         color: $color-grayErato;
-        padding: 0 rem-calc(15) 0 rem-calc(0);
+        padding: 0 rem-calc(15) 0 0;
         margin: 0;
         background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
         a {
@@ -1519,10 +1539,11 @@ height:60px;
 
 // Article Pages
 .article-category {
-    padding: 0; 
-    margin: 0;
-    font-size: rem-calc(10);
-    a {
+  text-transform: uppercase;
+  padding: 0; 
+  margin: 0;
+  font-size: rem-calc(10);
+  a {
     color: $color-grayHermes;
     font-weight: $bold;
       &:hover{
@@ -1548,7 +1569,7 @@ article {
   }
   .article-text, .article-text .article-additional {
     padding:0;
-    margin: rem-calc(15) 0 0 0;
+    margin: rem-calc(0) 0 0 0;
     h2 {
       font-family: 'ComeniaSansCondBold';
       color: $color-grayApollo;
@@ -1578,6 +1599,7 @@ article {
     }
     //table
     table {
+      margin-top: rem-calc(10);
       @media #{$Phone} {
         border: $thin-grayLinus;
       }
@@ -1687,7 +1709,7 @@ article {
       }
     }
     .article-additional{
-      padding: rem-calc(15) 0 rem-calc(15) 0;
+      padding: rem-calc(8) 0 rem-calc(8) 0;
       width: 100%;
       @media #{$Phone} {
         padding: rem-calc(15) 0 rem-calc(15) 0;
@@ -1698,7 +1720,7 @@ article {
       .caption {
         background-color: $color-grayApollo;
         color: $color-white;
-        padding: rem-calc(7) 0 rem-calc(7) rem-calc(10);
+        padding: rem-calc(7) rem-calc(10) rem-calc(7) rem-calc(10);
         p {
           color: $color-white;
           padding: 0;
@@ -1719,6 +1741,137 @@ article {
           width: 100%;
           height: 100%;
         }
+      }
+      section form {
+        //border: $thin-maroon;
+        width:100%; 
+        border-top: $thin-grayKallipygos; 
+        margin: 3px 0px 0px 0px; 
+        padding: rem-calc(15) 0 0 0;
+        & *:focus {
+          outline: none;
+        }
+        p {
+          display: none;
+        }
+        fieldset {
+          border: none;
+          //border: $thin-maroon;
+          padding: 0;
+          margin: 0;
+          ul {
+            min-height: 150px;
+            //border: $thin-maroon;
+            margin: 0; 
+            padding: 0; 
+            display: block;
+            li {
+              //border: $thin-maroon;
+              display: inline-block; 
+              width: 70%; 
+              position: relative; 
+              list-style-type: none; 
+              margin: 0 0 rem-calc(25) 0; 
+              padding: 0;
+              @media #{$Phone} {
+                width: 100%;
+              }
+              label {
+                font-family: 'ComeniaSansCondRegular'; 
+                font-size: rem-calc(18); 
+                font-weight:normal; 
+                color: $color-grayBoreas; 
+                padding: 0 rem-calc(5) 0 0;
+              }
+              .formSectionLabel {
+                font-family: 'ComeniaSansCondRegular'; 
+                font-size: rem-calc(19); 
+                font-weight: $bold; 
+                color: $color-grayBoreas; 
+                padding: 0 rem-calc(5) 0 0;
+              }
+              div label {
+                font-family: 'ComeniaSansCondRegular'; 
+                font-size: rem-calc(18); 
+                font-weight:normal; 
+                color: $color-grayBoreas; 
+                padding: 0 rem-calc(5) 0 0;
+              }
+              textarea {
+                position: relative;
+                width: 100%;
+                margin: 0;
+                border: $thin-grayIris;
+
+              }
+              .textAreaLabel {
+                display: inline-block; 
+                vertical-align: top;
+              }
+            }
+            .bcf-form-button {
+              width: 100%;
+              //border: $thin-grayIris;
+              input[type=submit], input[type=reset] {
+                background-color: $color-maroon;
+                color: $color-white;
+                font-size: rem-calc(15);
+                padding: rem-calc(7) rem-calc(10) rem-calc(7) rem-calc(10);
+                border-radius: 0;
+                border: none;
+                margin: 0;
+                &:hover {
+                  background-color: $color-grayApollo;
+                  color: $color-white;
+                }
+              }
+            }
+            .oneColumn {
+              width:100%;
+            }
+            .required label:before {
+              color: #e32; 
+              content: '*'; 
+              font-weight: normal; 
+              display:inline;
+              &.requiredBut:before {
+                color: #e32; 
+                content: ''; 
+                font-weight: normal; 
+                display:inline;
+              }
+              div.requiredBut label:before {
+                color: #e32; 
+                content: ''; 
+                font-weight: normal; 
+                display:inline;
+              }
+            }
+          }
+          .horizontal {
+            display: inline-block;
+            li {
+              display: inline-block; 
+              padding-right: 15px;
+            }
+          }
+        }
+        .fieldsetHighlight {
+          border: $thin-grayKallipygos; 
+          padding: rem-calc(20) rem-calc(5) 0 0; 
+          margin: 0 0 rem-calc(20) 0;
+        }
+        legend { 
+          display: none;
+        }
+      }
+      .formNote {
+        font-size: rem-calc(13); 
+        color: $color-grayErato; 
+        margin-top: 8px;
+      }
+      .redText {
+        color: #e32;
       }
     }
   }

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"thin",
+				"thin-maroon"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"color-gr",
+				"color-grayErato"
+			],
+			[
 				"thin-gray",
 				"thin-grayLinus"
 			],
@@ -111,7 +123,7 @@
 			"file": "sass/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 47390,
+				"buffer_size": 52477,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,7 +131,7 @@
 			"file": "css/app.css",
 			"settings":
 			{
-				"buffer_size": 122048,
+				"buffer_size": 134396,
 				"line_ending": "Windows"
 			}
 		},
@@ -135,23 +147,15 @@
 			"file": "sass/_foundation.scss",
 			"settings":
 			{
-				"buffer_size": 1448,
+				"buffer_size": 1478,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "HomePageBaseWithSlimmenu.html",
+			"file": "js/jquery.slimmenu.js",
 			"settings":
 			{
-				"buffer_size": 25671,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/foundation/foundation.responsive-tables.js",
-			"settings":
-			{
-				"buffer_size": 1091,
+				"buffer_size": 5468,
 				"line_ending": "Unix"
 			}
 		}
@@ -228,20 +232,23 @@
 	},
 	"file_history":
 	[
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.slimmenu.js",
+		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_orbit.scss",
+		"/Z/Public/$BCF_Website/Development/003-Production5/EFT/EFTContentTemplate.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/HomePageBaseWithSlimmenu.html",
+		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.responsive-tables.js",
 		"/Z/Public/$BCF_Website/Development/slimmenu/jquery.slimmenu.js",
 		"/Z/Public/$BCF_Website/Development/slimmenu/slimmenu.css",
 		"/Z/Public/$BCF_Website/Development/slimmenu/demo.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_top-bar.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/js/foundation/foundation.topbar.js",
 		"/Z/Public/$BCF_Website/Development/slimmenu/HomePageBaseWithSlimmenu.html",
-		"/Z/Public/$BCF_Website/Development/003-Production5/EFT/EFTContentTemplate.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/EFT/css/app.css",
 		"/Z/Public/$BCF_Website/Development/003-Production5/EFTContentTemplate.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/app.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/ContentPageBase.html",
 		"/Z/Public/2013 Admissions Marketing Materials/DIGITAL/website/production/013/css/admissions2013.css",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sidenav.html",
-		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_orbit.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/_foundation.scss",
 		"/Z/Public/$BCF_Website/Development/003-Production5/sass/foundation/components/_type.scss",
 		"/Z/Public/2013 Admissions Marketing Materials/DIGITAL/website/production/013/js/response.js",
@@ -258,7 +265,6 @@
 		"/Z/Public/$BCF_Website/Development/003-Production5/navOne-FlexNav.html",
 		"/Z/Public/$BCF_Website/Development/003-Production5/css/flexnav.css",
 		"/Z/Public/$BCF_Website/Development/003-Production5/demo.html",
-		"/Z/Public/$BCF_Website/Development/003-Production5/js/jquery.slimmenu.js",
 		"/Z/Public/$BCF_Website/Development/003-Production5/css/slimmenu.css",
 		"/Z/Public/$BCF_Website/Development/003-Production5/articleBuild.html",
 		"/Z/Public/$BCF_Website/$Admin/Diagrams/desktopLayout.html",
@@ -353,9 +359,7 @@
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/LineEndings/LineEndings.sublime-settings",
 		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Installed Packages/Package Control.sublime-package",
-		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+		"/C/Users/jdoe/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
@@ -374,6 +378,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"search",
+			"$Desktop",
+			"search",
+			".nav",
+			"nav-one",
+			"columnSpan-1",
+			"reset",
+			".orbit-next",
+			"foundation2",
+			"table",
+			"side-nav",
+			"all-c",
+			"footer-title",
+			"foundation2/",
 			"tr",
 			"blockq",
 			"h1",
@@ -487,21 +505,7 @@
 			"$topbar-link-color-hover",
 			"$topbar-link-bg-hover",
 			"emCalc",
-			"top",
-			"inter",
-			"h1",
-			"rem-calc",
-			"medium-8",
-			"medium",
-			"minor",
-			"minor-padding",
-			"major-padding",
-			"mini-padding",
-			"gray-thin",
-			"grey",
-			"clear",
-			".columns",
-			"panel"
+			"top"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -509,6 +513,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"foundation/",
 			"",
 			"/foundation",
 			"../img",
@@ -544,15 +549,15 @@
 					"file": "sass/_custom.scss",
 					"settings":
 					{
-						"buffer_size": 47390,
+						"buffer_size": 52477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25499,
-								25518
+								12137,
+								12191
 							]
 						],
 						"settings":
@@ -562,7 +567,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11118.0,
+						"translation.y": 5319.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -572,15 +577,15 @@
 					"file": "css/app.css",
 					"settings":
 					{
-						"buffer_size": 122048,
+						"buffer_size": 134396,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94629,
-								94629
+								76257,
+								76295
 							]
 						],
 						"settings":
@@ -589,8 +594,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 47855.0,
+						"translation.x": 6.0,
+						"translation.y": 40783.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -618,7 +623,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13015.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -628,15 +633,15 @@
 					"file": "sass/_foundation.scss",
 					"settings":
 					{
-						"buffer_size": 1448,
+						"buffer_size": 1478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1161,
-								1161
+								0,
+								0
 							]
 						],
 						"settings":
@@ -653,52 +658,24 @@
 				},
 				{
 					"buffer": 4,
-					"file": "HomePageBaseWithSlimmenu.html",
+					"file": "js/jquery.slimmenu.js",
 					"settings":
 					{
-						"buffer_size": 25671,
+						"buffer_size": 5468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7545,
-								7125
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4470.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/foundation/foundation.responsive-tables.js",
-					"settings":
-					{
-						"buffer_size": 1091,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								372,
-								377
+								1410,
+								1410
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,

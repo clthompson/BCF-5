@@ -322,7 +322,7 @@ $preloader-class: "preloader" !default;
     .touch {
       .orbit-container {
         .orbit-prev,
-        .orbit-next { display: none; }
+        .orbit-next { display: block; } //none;
       }
 
       .orbit-bullets { display: none; }
@@ -352,7 +352,7 @@ $preloader-class: "preloader" !default;
         .orbit-timer,
         .orbit-next,
         .orbit-prev,
-        .orbit-bullets {display: none;}
+        .orbit-bullets {display: block;}  //none;
       }
     }
 
