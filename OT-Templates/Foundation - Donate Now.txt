@@ -1,0 +1,9 @@
+anc_link - link to donate redirect page
+stf_EventTracker - GA event tracker code
+stf_text - bar text (white)
+
+<div class="row">
+    <section class="large-13 columns show-for-small-only donate-now">
+      <a href="<%anc_link%>" <%stf_EventTracker%>><p><%stf_text%></p></a>
+    </section>
+</div>

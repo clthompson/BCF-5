@@ -1,18 +1,21 @@
-img_spotlightImage - image
 stf_title - spotlight title and image alt-tag
+img_imageSmaller - smaller image
+img_imageLarger - larger image
 txt_text - spotlight text paragraphs
 
-          <div class="spotlight">
-            <div class="">
-              <p class="all-caps bolder">Spotlight</p>
+<div class="spotlight clearfix">
+            <div class="spotlight-header">
+              <h3 class="">Spotlight</h3>
             </div>
-            <div class="image">
-              <img src="<%img_spotlightImage%>" alt="<%stf_title%>" title="<%stf_title%>">
-            </div> 
-            <div class="title">
-              <p class="all-caps bolder"><%stf_title%></p>
+            <div class="spotlight-image">
+              <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="<%stf_title%>" title="<%stf_title%>"
+                data-src0="<%img_imageSmaller%>"
+                data-src768="<%img_imageLarger%>"/>
             </div>
-            <div class="text">
+            <div class="spotlight-title">
+              <h3 class=""><%stf_title%></h3>
+            </div>
+            <div class="spotlight-text">
                 <%txt_text%>
             </div>
           </div>

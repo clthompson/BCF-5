@@ -1,4 +1,4 @@
-txt_content - text paragraphs
+txt_content - text paragraphs 
 
     <div class="article-text">
         <%txt_content%>

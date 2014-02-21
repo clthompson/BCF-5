@@ -3,14 +3,17 @@ text_description - page description
 headline_parent - page's headline
 con_headerScripts - container for connecting headerScripts page
 con_header - container for connecting Header page
+con_donateNow - container to add the donate now bar
 con_navOne - container for connecting navOne page
 anc_home - anchor for breadcrumbs Home link
-img_imageSmaller - pulled image for news article
-opt_newsCategory - pulled option list for news article
+anc_newsLandingPage - link to main news landing page
 list_articles - pulled url for news article
+img_imageSmaller - pulled image for news article
+opt_siteSubCategory - pulled option list for news article
 stf_title - pulled title for for news article
+stf_date - story date
 txt_teaser - pulled teaser for news article
-list_sideNav - primary navigation
+list_subnavHidden - primary navigation
 con_aside - container for all aside elements
 con_footer - container for connecting Footer page
 con_footerScripts - container for connecting footerScripts page
@@ -23,9 +26,13 @@ con_footerScripts - container for connecting footerScripts page
     <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0"/>
     <meta name="keywords" content="<%text_keywords%>" />
     <meta name="description" content="<%text_description%>" />
-    <link href="favicon.ico" rel="shortcut icon" />
+
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+
+    <link href="http://www.brooklyn.cuny.edu/web/sup_foundation/favicon.ico" rel="shortcut icon" />
     
-    <title>Brooklyn College | <%headline_parent%></title>
+    <title>Brooklyn College Foundation | <%headline_parent%></title>
     
     <%con_headerScripts%>
     
@@ -36,74 +43,45 @@ con_footerScripts - container for connecting footerScripts page
 
     <%con_header%>
 
+    <%con_donateNow%>
+
     <%con_navOne%>
 
     <!-- articlesContentAsideRow -->
 
     <div class="row">
-        <section class="large-8 medium-7 columns">
+        <section class="large-8 medium-8 columns">
             <div class="articles-wrapper">
-              <div class="">
-                <ul class="all-caps breadcrumbs-bcf">
-                  <li class="bolder"><a href="<%anc_home%>">Home</a></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!IoRangeConditional>
-                  <li class="bolder"><%opt_siteCategory%></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!/IoRangeConditional>
-                  <!IoRangeConditional>
-                  <li class="bolder"><%opt_siteSubCategory%></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!/IoRangeConditional>
-                  <li class="bolder selected"><%stf_title%></li>
-                </ul>
+              <div class="breadcrumbs-bcf">
+                <p class="bolder"><span><a href="<%anc_home%>">Home</a></span>
+                    <!IoRangeConditional><span><a href="<%anc_newsLandingPage%>">The Impact of Giving</a></span><!/IoRangeConditional>
+                    <span><%headline_parent%></span>
+                </p>
               </div>
-                <!IoRangeConditional><p class="article-category all-caps"><%opt_newsCategory%></p><!/IoRangeConditional>
-                <!IoRangeConditional><div class="hide"><%txt_teaser%></div><!/IoRangeConditional>
-                <article>
-                  <h1><%stf_title%></h1>
-                  <!IoRangeConditional><p class="article-date"><%stf_date%></p><!/IoRangeConditional>
-                  <div class="article-text-additional">
-                    <!IoRangeRedDotMode><img src="<%img_imageBigger%>"><!/IoRangeRedDotMode>
-                        <!IoRangeConditional><div class="image-content">
-                            <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="" title=""
-                            data-src0="<%img_imageSmaller%>"
-                            data-src768="<%img_imageBigger%>"/>
-                        </div>
-                        <div class="caption"><%txt_imgCaption%></div><!/IoRangeConditional>
-                        <!IoRangeConditional><%con_additional1%><!/IoRangeConditional>
-                    </div>
-                  <div class="article-text">
-                    <%txt_content%>
-                  </div>
-                  <!IoRangeConditional><div class="article-text-additional"><%con_additional2%></div><!/IoRangeConditional>
-                </article>
-              </div>
+              <ul>
+                <!IoRangeList>              
+                <li>
+                <div class="listed-article clearfix">
+                  <!IoRangeConditional><div class="article-image left"><a href="<%list_articles%>"><img src="<%img_imageSmaller%>" alt="" title=""></a></div><!/IoRangeConditional>
+                  <div class="article-tag"><p class=""><%opt_siteSubCategory%></p></div>
+                  <div class="article-title"><h2><a href="<%list_articles%>"><%stf_title%></a></h2></div>
+                  <div class="article-date"><p><%stf_date%></p></div>
+                    <div>
+                      <span class="article-teaser"><%txt_teaser%></span><span class="article-readmore"><p><a href="<%list_articles%>">Read more...</a></p></span>
+                    </div>    
+
+
+                </div>
+              </li><!/IoRangeList>
+            </ul>        
         </section>
+
+    <!-- <!IoRangeList><%list_subnav_hidden%><!/IoRangeList> -->
 
     <!-- aside -->
 
-        <aside class="large-5 medium-6 columns">
+        <aside class="large-5 medium-5 columns">
             <div class="aside-wrapper">
-
-                <!IoRangeConditional>                
-                <ul class="side-nav">
-                    <li class="all-caps"><%headline_parent%></li>
-                    <!IoRangeList>
-                    <li><%list_sideSubNav%></li>
-                    <!/IoRangeList>
-                </ul>
-                <!/IoRangeConditional>
-
-                <!IoRangeConditional>                
-                <ul class="side-nav">
-                    <li class="all-caps"><%opt_sideNavTitle%></li>
-                    <!IoRangeList>
-                    <li><%list_sideNav%></li>
-                    <!/IoRangeList>
-                </ul>
-                <!/IoRangeConditional>
-
                 <%con_aside%>
             </div>
         </aside>
@@ -115,4 +93,5 @@ con_footerScripts - container for connecting footerScripts page
 
   </body>
 </html>
+ 
  

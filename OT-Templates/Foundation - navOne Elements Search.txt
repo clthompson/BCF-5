@@ -1,0 +1,9 @@
+no placeholders
+
+<li class="search-element">
+            <form class="bcf-search" method="GET" action="http://www.google.com/custom">
+                <input class="form-field" type="text" name="q" maxlength="30"/>
+                <input class="submit" type="submit" value=" "/ >
+                <input TYPE="hidden"  name="sitesearch" value="www.brooklyn.cuny.edu" checked />
+            </form>
+        </li>

@@ -1,10 +1,10 @@
 anc-partners - link to page
 con_partners - container for multiple Aside Our Partners List Items
 
-          <div class="partners">
-            <div class="title-bar clearfix">
-              <p class="title left all-caps bolder">Our Partners</p>
-              <p class="see-all right"><a href="<%anc_partners%>">See All</a></p>
+<div class="partners">
+            <div class="partners-title-bar clearfix">
+              <p class="see-all"><a href="<%anc_partners%>">See All</a></p>
+              <h3 class="partners-title">Our Partners</h3>
             </div>
             <div class="partners-list">
               <ul>

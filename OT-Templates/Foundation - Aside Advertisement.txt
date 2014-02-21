@@ -1,7 +1,13 @@
 anc-URL - link to page
 img_adImage - image asset
 stf_altText - image alt-text
+img_imageSmaller - smaller image - 300x175
+img_imageLarger - larger image - 640x100
 
-          <div class="advert">
-            <a href="<%anc_URL%>"><img src="<%img_adImage%>" alt="<%stf_altText%>" title="<%stf_altText%>"></a>
-          </div>
+<div class="advert">
+    <a href="<%anc_URL%>" target="_blank"><img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="<%stf_altText%>" title="<%stf_altText%>"
+        data-src0="<%img_imageSmaller%>"
+        data-src768="<%img_imageLarger%>"/>
+    </a>
+</div>
+ 

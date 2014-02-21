@@ -1,0 +1,12 @@
+anc_title - anchor for page link
+stf_title - title text
+list_moreStories - list item referencing main story list
+
+<div class="more-stories">              
+  <ul class="more-stories-list">
+    <li class="more-stories-header"><a href="<%anc_title%>"><%stf_title%></a></li>
+    <!IoRangeList><li><%list_moreStories%></li><!/IoRangeList>
+  </ul>
+</div>
+ 
+ 

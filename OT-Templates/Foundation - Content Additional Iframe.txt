@@ -1,0 +1,11 @@
+txt_content - text paragraphs
+stf_height - height of the iframe
+stf_width - width of the iframe - leave empty to be 100% and responsive
+stf_URL - link
+
+<div class="article-text">
+        <%txt_content%>
+        <IFRAME height="<%stf_height%>" width="<%stf_width%>" src="<%stf_URL%>" frameBorder=0 scrolling=no>
+          <p>Your browser does not support iframes.</p>
+        </IFRAME>
+    </div>

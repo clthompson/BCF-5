@@ -2,7 +2,7 @@ anc_logo - anchor for logo link (back to home page)
 img_bcfLogo - logo image
 stf_mission - mission statement
 
-    <header class="row">
+<header class="row">
       <div class="large-5 medium-4 columns">
         <div class="logo"><a href="<%anc_logo%>"><img src="<%img_bcfLogo%>" alt="Brooklyn College Foundation" title="Brooklyn College Foundation"></a></div>
       </div>

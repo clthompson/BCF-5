@@ -3,12 +3,14 @@ text_description - page description
 headline_parent - page's headline
 con_headerScripts - container for connecting headerScripts page
 con_header - container for connecting Header page
+con_donateNow - container to add the donate now bar
 con_navOne - container for connecting navOne page
 anc_home - anchor for breadcrumbs Home link
 opt_sitecategory - option list for major site category
 opt_siteSubcategory - option list for sub category
 stf_title - H1 page title
 opt_newsCategory - option list for news category
+txt_teaser - teaser text
 stf_date - date for news stories only
 img_imageBigger - larger image
 img_imageSmaller - smaller image, used to pull for news lists
@@ -16,9 +18,10 @@ txt_imageCaption - image caption
 con_additional1 - container for additional image, video, slideshow, text content
 txt_content - text content
 con_additional2 - container for additional image, video, slideshow, text content
-list_sideSubNav - list item for secondary navigation, only used for subpages
-opt_sideNavTitle - title for primary navigation box
+anc_navTitle - link for nav title
+opt_sideNavTitle - contextual title
 list_sideNav - primary navigation
+list_sideSubNav - list item for secondary navigation, only used for subpages
 con_aside - container for all aside elements
 con_footer - container for connecting Footer page
 con_footerScripts - container for connecting footerScripts page
@@ -31,86 +34,98 @@ con_footerScripts - container for connecting footerScripts page
     <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0"/>
     <meta name="keywords" content="<%text_keywords%>" />
     <meta name="description" content="<%text_description%>" />
-    <link href="favicon.ico" rel="shortcut icon" />
+
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+
+    <link href="http://www.brooklyn.cuny.edu/web/sup_foundation/favicon.ico" rel="shortcut icon" />
     
-    <title>Brooklyn College | <%headline_parent%></title>
+    <title>Brooklyn College Foundation | <%headline_parent%></title>
     
     <%con_headerScripts%>
     
   </head>
   <body data-responsejs='{"create" : {"mode" : "src", "prefix" : "src"}}'>
 
+      <script type="text/javascript">
+          headline_parent = "<%headline_parent%>";  
+      </script>
+
     <!-- Body Elements --> 
 
     <%con_header%>
+
+    <!IoRangeConditional><%con_donateNow%><!/IoRangeConditional>
 
     <%con_navOne%>
 
     <!-- articlesContentAsideRow -->
 
     <div class="row">
-        <section class="large-8 medium-7 columns">
+        <section class="large-8 medium-8 columns">
             <div class="articles-wrapper">
-              <div class="">
-                <ul class="all-caps breadcrumbs-bcf">
-                  <li class="bolder"><a href="<%anc_home%>">Home</a></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!IoRangeConditional>
-                  <li class="bolder"><%opt_siteCategory%></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!/IoRangeConditional>
-                  <!IoRangeConditional>
-                  <li class="bolder"><%opt_siteSubCategory%></li>
-                  <li><img src="http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png"></li>
-                  <!/IoRangeConditional>
-                  <li class="bolder selected"><%stf_title%></li>
-                </ul>
+              <div class="breadcrumbs-bcf">
+                <p class=""><span class=""><a href="<%anc_home%>">Home</a></span>
+                    <!IoRangeConditional><span><%opt_siteCategory%></span><!/IoRangeConditional>
+                    <!IoRangeConditional><span><%opt_siteSubCategory%></span><!/IoRangeConditional>
+                    <span><%stf_title%></span>
+                </p>
               </div>
-                <!IoRangeConditional><p class="article-category all-caps"><%opt_newsCategory%></p><!/IoRangeConditional>
+                <!IoRangeConditional><p class="article-category"><%opt_newsCategory%></p><!/IoRangeConditional>
                 <!IoRangeConditional><div class="hide"><%txt_teaser%></div><!/IoRangeConditional>
                 <article>
                   <h1><%stf_title%></h1>
                   <!IoRangeConditional><p class="article-date"><%stf_date%></p><!/IoRangeConditional>
-                  <div class="article-text-additional">
-                    <!IoRangeRedDotMode><img src="<%img_imageBigger%>"><!/IoRangeRedDotMode>
-                        <!IoRangeConditional><div class="image-content">
-                            <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="" title=""
-                            data-src0="<%img_imageSmaller%>"
-                            data-src768="<%img_imageBigger%>"/>
-                        </div>
-                        <div class="caption"><%txt_imgCaption%></div><!/IoRangeConditional>
-                        <!IoRangeConditional><%con_additional1%><!/IoRangeConditional>
+                    <div class="article-text">
+                        <!IoRangeConditional>
+                            <div class="article-additional">
+                            <!IoRangeRedDotMode><img src="<%img_imageBigger%>"><!/IoRangeRedDotMode>
+                                <div class="image-content">
+                                    <img src="http://www.brooklyn.cuny.edu/web/adm_2013marketing/trans.gif" alt="" title=""
+                                    data-src0="<%img_imageSmaller%>"
+                                    data-src500="<%img_imageBigger%>"
+                                    data-src768="<%img_imageBigger%>"/>
+                                </div>
+                                <div class="caption"><%txt_imgCaption%></div>
+                             </div>
+                        <!/IoRangeConditional>
+                        <!IoRangeConditional>
+                            <div class="article-additional">
+                                <%con_additional1%>
+                            </div>
+                        <!/IoRangeConditional>
+                        <%txt_content%>
+                        <!IoRangeConditional><div class="article-additional"><%con_additional2%></div><!/IoRangeConditional>
                     </div>
-                  <div class="article-text">
-                    <%txt_content%>
-                  </div>
-                  <!IoRangeConditional><div class="article-text-additional"><%con_additional2%></div><!/IoRangeConditional>
                 </article>
               </div>
         </section>
 
     <!-- aside -->
 
-        <aside class="large-5 medium-6 columns">
+        <aside class="large-5 medium-5 columns">
             <div class="aside-wrapper">
-
-                <!IoRangeConditional>                
-                <ul class="side-nav">
-                    <li class="all-caps"><%headline_parent%></li>
-                    <!IoRangeList>
-                    <li><%list_sideSubNav%></li>
-                    <!/IoRangeList>
-                </ul>
-                <!/IoRangeConditional>
-
-                <!IoRangeConditional>                
-                <ul class="side-nav">
-                    <li class="all-caps"><%opt_sideNavTitle%></li>
+                
+                <div id="sidebar">
+                <!IoRangeConditional>
+                <ul>
+                    <li class="sidebar-header"><a href="<%anc_navTitle%>"><%opt_sideNavTitle%></a></li>
+                </ul>            
+                <ul id="subnav" class="subpage">
+                    <!--<li class="sidebar-header"><a href="<%anc_navTitle%>"><%opt_sideNavTitle%></a></li>-->
                     <!IoRangeList>
                     <li><%list_sideNav%></li>
                     <!/IoRangeList>
-                </ul>
-                <!/IoRangeConditional>
+                </ul><!/IoRangeConditional>
+
+                
+                <!IoRangeConditional><ul class="subnav_secondary subpage">
+                    <!IoRangeList>
+                    <li><%list_sideSubNav%></li>
+                    <!/IoRangeList>
+                </ul><!/IoRangeConditional>
+
+                </div>
 
                 <%con_aside%>
             </div>
@@ -120,7 +135,41 @@ con_footerScripts - container for connecting footerScripts page
     <%con_footer%>
     
     <%con_footerScripts%>
+    
+    <!-- Right-Side Navigation -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        
+         var headline = headline_parent; // see above
+         
+        $("#sidebar ul.subpage a").each(function(){
+          if ($(this).text()== headline) {
+            $(this).addClass("selected");
+          }
+        });
+        if ($('#sidebar ul.subpage').length > 1) {
+          var item_found = false;
+          $('#sidebar ul.subpage').each(function() {
+            $selected_item = $(this).find('li a.selected');
+  
+            if ($selected_item.text() == '' && item_found == true) {
+              // sub list item
+              item_found = false;
+              $(this).insertAfter('#sidebar #subnav.subpage li a.selected');
+            } else if ($selected_item.text() == '') {
+              // empty item
+              $(this).attr('id','').css('display','none');
+            } else {
+              // selected list item
+              $(this).attr('id','subnav');
+              item_found = true;
+            }
+          });
+        }
+      });
+    </script>
 
   </body>
 </html>
+ 
  

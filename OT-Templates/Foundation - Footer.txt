@@ -3,25 +3,23 @@ txt_address - address text content
 con_links - container referencing top level of navOne
 stf_copyright - copyright text
 
-    <div class="full-width footer-wrapper">
+<div class="full-width footer-wrapper">
       <footer class="row">
-        <div class="small-8 medium-8 large-5 columns">
+        <div class="small-8 medium-7 large-5 columns">
           <div class="footer-address">
-            <p class="footer-title bolder all-caps"><%stf_title%></p>
+            <h1 class="footer-title"><%stf_title%></h1>
             <%txt_address%>
+            <p class="footer-url">Visit the <a href="http://brooklyn.cuny.edu" target="_blank" ga-category="Footer" ga-action="Navigate" ga-label="BC.edu Footer Link"
+>Brooklyn College website</a></p>
           </div>
         </div>
-        <div class="small-5 medium-5 large-8 columns">
+        <div class="small-5 medium-6 large-8 columns">
           <div class="footer-nav">
             <!-- list that references the main navOne list and hides all li-ul elements -->
             <ul>
               <%con_links%>
-              <!--<li><a href="#">Giving Opportunities</a></li>
-              <li><a href="#">Donate Now</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>-->
             </ul>
-            <p><%stf_copyright%></p>
+            <p class="footer-copyright"><%stf_copyright%></p>
           </div> 
         </div>
       </footer>

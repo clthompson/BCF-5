@@ -1,4 +1,10 @@
-img_partner - image
-stf_altText - image alt-text
+img_partner - image - not used
+stf_altText - image alt-text - not used
+stf_partnerText - name of partner
 
-		<li class="sponsor"><img src="<%img_partner%>" alt="<%stf_altText%>" title="<%stf_altText%>"></li>
+<li>
+    <div class="partner">
+    <!IoRangeConditional><img src="<%img_partner%>" alt="<%stf_altText%>" title="<%stf_altText%>"><!/IoRangeConditional>
+    <!IoRangeConditional><p><%stf_partnerText%></p><!/IoRangeConditional>
+    </div>
+</li>

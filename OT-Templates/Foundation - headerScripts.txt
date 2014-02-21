@@ -1,8 +1,25 @@
 No placeholders
 
 <link rel="stylesheet" href="http://www.brooklyn.cuny.edu/web/css/app.css" /> <!-- Compiled Sass CSS -->
-    <script src="http://www.brooklyn.cuny.edu/web/js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="http://www.brooklyn.cuny.edu/web/js/vendor/modernizr.js"></script> <!-- Modernizr -->
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16095067-6']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    function trackClick(eventCategory,eventAction,eventLabel) {
+    _gaq.push(['_trackEvent',eventCategory,eventAction,eventLabel]);
+    };
+
+</script>
