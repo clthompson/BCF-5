@@ -4,12 +4,40 @@
 		"selected_items":
 		[
 			[
-				"thin",
-				"thin-maroon"
+				"com",
+				"ComeniaSansCondBold"
+			],
+			[
+				"Cons",
+				"ComeniaSansCondBold"
+			],
+			[
+				"Com",
+				"ComeniaSansCondRegular"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"come",
+				"ComeniaSansCondBold"
+			],
+			[
+				"fon",
+				"font-lucida"
+			],
+			[
+				"Co",
+				"ComeniaSansCondBold"
 			],
 			[
 				"bo",
-				"border"
+				"bold"
+			],
+			[
+				"thin",
+				"thin-maroon"
 			],
 			[
 				"color-gr",
@@ -22,10 +50,6 @@
 			[
 				"color-",
 				"color-black"
-			],
-			[
-				"font-",
-				"font-weight"
 			],
 			[
 				"n",
@@ -123,7 +147,7 @@
 			"file": "sass/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 52477,
+				"buffer_size": 56216,
 				"line_ending": "Windows"
 			}
 		},
@@ -131,7 +155,7 @@
 			"file": "css/app.css",
 			"settings":
 			{
-				"buffer_size": 134396,
+				"buffer_size": 135277,
 				"line_ending": "Windows"
 			}
 		},
@@ -378,6 +402,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ComeniaSansCondBold",
+			"search",
+			"form",
+			":focus",
+			"search",
+			"article",
+			"bcf-",
 			"search",
 			"$Desktop",
 			"search",
@@ -498,14 +529,7 @@
 			"height",
 			"$topbar-bg",
 			"height",
-			"has-dropdown",
-			"z-index",
-			"top-bar-section",
-			"$topbar-link-bg-active",
-			"$topbar-link-color-hover",
-			"$topbar-link-bg-hover",
-			"emCalc",
-			"top"
+			"has-dropdown"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -549,15 +573,15 @@
 					"file": "sass/_custom.scss",
 					"settings":
 					{
-						"buffer_size": 52477,
+						"buffer_size": 56216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12137,
-								12191
+								36984,
+								36984
 							]
 						],
 						"settings":
@@ -567,7 +591,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5319.0,
+						"translation.y": 16786.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -577,15 +601,15 @@
 					"file": "css/app.css",
 					"settings":
 					{
-						"buffer_size": 134396,
+						"buffer_size": 135277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76257,
-								76295
+								107911,
+								107911
 							]
 						],
 						"settings":
@@ -594,8 +618,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 6.0,
-						"translation.y": 40783.0,
+						"translation.x": 0.0,
+						"translation.y": 55188.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -612,8 +636,8 @@
 						"selection":
 						[
 							[
-								35200,
-								35200
+								17219,
+								17219
 							]
 						],
 						"settings":
@@ -623,7 +647,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5949.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -3108,13 +3108,13 @@ ul {
   float: right;
   margin-bottom: 0;
   font-size: 0.875rem;
-  padding-right: 10px;
+  padding-right: 0.5rem;
   background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon.png) no-repeat right center; }
   @media screen and (max-width: 767px) {
     .see-all {
-      padding-right: 6px;
+      padding-right: 0.25rem;
       font-size: 0.8125rem;
-      width: 48px;
+      width: 44px;
       background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-maroon-Mini.png) no-repeat right center; } }
   .see-all:hover {
     background: url(http://www.brooklyn.cuny.edu/web/sup_foundation/seeAll-Hover.png) no-repeat right center;
@@ -3726,27 +3726,26 @@ aside .aside-wrapper {
     aside .aside-wrapper .partners .partners-list ul {
       margin: 0;
       width: 100%;
-      background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png"); }
+      background-image: url("http://www.brooklyn.cuny.edu/web/sup_foundation/diagonals.png");
+      border-left: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0; }
       aside .aside-wrapper .partners .partners-list ul li {
         height: 3.75rem;
         position: relative;
-        border-left: 1px solid #f0f0f0;
-        border-right: 1px solid #f0f0f0;
-        border-bottom: 1px solid #e2e2e2; }
-        aside .aside-wrapper .partners .partners-list ul li .partner {
-          position: absolute;
-          display: table;
-          height: 3.75rem; }
-          aside .aside-wrapper .partners .partners-list ul li .partner p {
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-            font-size: 0.9375rem;
-            display: table-cell;
-            vertical-align: middle;
-            padding: 0 0.9375rem 0 0.9375rem;
-            color: #555555;
-            line-height: 16px; }
+        border-bottom: 1px solid #e2e2e2;
+        width: 100%;
+        display: table; }
+        aside .aside-wrapper .partners .partners-list ul li p {
+          font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+          font-size: 0.9375rem;
+          display: table-cell;
+          vertical-align: middle;
+          padding: 0 0.9375rem 0 0.9375rem;
+          color: #555555;
+          line-height: 16px; }
         aside .aside-wrapper .partners .partners-list ul li:last-of-type {
-          border-bottom: 1px solid #f0f0f0; }
+          border-bottom: none; }
   @media screen and (max-width: 767px) {
     aside .aside-wrapper .more-stories {
       padding: 0.9375rem 1rem 0.9375rem 1rem;
@@ -3983,7 +3982,7 @@ section .articles-wrapper {
         section .articles-wrapper ul li:first-child .listed-article .article-image img {
           max-width: 333px;
           height: 200px;
-          left: -60px; }
+          left: -35px; }
           @media screen and (max-width: 849px) and (min-width: 768px) {
             section .articles-wrapper ul li:first-child .listed-article .article-image img {
               max-width: 266px;
@@ -3992,7 +3991,7 @@ section .articles-wrapper {
             section .articles-wrapper ul li:first-child .listed-article .article-image img {
               max-width: 166px;
               height: 100px;
-              left: -30px; } }
+              left: -20px; } }
     @media screen and (max-width: 767px) {
       section .articles-wrapper ul li:last-child .listed-article, section .articles-wrapper ul li:last-child .listed-article-landing {
         border-bottom: none; } }
@@ -4003,7 +4002,7 @@ section .articles-wrapper {
 
 section .stats-wrapper {
   padding: 1.375rem 0 1.375rem 0;
-  height: 118px;
+  min-height: 118px;
   margin: 0; }
   @media screen and (max-width: 849px) and (min-width: 768px) {
     section .stats-wrapper {
@@ -4011,7 +4010,7 @@ section .stats-wrapper {
   @media screen and (max-width: 767px) {
     section .stats-wrapper {
       padding: 0.3125rem 0 0.3125rem 0;
-      height: 40px; } }
+      min-height: 40px; } }
   section .stats-wrapper ul {
     width: 100%;
     border-top: 1px solid #cccccc;

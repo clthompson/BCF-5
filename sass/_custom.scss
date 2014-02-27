@@ -895,37 +895,69 @@ ul.slimmenu li > ul > li ul {
               }
             }
           }
-          .partners-list{
+          //.partners-list{ //OLD WAY
+          //  ul {
+          //    margin:0;
+          //    width:100%;
+          //    background-image: $background-d;
+          //    //@media #{$Phone} {
+          //    //  border: $thin-grayLinus;
+          //    //}
+          //    li {
+          //      height: rem-calc(60);
+          //      position: relative;
+          //      border-left: $thin-grayMinotaur;
+          //      border-right: $thin-grayMinotaur;
+          //      border-bottom: $thin-grayLinus;
+          //      .partner {
+          //        position: absolute;
+          //        display: table;
+          //        height: rem-calc(60);
+          //        p {
+          //          font-family: $font-lucida;
+          //          font-size: rem-calc(15);
+          //          //font-weight: $bold;
+          //          display: table-cell; 
+          //          vertical-align: middle; 
+          //          padding: 0 rem-calc(15) 0 rem-calc(15);
+          //          color: $color-grayChiron;
+          //          line-height: 16px;
+          //        }
+          //      }
+          //      &:last-of-type {
+          //        border-bottom: $thin-grayMinotaur;
+          //      }
+          //    }
+          //  } 
+          //}
+          .partners-list {
             ul {
               margin:0;
               width:100%;
               background-image: $background-d;
-              //@media #{$Phone} {
-              //  border: $thin-grayLinus;
-              //}
+              border-left: $thin-grayMinotaur;
+              border-right: $thin-grayMinotaur;
+              border-bottom: $thin-grayMinotaur;
               li {
                 height: rem-calc(60);
                 position: relative;
-                border-left: $thin-grayMinotaur;
-                border-right: $thin-grayMinotaur;
                 border-bottom: $thin-grayLinus;
-                .partner {
-                  position: absolute;
-                  display: table;
-                  height: rem-calc(60);
-                  p {
-                    font-family: $font-lucida;
-                    font-size: rem-calc(15);
-                    //font-weight: $bold;
-                    display: table-cell; 
-                    vertical-align: middle; 
-                    padding: 0 rem-calc(15) 0 rem-calc(15);
-                    color: $color-grayChiron;
-                    line-height: 16px;
-                  }
+                width: 100%;
+                //position: absolute;
+                display: table;
+                //height: rem-calc(60);
+                p {
+                  font-family: $font-lucida;
+                  font-size: rem-calc(15);
+                  //font-weight: $bold;
+                  display: table-cell; 
+                  vertical-align: middle; 
+                  padding: 0 rem-calc(15) 0 rem-calc(15);
+                  color: $color-grayChiron;
+                  line-height: 16px;
                 }
                 &:last-of-type {
-                  border-bottom: $thin-grayMinotaur;
+                  border-bottom: none;
                 }
               }
             }
@@ -1220,7 +1252,7 @@ ul.slimmenu li > ul > li ul {
             img {
               max-width: 333px;
               height: 200px;
-              left:-60px;
+              left:-35px;  //-60
               @media #{$iPadPortrait} {
                 max-width: 266px;
                 height: 160px;
@@ -1228,7 +1260,7 @@ ul.slimmenu li > ul > li ul {
               @media #{$Five00} {
                 max-width: 166px;
                 height: 100px;
-                left:-30px;
+                left:-20px; //-30
               }
             }
           }
@@ -1252,14 +1284,14 @@ ul.slimmenu li > ul > li ul {
 
   section .stats-wrapper {
     padding: rem-calc(22) 0 rem-calc(22) 0;
-    height: 118px;
+    min-height: 118px;
     margin: 0;
     @media #{$iPadPortrait} {
       padding: rem-calc(22) rem-calc(15) rem-calc(22) rem-calc(15);
     }
     @media #{$Phone} {
       padding: rem-calc(5) 0 rem-calc(5) 0;
-      height: 40px;
+      min-height: 40px;
     } //768
     ul {
       width: 100%;
